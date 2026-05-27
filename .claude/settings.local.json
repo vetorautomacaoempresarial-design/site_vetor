@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-Content *)",
+      "Bash(pnpm create *)",
+      "Bash(where npm *)",
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "PowerShell(pnpm *)",
+      "PowerShell(pnpm install *)",
+      "PowerShell(pnpm add *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(pnpm build *)",
+      "PowerShell($env:PATH = \"C:\\\\Users\\\\User\\\\AppData\\\\Roaming\\\\npm;$env:PATH\"; Set-Location \"C:\\\\Users\\\\User\\\\Desktop\\\\SITE VETOR\"; Start-Process -FilePath \"pnpm\" -ArgumentList \"dev\" -NoNewWindow; Start-Sleep -Seconds 5; Write-Host \"Server started\")",
+      "Bash(PATH=__TRACKED_VAR__:/c/Users/User/AppData/Roaming/npm pnpm dev)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(ping -n 4 127.0.0.1)",
+      "Bash(npx ngrok *)",
+      "PowerShell(New-NetFirewallRule *)",
+      "Bash(vercel --version)",
+      "Bash(ls .vercel/project.json)",
+      "Bash(vercel link *)",
+      "Bash(vercel --prod)"
+    ]
+  }
+}
