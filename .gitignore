@@ -40,4 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# internal dev files
+.claude/
+CLAUDE.md
+PLANO.md
