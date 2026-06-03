@@ -6,7 +6,7 @@ _Em conformidade com a Lei nº 13.709/2018 (LGPD)_
 
 **1.1.** Esta Política descreve como a VETOR AUTOMAÇÃO EMPRESARIAL LTDA, CNPJ 65.473.700/0001-49, com sede na Rua General Góes Monteiro, nº 456, Apto. 901, Bairro São Francisco, Bento Gonçalves/RS, CEP 95.703-052 (“VETOR”, “nós”), trata dados pessoais no contexto da prestação do serviço de automação por inteligência artificial para qualificação de leads via WhatsApp.
 
-**1.2.** Ao visitar nosso site, você toma ciência desta Política e da Política de Cookies, conforme exibido no banner de consentimento. Ao contratar os serviços da VETOR, o aceite formal desta Política ocorre no momento da contratação (checkout), por meio de caixa de seleção ativa antes da conclusão do pagamento. Dúvidas sobre privacidade: contato@vetorauto.com.
+**1.2.** Ao visitar nosso site, você toma ciência desta Política e da Política de Cookies, conforme exibido no banner de consentimento. Ao contratar os serviços da VETOR, o aceite formal desta Política ocorre no momento da contratação (checkout), por meio de caixa de seleção ativa antes da conclusão do pagamento. Dúvidas sobre privacidade: contato@vetorautomacao.io.
 
 ## 2\. DEFINIÇÕES
 
@@ -95,7 +95,7 @@ Na qualidade de controladora dos dados do Cliente, tratamos as seguintes categor
 
 **e)** revogação do consentimento e eliminação dos dados tratados com base nele.
 
-**11.2.** Solicitações podem ser feitas pelo e-mail contato@vetorauto.com. Quando a solicitação envolver dados de Leads, em que atuamos como operadora, ela será encaminhada ao respectivo Cliente controlador para atendimento.
+**11.2.** Solicitações podem ser feitas pelo e-mail contato@vetorautomacao.io. Quando a solicitação envolver dados de Leads, em que atuamos como operadora, ela será encaminhada ao respectivo Cliente controlador para atendimento.
 
 ## 12\. INCIDENTES DE SEGURANÇA
 
@@ -103,7 +103,7 @@ Na qualidade de controladora dos dados do Cliente, tratamos as seguintes categor
 
 ## 13\. ENCARREGADO (DPO)
 
-**13.1.** O canal de comunicação com o Encarregado pelo Tratamento de Dados Pessoais da VETOR é o e-mail **privacidade@vetorauto.com**, exclusivo para matérias de privacidade e proteção de dados. Solicitações, dúvidas e exercício de direitos de titulares serão respondidos por esse canal no prazo de até 15 (quinze) dias úteis.
+**13.1.** O canal de comunicação com o Encarregado pelo Tratamento de Dados Pessoais da VETOR é o e-mail **contato@vetorautomacao.io**, exclusivo para matérias de privacidade e proteção de dados. Solicitações, dúvidas e exercício de direitos de titulares serão respondidos por esse canal no prazo de até 15 (quinze) dias úteis.
 
 ## 14\. ALTERAÇÕES DESTA POLÍTICA
 
@@ -111,7 +111,7 @@ Na qualidade de controladora dos dados do Cliente, tratamos as seguintes categor
 
 ## 15\. CONTATO
 
-**15.1.** Dúvidas sobre esta Política ou sobre o tratamento de seus dados: VETOR AUTOMAÇÃO EMPRESARIAL LTDA — e-mail contato@vetorauto.com — telefone (54) 9674-2471.
+**15.1.** Dúvidas sobre esta Política ou sobre o tratamento de seus dados: VETOR AUTOMAÇÃO EMPRESARIAL LTDA — e-mail contato@vetorautomacao.io — telefone (54) 9674-2471.
 
 _Última atualização: Junho/2026 — Versão 1.0_
 

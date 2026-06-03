@@ -59,11 +59,11 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:contato@vetorauto.com"
+                href="mailto:contato@vetorautomacao.io"
                 className="flex items-center gap-2 font-body text-sm text-[#A3A3A3] hover:text-white transition-colors"
               >
                 <Mail size={14} />
-                contato@vetorauto.com
+                contato@vetorautomacao.io
               </a>
             </div>
             <div className="flex gap-3 mt-6">

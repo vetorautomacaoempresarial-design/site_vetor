@@ -16,7 +16,7 @@ const inter = Inter({
   weight: ["300", "400", "500"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vetorautomacao.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vetorautomacao.io";
 
 export const metadata: Metadata = {
   title: {

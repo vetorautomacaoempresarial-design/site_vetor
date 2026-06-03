@@ -43,6 +43,6 @@ _A lista detalhada de cookies específicos utilizados (nome, provedor e prazo de
 
 ## 8\. ALTERAÇÕES E CONTATO
 
-**8.1.** Esta Política poderá ser atualizada periodicamente; a versão vigente, com a data de atualização, estará sempre disponível no site. Dúvidas: contato@vetorauto.com.
+**8.1.** Esta Política poderá ser atualizada periodicamente; a versão vigente, com a data de atualização, estará sempre disponível no site. Dúvidas: contato@vetorautomacao.io.
 
 _Última atualização: Junho/2026 — Versão 1.0_

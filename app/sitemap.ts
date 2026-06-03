@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { cases } from "@/lib/cases";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vetorautomacao.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vetorautomacao.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const casesEntries = cases.map((c) => ({

@@ -4,7 +4,7 @@ _Serviço de Automação por Inteligência Artificial para Qualificação de Lea
 
 ## QUALIFICAÇÃO DAS PARTES
 
-CONTRATADA: VETOR AUTOMAÇÃO EMPRESARIAL LTDA, sociedade empresária limitada inscrita no CNPJ sob o nº 65.473.700/0001-49, com sede na Rua General Góes Monteiro, nº 456, Apto. 901, Bairro São Francisco, Bento Gonçalves/RS, CEP 95.703-052, e-mail contato@vetorauto.com, telefone (54) 9674-2471, doravante denominada simplesmente “VETOR” ou “CONTRATADA”.
+CONTRATADA: VETOR AUTOMAÇÃO EMPRESARIAL LTDA, sociedade empresária limitada inscrita no CNPJ sob o nº 65.473.700/0001-49, com sede na Rua General Góes Monteiro, nº 456, Apto. 901, Bairro São Francisco, Bento Gonçalves/RS, CEP 95.703-052, e-mail contato@vetorautomacao.io, telefone (54) 9674-2471, doravante denominada simplesmente “VETOR” ou “CONTRATADA”.
 
 CONTRATANTE: a pessoa física ou jurídica que realiza o cadastro, aceita eletronicamente este instrumento e contrata os serviços da VETOR, qualificada pelos dados informados no ato da contratação (nome/razão social, CPF/CNPJ, endereço, e-mail e telefone), doravante denominada “CLIENTE” ou “CONTRATANTE”.
 
@@ -42,7 +42,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **4.1.** Disponibilizar a Automação em funcionamento durante a vigência do Contrato, observadas as limitações técnicas e a dependência de plataformas de terceiros.
 
-**4.2.** Prestar suporte técnico ao CLIENTE pelo canal **WhatsApp (54) 9674-2471 e e-mail contato@vetorautomacao.io**, em **dias úteis (segunda a sexta-feira), das 9h às 18h (horário de Brasília), exceto feriados nacionais**.
+**4.2.** Prestar suporte técnico ao CLIENTE pelo canal **WhatsApp (54) 9674-2471 e e-mail administrativo@vetorautomacao.io**, em **dias úteis (segunda a sexta-feira), das 9h às 18h (horário de Brasília), exceto feriados nacionais**.
 
 **4.3.** Empregar medidas técnicas e administrativas razoáveis e compatíveis com o estado da técnica para proteger os dados tratados, nos termos da Política de Privacidade e da legislação aplicável.
 
@@ -152,7 +152,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 ## CLÁUSULA 15 – DO CANCELAMENTO, RESCISÃO E REEMBOLSO
 
-**15.1.** O CLIENTE poderá cancelar a assinatura a qualquer tempo, mediante solicitação pelo canal **e-mail contato@vetorautomacao.io**, com antecedência mínima de **7 (sete) dias corridos** da data de renovação, cessando as cobranças a partir do ciclo seguinte.
+**15.1.** O CLIENTE poderá cancelar a assinatura a qualquer tempo, mediante solicitação pelo canal **e-mail administrativo@vetorautomacao.io**, com antecedência mínima de **7 (sete) dias corridos** da data de renovação, cessando as cobranças a partir do ciclo seguinte.
 
 **15.2.** Direito de arrependimento: tratando-se de contratação à distância, o CLIENTE consumidor poderá desistir no prazo de 7 (sete) dias contados da contratação, com devolução dos valores eventualmente pagos, nos termos do art. 49 do Código de Defesa do Consumidor.
 

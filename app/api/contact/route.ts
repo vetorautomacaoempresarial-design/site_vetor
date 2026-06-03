@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const emailTo = process.env.EMAIL_TO ?? "contato@vetorauto.com";
+  const emailTo = process.env.EMAIL_TO ?? "administrativo@vetorautomacao.io";
 
   if (!apiKey) {
     console.warn("RESEND_API_KEY not set — skipping email send in dev");
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(apiKey);
 
     await resend.emails.send({
-      from: "Vetor Automação <noreply@vetorauto.com>",
+      from: "Vetor Automação <noreply@contato.vetorautomacao.io>",
       to: [emailTo],
       replyTo: email,
       subject: `[Lead] ${name} — ${company}`,

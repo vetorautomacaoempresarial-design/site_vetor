@@ -5,7 +5,7 @@ export async function notifyTeam(params: {
   html: string;
 }): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
-  const emailTo = process.env.EMAIL_TO ?? "contato@vetorauto.com";
+  const emailTo = process.env.EMAIL_TO ?? "administrativo@vetorautomacao.io";
 
   if (!apiKey) {
     console.warn("RESEND_API_KEY não definida — pulando notificação por e-mail.");
@@ -16,7 +16,7 @@ export async function notifyTeam(params: {
     const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
     await resend.emails.send({
-      from: "Vetor Automação <noreply@vetorauto.com>",
+      from: "Vetor Automação <noreply@contato.vetorautomacao.io>",
       to: [emailTo],
       subject: params.subject,
       html: params.html,
