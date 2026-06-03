@@ -7,8 +7,9 @@ import Badge from "@/components/ui/Badge";
 import { FadeInUp } from "@/components/motion";
 import { contactSchema, ContactFormData } from "@/lib/validation";
 import { cn } from "@/lib/cn";
+import type { SiteContent } from "@/lib/content/types";
 
-export default function ContatoForm() {
+export default function ContatoForm({ content }: { content: SiteContent["home"]["contato"] }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 
@@ -45,15 +46,12 @@ export default function ContatoForm() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           <FadeInUp>
-            <Badge className="mb-4">Contato</Badge>
-            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight mb-6">
-              Vamos conversar
-              <br />
-              sobre o seu processo?
+            <Badge className="mb-4">{content.badge}</Badge>
+            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight mb-6 whitespace-pre-line">
+              {content.title}
             </h2>
             <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed mb-10">
-              Conte o que você precisa automatizar. Respondemos em até 24h com uma
-              proposta de diagnóstico inicial — sem compromisso.
+              {content.intro}
             </p>
 
             <a
@@ -63,11 +61,11 @@ export default function ContatoForm() {
               className="inline-flex items-center gap-3 px-6 py-4 bg-[#25D366] text-white font-display font-semibold text-sm tracking-wide hover:bg-[#22C35E] transition-colors"
             >
               <MessageCircle size={18} />
-              Falar pelo WhatsApp
+              {content.whatsappLabel}
             </a>
 
             <p className="font-body text-xs text-[#737373] mt-4">
-              Ou preencha o formulário ao lado e entraremos em contato.
+              {content.whatsappNote}
             </p>
           </FadeInUp>
 

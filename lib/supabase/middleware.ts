@@ -36,8 +36,9 @@ export async function updateSession(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  // Proteção das rotas da área do cliente.
-  if (!user && pathname.startsWith("/conta")) {
+  // Proteção das rotas da área do cliente e do painel admin.
+  // (O acesso de admin em si é checado no layout de /admin via tabela `admins`.)
+  if (!user && (pathname.startsWith("/conta") || pathname.startsWith("/admin"))) {
     const url = request.nextUrl.clone();
     url.pathname = "/entrar";
     url.searchParams.set("redirect", pathname);

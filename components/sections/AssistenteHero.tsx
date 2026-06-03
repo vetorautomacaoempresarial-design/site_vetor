@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import type { AssistenteHero as AssistenteHeroContent } from "@/lib/content/types";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
@@ -9,7 +10,7 @@ const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   "Olá! Tenho interesse no Assistente de Vendas da Vetor."
 )}`;
 
-export default function AssistenteHero() {
+export default function AssistenteHero({ content }: { content: AssistenteHeroContent }) {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A0A0A]">
       <div className="absolute inset-0 grid-bg opacity-60" />
@@ -35,7 +36,7 @@ export default function AssistenteHero() {
           >
             <span className="w-6 h-px bg-[#2563EB]" />
             <span className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-[#2563EB]">
-              Produto · Assistente de Vendas
+              {content.tag}
             </span>
           </motion.div>
 
@@ -45,13 +46,12 @@ export default function AssistenteHero() {
             transition={{ duration: 0.8, delay: 0.4, ease }}
             className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-[#F5F5F5] leading-[1.05] tracking-tight mb-6"
           >
-            Todo lead
-            <br />
-            qualificado.
-            <br />
-            <span className="text-[#2563EB]">Todo vendedor</span>
-            <br />
-            no contexto.
+            {content.headline.map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                <span className={line.accent ? "text-[#2563EB]" : undefined}>{line.text}</span>
+              </span>
+            ))}
           </motion.h1>
 
           <motion.p
@@ -60,9 +60,7 @@ export default function AssistenteHero() {
             transition={{ duration: 0.7, delay: 0.7, ease }}
             className="font-body font-light text-lg text-[#A3A3A3] leading-relaxed mb-10 max-w-xl"
           >
-            O Assistente de Vendas faz o primeiro contato com cada lead, entende a fundo a demanda
-            e entrega um resumo completo para o seu time — com dados de contato e a necessidade real
-            do cliente. Seu processo comercial, organizado de ponta a ponta.
+            {content.subtitle}
           </motion.p>
 
           <motion.div
@@ -75,7 +73,7 @@ export default function AssistenteHero() {
               href="#planos"
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors group"
             >
-              Ver planos
+              {content.ctaPrimary}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
@@ -85,7 +83,7 @@ export default function AssistenteHero() {
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 border border-[#2A2A2A] text-[#A3A3A3] hover:text-white hover:border-[#525252] transition-colors"
             >
               <MessageCircle size={16} />
-              Falar no WhatsApp
+              {content.ctaSecondary}
             </a>
           </motion.div>
         </div>

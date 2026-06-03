@@ -4,25 +4,13 @@ import { Plus, Minus } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { FadeInUp } from "@/components/motion";
 import { cn } from "@/lib/cn";
+import type { SiteContent } from "@/lib/content/types";
 
-const faqs = [
-  {
-    question: "Como o Assistente recebe os leads?",
-    answer:
-      "Por padrão, o Assistente recebe os leads pelo WhatsApp. Essa funcionalidade pode ser alterada caso o seu principal canal de atendimento seja outro.",
-  },
-  {
-    question: "Como o resumo do lead chega para o vendedor?",
-    answer:
-      "Diretamente no WhatsApp do vendedor. Ele recebe todos os dados necessários para entrar em contato com o lead, além da demanda completa dele.",
-  },
-  {
-    question: "Posso trocar de plano depois?",
-    answer: "Sim, a qualquer momento você pode trocar de plano.",
-  },
-];
-
-export default function AssistenteFaq() {
+export default function AssistenteFaq({
+  content,
+}: {
+  content: SiteContent["assistente"]["faq"];
+}) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -30,16 +18,14 @@ export default function AssistenteFaq() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           <FadeInUp>
-            <Badge className="mb-4">FAQ</Badge>
-            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight">
-              Perguntas
-              <br />
-              frequentes
+            <Badge className="mb-4">{content.badge}</Badge>
+            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight whitespace-pre-line">
+              {content.title}
             </h2>
           </FadeInUp>
 
           <div className="flex flex-col divide-y divide-[#2A2A2A]">
-            {faqs.map((faq, i) => (
+            {content.items.map((faq, i) => (
               <div key={i}>
                 <button
                   onClick={() => setOpen(open === i ? null : i)}

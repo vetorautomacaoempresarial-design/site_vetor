@@ -4,31 +4,9 @@ import { Plus, Minus } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { FadeInUp } from "@/components/motion";
 import { cn } from "@/lib/cn";
+import type { SiteContent } from "@/lib/content/types";
 
-const faqs = [
-  {
-    question: "Quanto tempo leva para ter uma automação em produção?",
-    answer:
-      "Depende da complexidade. Para automações simples (atendimento, triagem), de 2 a 5 semanas. Para pipelines mais complexos com múltiplas integrações, de 8 a 12 semanas. Nossa metodologia garante que você veja valor antes da entrega final.",
-  },
-  {
-    question: "Quanto custa um projeto de automação com IA?",
-    answer:
-      "Cada projeto é precificado individualmente após o diagnóstico. Temos a responsabilidade de não entregar nada aquém do que o seu processo exige, mas com consciência com relação ao seu orçamento.",
-  },
-  {
-    question: "Preciso trocar meus sistemas atuais para automatizar?",
-    answer:
-      "Temos soluções também para projetos que exigem integrações com plataformas que não possuem API pública.",
-  },
-  {
-    question: "O que acontece se a automação falhar ou tomar uma decisão errada?",
-    answer:
-      "Todas as automações possuem sistemas de fallback, alertas e, quando necessário, revisão humana. Monitoramos proativamente e de forma integral para garantir o sucesso da operação.",
-  },
-];
-
-export default function Faq() {
+export default function Faq({ content }: { content: SiteContent["home"]["faq"] }) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -36,20 +14,17 @@ export default function Faq() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           <FadeInUp>
-            <Badge className="mb-4">FAQ</Badge>
-            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight">
-              Perguntas
-              <br />
-              frequentes
+            <Badge className="mb-4">{content.badge}</Badge>
+            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight whitespace-pre-line">
+              {content.title}
             </h2>
             <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed mt-6 max-w-sm">
-              Não encontrou sua resposta? Fale diretamente com a gente pelo formulário
-              abaixo ou pelo WhatsApp.
+              {content.intro}
             </p>
           </FadeInUp>
 
           <div className="flex flex-col divide-y divide-[#2A2A2A]">
-            {faqs.map((faq, i) => (
+            {content.items.map((faq, i) => (
               <div key={i}>
                 <button
                   onClick={() => setOpen(open === i ? null : i)}

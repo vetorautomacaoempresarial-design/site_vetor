@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Globe, Mail } from "lucide-react";
+import { getSiteContent } from "@/lib/content";
 
 const nav = [
   { label: "Serviços", href: "/#servicos" },
@@ -11,7 +12,9 @@ const nav = [
   { label: "Área do cliente", href: "/conta" },
 ];
 
-export default function Footer() {
+export default async function Footer() {
+  const { footer } = await getSiteContent();
+
   return (
     <footer className="bg-[#0A0A0A] border-t border-[#2A2A2A]">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -25,8 +28,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-body font-light text-xs text-[#737373] leading-relaxed max-w-xs">
-              Automação de processos com agentes de IA.
-              Diagnóstico, projeto, implantação e operação.
+              {footer.description}
             </p>
             <p className="font-display text-xs text-[#2563EB] tracking-widest uppercase mt-4">
               AI · Process Automation
@@ -59,11 +61,11 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:contato@vetorautomacao.io"
+                href={`mailto:${footer.email}`}
                 className="flex items-center gap-2 font-body text-sm text-[#A3A3A3] hover:text-white transition-colors"
               >
                 <Mail size={14} />
-                contato@vetorautomacao.io
+                {footer.email}
               </a>
             </div>
             <div className="flex gap-3 mt-6">
@@ -90,7 +92,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Vetor Automação. Todos os direitos reservados.
           </p>
           <p className="font-body text-xs text-[#737373]">
-            Seu processo tem magnitude. Nós damos direção.
+            {footer.tagline}
           </p>
         </div>
       </div>

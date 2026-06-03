@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import type { HomeHero } from "@/lib/content/types";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-export default function Hero() {
+export default function Hero({ content }: { content: HomeHero }) {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A0A0A]">
       {/* Grid background */}
@@ -46,7 +47,7 @@ export default function Hero() {
           >
             <span className="w-6 h-px bg-[#2563EB]" />
             <span className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-[#2563EB]">
-              AI · Process Automation
+              {content.tag}
             </span>
           </motion.div>
 
@@ -57,13 +58,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease }}
             className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-[#F5F5F5] leading-[1.05] tracking-tight mb-6"
           >
-            Seu processo
-            <br />
-            tem magnitude.
-            <br />
-            <span className="text-[#2563EB]">Nós damos</span>
-            <br />
-            direção.
+            {content.headline.map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                <span className={line.accent ? "text-[#2563EB]" : undefined}>{line.text}</span>
+              </span>
+            ))}
           </motion.h1>
 
           {/* Subheadline */}
@@ -73,8 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.7, ease }}
             className="font-body font-light text-lg text-[#A3A3A3] leading-relaxed mb-10 max-w-xl"
           >
-            Automatizamos processos com agentes de IA — do diagnóstico à
-            operação contínua. Mais velocidade, menos erro, escala real.
+            {content.subtitle}
           </motion.p>
 
           {/* CTAs */}
@@ -88,7 +87,7 @@ export default function Hero() {
               href="#contato"
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors group"
             >
-              Agendar Demo
+              {content.ctaLabel}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

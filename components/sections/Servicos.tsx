@@ -2,51 +2,33 @@
 import { Bot, Plug, Search } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
+import type { SiteContent } from "@/lib/content/types";
 
-const services = [
-  {
-    icon: Bot,
-    title: "Agentes de IA Conversacional",
-    description:
-      "Agentes autônomos que entendem contexto, executam tarefas e se integram ao seu fluxo de trabalho — atendimento, vendas, suporte interno e muito mais.",
-  },
-  {
-    icon: Plug,
-    title: "Integrações & Orquestração",
-    description:
-      "Conectamos suas ferramentas, APIs e bancos de dados em pipelines inteligentes que movem dados e disparam ações automaticamente entre sistemas.",
-  },
-  {
-    icon: Search,
-    title: "Diagnóstico & Consultoria",
-    description:
-      "Mapeamos seus processos, identificamos os maiores gargalos e entregamos um roadmap de automação com ROI estimado antes de qualquer implementação.",
-  },
-];
+// Ícones fixos (não editáveis), na ordem dos cards.
+const icons = [Bot, Plug, Search];
 
-export default function Servicos() {
+export default function Servicos({ content }: { content: SiteContent["home"]["servicos"] }) {
   return (
     <section id="servicos" className="py-28 bg-[#0A0A0A] border-t border-[#2A2A2A]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <Badge className="mb-4">Serviços</Badge>
-            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight">
-              O que entregamos
+            <Badge className="mb-4">{content.badge}</Badge>
+            <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight whitespace-pre-line">
+              {content.title}
             </h2>
           </div>
           <p className="font-body font-light text-[#A3A3A3] max-w-md leading-relaxed text-sm md:text-right">
-            Soluções end-to-end, da estratégia à operação. Cada projeto é construído
-            com tecnologia de ponta e responsabilidade de negócio.
+            {content.intro}
           </p>
         </div>
 
         <StaggerChildren className="grid md:grid-cols-3 gap-px bg-[#2A2A2A]" staggerDelay={0.1}>
-          {services.map((service) => {
-            const Icon = service.icon;
+          {content.items.map((service, i) => {
+            const Icon = icons[i % icons.length];
             return (
               <motion.div
-                key={service.title}
+                key={service.title || i}
                 variants={staggerItem}
                 className="bg-[#0A0A0A] p-8 group hover:bg-[#141414] transition-colors duration-300"
               >
