@@ -5,8 +5,10 @@ import { Globe, Mail } from "lucide-react";
 const nav = [
   { label: "Serviços", href: "/#servicos" },
   { label: "Como Funciona", href: "/#como-funciona" },
+  { label: "Produtos", href: "/assistente-de-vendas" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contato", href: "/#contato" },
+  { label: "Área do cliente", href: "/conta" },
 ];
 
 export default function Footer() {

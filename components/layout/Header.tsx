@@ -6,9 +6,10 @@ import { cn } from "@/lib/cn";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Como Funciona", href: "#como-funciona" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Como Funciona", href: "/#como-funciona" },
+  { label: "Produtos", href: "/assistente-de-vendas" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Header() {
@@ -46,17 +47,23 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-5">
+          <Link
+            href="/conta"
+            className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
+          >
+            Área do cliente
+          </Link>
           <a
             href="#contato"
             className="font-display text-sm font-semibold tracking-wide px-5 py-2 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
@@ -77,15 +84,22 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-[#0A0A0A] border-t border-[#2A2A2A] px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="font-display text-base text-[#A3A3A3] hover:text-white transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
+          <Link
+            href="/conta"
+            className="font-display text-base text-[#A3A3A3] hover:text-white transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            Área do cliente
+          </Link>
           <a
             href="#contato"
             className="font-display text-sm font-semibold tracking-wide px-5 py-3 bg-[#2563EB] text-white text-center hover:bg-[#3B82F6] transition-colors mt-2"
