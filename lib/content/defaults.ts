@@ -199,6 +199,19 @@ export const DEFAULT_CONTENT: SiteContent = {
             "A qualificação vira uma etapa padronizada e previsível. Seu funil fica limpo e seus vendedores focam em quem está pronto para comprar.",
         },
       ],
+      stats: [
+        {
+          value: "78%",
+          caption:
+            "dos consumidores compram da primeira empresa que responde ao contato.",
+        },
+        {
+          value: "391%",
+          caption:
+            "de aumento na conversão ao responder o lead no primeiro minuto.",
+        },
+      ],
+      statsNote: "Dados de estudos de mercado sobre tempo de resposta a leads.",
     },
     processo: {
       badge: "Processo de compra",
@@ -208,7 +221,7 @@ export const DEFAULT_CONTENT: SiteContent = {
           number: "01",
           title: "Escolha e adquira o plano",
           description:
-            "Selecione o plano que faz mais sentido para o seu negócio e finalize a compra pelo Mercado Pago.",
+            "Selecione o plano que faz mais sentido para o seu negócio e finalize a compra pelo ASAAS.",
         },
         {
           number: "02",

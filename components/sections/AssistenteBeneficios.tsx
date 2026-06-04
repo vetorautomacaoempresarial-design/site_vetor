@@ -49,6 +49,35 @@ export default function AssistenteBeneficios({
             );
           })}
         </StaggerChildren>
+
+        {content.stats?.length > 0 && (
+          <div className="mt-20">
+            <StaggerChildren
+              className="grid sm:grid-cols-2 gap-px bg-[#2A2A2A] border border-[#2A2A2A]"
+              staggerDelay={0.1}
+            >
+              {content.stats.map((s, i) => (
+                <motion.div
+                  key={s.value || i}
+                  variants={staggerItem}
+                  className="bg-[#0A0A0A] px-8 py-12 flex flex-col items-center text-center"
+                >
+                  <span className="font-display font-bold text-6xl lg:text-7xl text-[#2563EB] tracking-tight">
+                    {s.value}
+                  </span>
+                  <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed mt-4 max-w-xs">
+                    {s.caption}
+                  </p>
+                </motion.div>
+              ))}
+            </StaggerChildren>
+            {content.statsNote && (
+              <p className="mt-5 text-center font-body text-xs text-[#525252]">
+                {content.statsNote}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

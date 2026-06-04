@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MessageCircle, Clock } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
-import { PLAN_LIST } from "@/lib/plans";
+import { PLAN_LIST, savingsPercent } from "@/lib/plans";
 import type { SiteContent } from "@/lib/content/types";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
@@ -34,15 +34,24 @@ export default function Planos({ content }: { content: SiteContent["assistente"]
         </div>
 
         <StaggerChildren className="grid md:grid-cols-3 gap-px bg-[#2A2A2A]" staggerDelay={0.1}>
-          {PLAN_LIST.map((plan) => (
+          {PLAN_LIST.map((plan) => {
+            const savings = savingsPercent(plan);
+            return (
             <motion.div
               key={plan.name}
               variants={staggerItem}
               className="flex flex-col bg-[#0A0A0A] p-8"
             >
-              <h3 className="font-display font-semibold text-lg text-[#F5F5F5] tracking-tight mb-2">
-                {plan.name}
-              </h3>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="font-display font-semibold text-lg text-[#F5F5F5] tracking-tight">
+                  {plan.name}
+                </h3>
+                {savings > 0 && (
+                  <span className="font-display text-[11px] font-semibold tracking-wide px-2 py-0.5 bg-[#2563EB]/10 text-[#2563EB] border border-[#2563EB]/30">
+                    Economize {savings}%
+                  </span>
+                )}
+              </div>
               <div className="flex items-baseline gap-1 mb-1">
                 <span className="font-display font-bold text-4xl text-[#F5F5F5]">
                   {plan.monthlyLabel}
@@ -60,7 +69,8 @@ export default function Planos({ content }: { content: SiteContent["assistente"]
                 Assinar {plan.name}
               </Link>
             </motion.div>
-          ))}
+            );
+          })}
         </StaggerChildren>
 
         <div className="mt-12 flex flex-col items-center gap-4 text-center">

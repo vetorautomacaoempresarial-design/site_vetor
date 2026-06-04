@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AlertCircle, CheckCircle, X } from "lucide-react";
-import { PLAN_LIST, PLANS, formatBRL, type PlanId } from "@/lib/plans";
+import { PLAN_LIST, PLANS, formatBRL, savingsPercent, type PlanId } from "@/lib/plans";
 import { LEGAL_DOCS } from "@/lib/legal";
 import { Field, Input, FormError } from "@/components/ui/Form";
 import { cn } from "@/lib/cn";
@@ -137,6 +137,7 @@ export default function ContaActions({
           {PLAN_LIST.map((plan) => {
             const isCurrent = hasActive && plan.id === currentPlan;
             const selected = selectedPlan === plan.id;
+            const savings = savingsPercent(plan);
             return (
               <button
                 key={plan.id}
@@ -148,9 +149,16 @@ export default function ContaActions({
                   selected ? "ring-1 ring-inset ring-[#2563EB]" : "hover:bg-[#121212]"
                 )}
               >
-                <p className="font-display font-semibold text-sm text-[#F5F5F5] mb-1">
-                  {plan.name}
-                  {isCurrent && <span className="text-[#737373] font-normal"> (atual)</span>}
+                <p className="font-display font-semibold text-sm text-[#F5F5F5] mb-1 flex items-center gap-2">
+                  <span>
+                    {plan.name}
+                    {isCurrent && <span className="text-[#737373] font-normal"> (atual)</span>}
+                  </span>
+                  {savings > 0 && (
+                    <span className="font-display text-[10px] font-semibold tracking-wide px-1.5 py-0.5 bg-[#2563EB]/10 text-[#2563EB] border border-[#2563EB]/30">
+                      −{savings}%
+                    </span>
+                  )}
                 </p>
                 <p className="font-display font-bold text-xl text-[#F5F5F5]">
                   {plan.monthlyLabel}

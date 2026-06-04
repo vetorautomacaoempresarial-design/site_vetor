@@ -27,6 +27,12 @@ export interface FaqItem {
   answer: string;
 }
 
+/** Estatística de destaque (número grande + legenda). */
+export interface StatItem {
+  value: string;
+  caption: string;
+}
+
 /** Botão de plano no processo de compra (texto + mensagem do WhatsApp). */
 export interface PlanButton {
   label: string;
@@ -66,7 +72,14 @@ export interface SiteContent {
   assistente: {
     hero: AssistenteHero;
     comoFunciona: { badge: string; title: string; steps: Step[] };
-    beneficios: { badge: string; title: string; intro: string; items: InfoCard[] };
+    beneficios: {
+      badge: string;
+      title: string;
+      intro: string;
+      items: InfoCard[];
+      stats: StatItem[];
+      statsNote: string;
+    };
     processo: {
       badge: string;
       title: string;

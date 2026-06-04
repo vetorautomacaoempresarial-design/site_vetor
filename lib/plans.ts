@@ -47,6 +47,28 @@ export const PLANS: Record<PlanId, Plan> = {
 
 export const PLAN_LIST: Plan[] = [PLANS.mensal, PLANS.trimestral, PLANS.anual];
 
+/** Quantidade de meses cobertos por cada ciclo de cobrança. */
+const CYCLE_MONTHS: Record<AsaasCycle, number> = {
+  MONTHLY: 1,
+  QUARTERLY: 3,
+  YEARLY: 12,
+};
+
+/** Valor mensal efetivo (centavos): total do ciclo dividido pelos meses do ciclo. */
+export function monthlyCents(plan: Plan): number {
+  return Math.round(plan.priceCentsPerCycle / CYCLE_MONTHS[plan.cycle]);
+}
+
+/**
+ * Economia percentual no mensal efetivo em relação ao plano Mensal.
+ * Retorna 0 quando não há economia (ex.: o próprio plano Mensal).
+ */
+export function savingsPercent(plan: Plan): number {
+  const base = monthlyCents(PLANS.mensal);
+  const pct = Math.round((1 - monthlyCents(plan) / base) * 100);
+  return pct > 0 ? pct : 0;
+}
+
 export function isPlanId(value: unknown): value is PlanId {
   return value === "mensal" || value === "trimestral" || value === "anual";
 }
