@@ -188,7 +188,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 E, por estarem assim justas e contratadas, as partes aceitam o presente Contrato. Quando aplicável, poderá ser firmado em vias física ou eletrônica.
 
-| VETOR AUTOMAÇÃO EMPRESARIAL LTDACONTRATADA | CLIENTECONTRATANTE (nome / CPF ou CNPJ) |
+| VETOR AUTOMAÇÃO EMPRESARIAL LTDA — CONTRATADA | CLIENTE — CONTRATANTE (nome / CPF ou CNPJ) |
 | --- | --- |
 
 Bento Gonçalves/RS, \_\_\_\_\_\_ de \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ de 20\_\_\_\_.
