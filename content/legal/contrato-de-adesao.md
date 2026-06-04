@@ -84,9 +84,9 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 | Plano | Valor mensal | Compromisso / cobrança |
 | --- | --- | --- |
-| Mensal | R$ 189,90 | Sem fidelidade. Renovação automática a cada mês. |
-| Trimestral | R$ 159,90 /mês | Compromisso de 3 meses (total R$ 479,70). |
-| Anual | R$ 129,90 /mês | Compromisso de 12 meses (total R$ 1.558,80). |
+| Mensal | R$ 289,90 | Sem fidelidade. Renovação automática a cada mês. |
+| Trimestral | R$ 259,90 /mês | Compromisso de 3 meses (total R$ 779,70). |
+| Anual | R$ 229,90 /mês | Compromisso de 12 meses (total R$ 2.758,80). |
 
 **7.2.** Os valores dos planos Trimestral e Anual correspondem ao preço mensal sob compromisso de permanência pelo respectivo período, com cobrança recorrente mensal dentro do período contratado, mediante débito automático no cartão de crédito cadastrado ou pagamento via PIX/boleto gerado mensalmente.
 

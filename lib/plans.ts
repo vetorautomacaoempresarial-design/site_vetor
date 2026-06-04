@@ -22,24 +22,24 @@ export const PLANS: Record<PlanId, Plan> = {
   mensal: {
     id: "mensal",
     name: "Mensal",
-    monthlyLabel: "R$ 189,90",
-    priceCentsPerCycle: 18990,
+    monthlyLabel: "R$ 289,90",
+    priceCentsPerCycle: 28990,
     cycle: "MONTHLY",
     description: "Acesso completo ao Assistente de Vendas com cobrança mensal.",
   },
   trimestral: {
     id: "trimestral",
     name: "Trimestral",
-    monthlyLabel: "R$ 159,90",
-    priceCentsPerCycle: 47970, // 3 x 159,90
+    monthlyLabel: "R$ 259,90",
+    priceCentsPerCycle: 77970, // 3 x 259,90
     cycle: "QUARTERLY",
     description: "Acesso completo ao Assistente de Vendas com cobrança trimestral.",
   },
   anual: {
     id: "anual",
     name: "Anual",
-    monthlyLabel: "R$ 129,90",
-    priceCentsPerCycle: 155880, // 12 x 129,90
+    monthlyLabel: "R$ 229,90",
+    priceCentsPerCycle: 275880, // 12 x 229,90
     cycle: "YEARLY",
     description: "Acesso completo ao Assistente de Vendas com cobrança anual.",
   },

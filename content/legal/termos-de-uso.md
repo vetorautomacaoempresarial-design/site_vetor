@@ -46,7 +46,7 @@ _Plataforma de Automação por IA para Qualificação de Leads via WhatsApp_
 
 ## 6\. PLANOS, PAGAMENTO E CANCELAMENTO
 
-**6.1.** Os planos, valores, formas de pagamento, renovação, reajuste e cancelamento são regidos pelo Contrato de Prestação de Serviços. Em resumo, há os planos Mensal (R$ 189,90), Trimestral (R$ 159,90/mês) e Anual (R$ 129,90/mês), com renovação automática. Para cancelar, o CLIENTE deve enviar solicitação ao e-mail administrativo@vetorautomacao.io com antecedência mínima de 7 (sete) dias corridos da data de renovação. O suporte técnico é prestado via WhatsApp (54) 9674-2471 e e-mail administrativo@vetorautomacao.io, em dias úteis, das 9h às 18h (horário de Brasília); os prazos de atendimento são informados diretamente no canal de suporte.
+**6.1.** Os planos, valores, formas de pagamento, renovação, reajuste e cancelamento são regidos pelo Contrato de Prestação de Serviços. Em resumo, há os planos Mensal (R$ 289,90), Trimestral (R$ 259,90/mês) e Anual (R$ 229,90/mês), com renovação automática. Para cancelar, o CLIENTE deve enviar solicitação ao e-mail administrativo@vetorautomacao.io com antecedência mínima de 7 (sete) dias corridos da data de renovação. O suporte técnico é prestado via WhatsApp (54) 9674-2471 e e-mail administrativo@vetorautomacao.io, em dias úteis, das 9h às 18h (horário de Brasília); os prazos de atendimento são informados diretamente no canal de suporte.
 
 **6.2.** O CLIENTE consumidor poderá exercer o direito de arrependimento em até 7 (sete) dias da contratação, nos termos do art. 49 do CDC.
 

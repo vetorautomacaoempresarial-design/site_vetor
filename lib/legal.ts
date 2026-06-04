@@ -16,7 +16,7 @@ export interface LegalDoc {
  * (`terms_acceptances`) como prova da formação contratual, conforme a
  * Cláusula 18.2 do Contrato de Adesão.
  */
-export const LEGAL_VERSION = "2026-06-03";
+export const LEGAL_VERSION = "2026-06-04";
 
 export const LEGAL_DOCS: LegalDoc[] = [
   {
