@@ -7,6 +7,18 @@ import type { SiteContent } from "@/lib/content/types";
 // Ícones fixos (não editáveis), na ordem dos cards.
 const icons = [TrendingUp, Clock, ClipboardCheck, Shield];
 
+// Fontes das estatísticas (links externos ficam no código), na ordem das stats.
+const statSources = [
+  {
+    label: "Lead Connect",
+    url: "https://leadresponse.co/blog/speed-to-lead-statistics#2-78-of-customers-buy-from-the-company-that-responds-first",
+  },
+  {
+    label: "HubSpot",
+    url: "https://cdn2.hubspot.net/hubfs/69576/leads360_wp_speed_to_call.pdf?t=1515599992576&utm_source=chatgpt.com",
+  },
+];
+
 export default function AssistenteBeneficios({
   content,
 }: {
@@ -56,20 +68,36 @@ export default function AssistenteBeneficios({
               className="grid sm:grid-cols-2 gap-px bg-[#2A2A2A] border border-[#2A2A2A]"
               staggerDelay={0.1}
             >
-              {content.stats.map((s, i) => (
-                <motion.div
-                  key={s.value || i}
-                  variants={staggerItem}
-                  className="bg-[#0A0A0A] px-8 py-12 flex flex-col items-center text-center"
-                >
-                  <span className="font-display font-bold text-6xl lg:text-7xl text-[#2563EB] tracking-tight">
-                    {s.value}
-                  </span>
-                  <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed mt-4 max-w-xs">
-                    {s.caption}
-                  </p>
-                </motion.div>
-              ))}
+              {content.stats.map((s, i) => {
+                const src = statSources[i];
+                return (
+                  <motion.div
+                    key={s.value || i}
+                    variants={staggerItem}
+                    className="bg-[#0A0A0A] px-8 py-12 flex flex-col items-center text-center"
+                  >
+                    <span className="font-display font-bold text-6xl lg:text-7xl text-[#2563EB] tracking-tight">
+                      {s.value}
+                    </span>
+                    <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed mt-4 max-w-xs">
+                      {s.caption}
+                    </p>
+                    {src && (
+                      <p className="mt-3 font-body text-[10px] text-[#525252]">
+                        fonte:{" "}
+                        <a
+                          href={src.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-2 hover:text-[#2563EB] transition-colors"
+                        >
+                          {src.label}
+                        </a>
+                      </p>
+                    )}
+                  </motion.div>
+                );
+              })}
             </StaggerChildren>
             {content.statsNote && (
               <p className="mt-5 text-center font-body text-xs text-[#525252]">
