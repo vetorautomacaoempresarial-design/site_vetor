@@ -23,8 +23,8 @@ export const DEFAULT_CONTENT: SiteContent = {
         { text: "direção.", accent: false },
       ],
       subtitle:
-        "Automatizamos processos com agentes de IA de forma personalizada para o seu negócio, do diagnóstico à operação contínua. Mais velocidade, menos erro, escala real.",
-      ctaLabel: "Como funciona",
+        "Automatizamos processos com agentes de inteligência artificial, do diagnóstico à operação contínua. Mais velocidade, menos erro, escala real.",
+      ctaLabel: "Fale Conosco",
     },
     servicos: {
       badge: "Serviços",
@@ -259,15 +259,15 @@ export const DEFAULT_CONTENT: SiteContent = {
       boxSubtitle: "Clique no botão correspondente ao seu plano para iniciar a implementação.",
       planButtons: [
         {
-          label: "Mensal",
+          label: "Adquiri o plano Mensal",
           msg: "Olá! Adquiri o plano Mensal do Assistente de Vendas! Qual é o próximo passo para a implementação?",
         },
         {
-          label: "Trimestral",
+          label: "Adquiri o plano Trimestral",
           msg: "Olá! Adquiri o plano Trimestral do Assistente de Vendas! Qual é o próximo passo para a implementação?",
         },
         {
-          label: "Anual",
+          label: "Adquiri o plano Anual",
           msg: "Olá! Adquiri o plano Anual do Assistente de Vendas! Qual é o próximo passo para a implementação?",
         },
       ],
@@ -289,12 +289,12 @@ export const DEFAULT_CONTENT: SiteContent = {
         {
           question: "Como o Assistente recebe os clientes?",
           answer:
-            "O Assistente recebe os clientes pelo WhatsApp, criando um ambiente humanizado. A partir desse atendimento, ele coleta as informações necessárias para o resumo e as envia para o(s) vendedor(es).",
+            "Por padrão, o Assistente recebe os clientes pelo WhatsApp. Essa função pode ser alterada caso o seu principal canal de atendimento seja outro.",
         },
         {
           question: "Como o resumo do cliente chega para o vendedor?",
           answer:
-            "Diretamente no WhatsApp do vendedor. Ele recebe todos os dados necessários para entrar em contato com o cliente, incluindo a demanda completa, urgência, nome e telefone de contato.",
+            "Diretamente no WhatsApp do vendedor. Ele recebe todos os dados necessários para entrar em contato com o cliente, além da demanda completa dele.",
         },
         {
           question: "Posso trocar de plano depois?",
