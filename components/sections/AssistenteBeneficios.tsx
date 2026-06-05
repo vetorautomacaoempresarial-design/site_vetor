@@ -1,11 +1,11 @@
 "use client";
-import { Clock, ClipboardList, TrendingUp } from "lucide-react";
+import { Clock, ClipboardList, TrendingUp, Shield } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
 import type { SiteContent } from "@/lib/content/types";
 
 // Ícones fixos (não editáveis), na ordem dos cards.
-const icons = [Clock, ClipboardList, TrendingUp];
+const icons = [Clock, ClipboardList, TrendingUp, Shield];
 
 export default function AssistenteBeneficios({
   content,
@@ -27,7 +27,7 @@ export default function AssistenteBeneficios({
           </p>
         </div>
 
-        <StaggerChildren className="grid md:grid-cols-3 gap-px bg-[#2A2A2A]" staggerDelay={0.1}>
+        <StaggerChildren className="grid md:grid-cols-2 gap-px bg-[#2A2A2A]" staggerDelay={0.1}>
           {content.items.map((b, i) => {
             const Icon = icons[i % icons.length];
             return (

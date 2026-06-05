@@ -217,6 +217,11 @@ export const DEFAULT_CONTENT: SiteContent = {
           description:
             "A qualificação vira uma etapa padronizada e previsível. Seu funil de vendas fica limpo e seus vendedores focam em quem está pronto para comprar.",
         },
+        {
+          title: "Ferramentas mais seguras do mercado",
+          description:
+            "Utilizamos a API Oficial da Meta, garantindo a proteção contra banimentos indevidos em sua conta do WhatsApp Business.",
+        },
       ],
       stats: [
         {
