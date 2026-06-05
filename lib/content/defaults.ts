@@ -156,13 +156,13 @@ export const DEFAULT_CONTENT: SiteContent = {
     hero: {
       tag: "Produto · Assistente de Vendas",
       headline: [
-        { text: "Todo contato", accent: false },
-        { text: "qualificado.", accent: false },
-        { text: "Todo vendedor", accent: true },
-        { text: "no contexto.", accent: false },
+        { text: "Seus leads", accent: false },
+        { text: "atendidos", accent: false },
+        { text: "24 horas", accent: true },
+        { text: "7 dias por semana", accent: true },
       ],
       subtitle:
-        "O Assistente de Vendas faz o primeiro contato com cada cliente, entende a fundo a demanda e entrega um resumo completo para a sua equipe, com os dados de contato e a necessidade real do cliente. Seu processo comercial organizado de ponta a ponta.",
+        "O Assistente de Vendas faz o primeiro contato com cada cliente, entende a demanda e gera um resumo completo para a sua equipe com os dados de contato e a necessidade real do cliente. Seu vendedor só precisa concretizar a venda.",
       ctaPrimary: "Ver planos",
       ctaSecondary: "Falar no WhatsApp",
     },
@@ -208,9 +208,9 @@ export const DEFAULT_CONTENT: SiteContent = {
             "Nenhum cliente espera. O agente atende no instante do primeiro contato, a qualquer hora do dia, e nenhuma oportunidade esfria por falta de resposta.",
         },
         {
-          title: "Vendedor sempre no contexto",
+          title: "Responda antes da concorrência",
           description:
-            "A equipe recebe um resumo completo da demanda e dos dados do cliente, sem retrabalho, sem perguntar de novo o que o cliente já respondeu.",
+            "Seu lead recebe atenção imediata enquanto a concorrência ainda não respondeu.",
         },
         {
           title: "Processo comercial organizado",
