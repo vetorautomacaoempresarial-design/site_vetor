@@ -45,14 +45,14 @@ export default function ProcessoDeCompra({
           ))}
         </StaggerChildren>
 
-        <div className="mt-16 p-10 border border-[#2A2A2A] bg-[#0A0A0A]">
+        <div className="mt-16 p-10 border border-[#2A2A2A] bg-[#0A0A0A] flex flex-col items-center text-center">
           <p className="font-display font-semibold text-lg text-[#F5F5F5] mb-2">
             {content.boxTitle}
           </p>
           <p className="font-body font-light text-sm text-[#A3A3A3] mb-8">
             {content.boxSubtitle}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {content.planButtons.map((p) => (
               <a
                 key={p.label}
