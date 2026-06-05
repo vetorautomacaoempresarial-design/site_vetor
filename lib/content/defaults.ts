@@ -203,14 +203,14 @@ export const DEFAULT_CONTENT: SiteContent = {
         "Mais do que atender, o agente organiza a porta de entrada do seu comercial e entrega clientes prontos para a equipe avançar.",
       items: [
         {
-          title: "Resposta imediata, a qualquer hora",
+          title: "Potencialize suas conversões",
           description:
-            "Nenhum cliente espera. O agente atende no instante do primeiro contato, a qualquer hora do dia, e nenhuma oportunidade esfria por falta de resposta.",
+            "Com atendimento imediato e organização comercial, alcance o potencial máximo de vendas do seu negócio. Transforme leads em clientes.",
         },
         {
           title: "Responda antes da concorrência",
           description:
-            "Seu lead recebe atenção imediata enquanto a concorrência ainda não respondeu.",
+            "A equipe recebe um resumo completo da demanda e dos dados do cliente, sem retrabalho, sem perguntar de novo o que o cliente já respondeu.",
         },
         {
           title: "Processo comercial organizado",
