@@ -213,9 +213,9 @@ export const DEFAULT_CONTENT: SiteContent = {
             "A equipe recebe um resumo completo da demanda e dos dados do cliente, sem retrabalho, sem perguntar de novo o que o cliente já respondeu.",
         },
         {
-          title: "Processo comercial organizado",
+          title: "Vendedores focados no fechamento",
           description:
-            "A qualificação vira uma etapa padronizada e previsível. Seu funil de vendas fica limpo e seus vendedores focam em quem está pronto para comprar.",
+            "Enquanto o assistente cuida do primeiro atendimento e entende a necessidade do lead, seus vendedores focam apenas em avançar a negociação e fechar.",
         },
         {
           title: "Ferramentas mais seguras do mercado",
