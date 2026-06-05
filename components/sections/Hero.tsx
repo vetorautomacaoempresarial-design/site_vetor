@@ -84,7 +84,7 @@ export default function Hero({ content }: { content: HomeHero }) {
             className="flex flex-wrap items-center gap-4"
           >
             <a
-              href="#contato"
+              href="#como-funciona"
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors group"
             >
               {content.ctaLabel}
