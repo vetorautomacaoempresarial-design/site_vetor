@@ -4,6 +4,15 @@
 import type { SiteContent } from "@/lib/content/types";
 
 export const DEFAULT_CONTENT: SiteContent = {
+  header: {
+    brand: "Vetor Automação",
+    navServicos: "O que entregamos",
+    navComoFunciona: "Como Funciona",
+    navProdutos: "Produtos",
+    navDuvidas: "Dúvidas",
+    areaCliente: "Área do cliente",
+    cta: "Fale Conosco",
+  },
   home: {
     hero: {
       tag: "Inteligência Artificial · Automação de Processos",
@@ -304,6 +313,7 @@ export const DEFAULT_CONTENT: SiteContent = {
 
 /** Rótulos amigáveis das seções para o painel /admin. */
 export const SECTION_LABELS: Record<string, { group: string; label: string }> = {
+  header: { group: "Geral", label: "Cabeçalho (menu do topo)" },
   "home.hero": { group: "Home", label: "Topo (Hero)" },
   "home.servicos": { group: "Home", label: "Serviços" },
   "home.comoFunciona": { group: "Home", label: "Como funciona" },

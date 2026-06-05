@@ -54,7 +54,19 @@ export interface AssistenteHero {
   ctaSecondary: string;
 }
 
+/** Cabeçalho/menu do topo. Só TEXTO — os links (hrefs) ficam no código. */
+export interface HeaderContent {
+  brand: string;
+  navServicos: string;
+  navComoFunciona: string;
+  navProdutos: string;
+  navDuvidas: string;
+  areaCliente: string;
+  cta: string;
+}
+
 export interface SiteContent {
+  header: HeaderContent;
   home: {
     hero: HomeHero;
     servicos: { badge: string; title: string; intro: string; items: InfoCard[] };
@@ -103,6 +115,7 @@ export interface SiteContent {
 
 /** Chave de uma seção editável (ex.: "home.hero"). */
 export type SectionKey =
+  | "header"
   | "home.hero"
   | "home.servicos"
   | "home.comoFunciona"

@@ -8,6 +8,13 @@ type Json = string | number | boolean | null | Json[] | { [k: string]: Json };
 
 // Rótulos amigáveis para os campos conhecidos.
 const LABELS: Record<string, string> = {
+  brand: "Nome da marca (ao lado do logo)",
+  navServicos: "Menu · O que entregamos",
+  navComoFunciona: "Menu · Como Funciona",
+  navProdutos: "Menu · Produtos",
+  navDuvidas: "Menu · Dúvidas",
+  areaCliente: "Link · Área do cliente",
+  cta: "Botão · Fale Conosco",
   tag: "Etiqueta (texto pequeno acima do título)",
   badge: "Selo",
   title: "Título",
