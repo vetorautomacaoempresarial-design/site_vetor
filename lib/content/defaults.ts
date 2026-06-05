@@ -235,7 +235,6 @@ export const DEFAULT_CONTENT: SiteContent = {
             "de aumento na conversão ao responder o cliente no primeiro minuto.",
         },
       ],
-      statsNote: "Dados de estudos de mercado sobre tempo de resposta a clientes.",
     },
     processo: {
       badge: "Processo de compra",

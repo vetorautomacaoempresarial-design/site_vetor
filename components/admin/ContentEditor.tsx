@@ -31,7 +31,6 @@ const LABELS: Record<string, string> = {
   stats: "Estatísticas (números grandes)",
   value: "Número em destaque",
   caption: "Legenda",
-  statsNote: "Aviso/fonte abaixo das estatísticas",
   steps: "Etapas",
   planButtons: "Botões de plano",
   question: "Pergunta",

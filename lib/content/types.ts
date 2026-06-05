@@ -90,7 +90,6 @@ export interface SiteContent {
       intro: string;
       items: InfoCard[];
       stats: StatItem[];
-      statsNote: string;
     };
     processo: {
       badge: string;

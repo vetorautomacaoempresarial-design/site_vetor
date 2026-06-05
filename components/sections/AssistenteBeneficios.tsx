@@ -99,11 +99,6 @@ export default function AssistenteBeneficios({
                 );
               })}
             </StaggerChildren>
-            {content.statsNote && (
-              <p className="mt-5 text-center font-body text-xs text-[#525252]">
-                {content.statsNote}
-              </p>
-            )}
           </div>
         )}
       </div>
