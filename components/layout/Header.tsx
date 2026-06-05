@@ -4,26 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { Menu, X } from "lucide-react";
-import type { HeaderContent } from "@/lib/content/types";
 
-// Os hrefs (links funcionais) ficam no código; só os textos vêm do CMS.
-const NAV_HREFS = {
-  navServicos: "/#servicos",
-  navComoFunciona: "/#como-funciona",
-  navProdutos: "/assistente-de-vendas",
-  navDuvidas: "/#faq",
-} as const;
+const navLinks = [
+  { label: "O que entregamos", href: "/#servicos" },
+  { label: "Como Funciona", href: "/#como-funciona" },
+  { label: "Produtos", href: "/assistente-de-vendas" },
+  { label: "Dúvidas", href: "/#faq" },
+];
 
-export default function Header({ content }: { content: HeaderContent }) {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const navLinks = [
-    { label: content.navServicos, href: NAV_HREFS.navServicos },
-    { label: content.navComoFunciona, href: NAV_HREFS.navComoFunciona },
-    { label: content.navProdutos, href: NAV_HREFS.navProdutos },
-    { label: content.navDuvidas, href: NAV_HREFS.navDuvidas },
-  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,7 +41,7 @@ export default function Header({ content }: { content: HeaderContent }) {
             className="object-contain brightness-0 invert"
           />
           <span className="font-display font-700 text-[13px] tracking-widest uppercase text-[#F5F5F5] group-hover:text-white transition-colors">
-            {content.brand}
+            VETOR AUTOMAÇÃO
           </span>
         </Link>
 
@@ -71,13 +62,13 @@ export default function Header({ content }: { content: HeaderContent }) {
             href="/conta"
             className="font-display text-[14px] text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
           >
-            {content.areaCliente}
+            Área do cliente
           </Link>
           <a
             href="#contato"
             className="font-display text-[14px] font-semibold tracking-wide px-5 py-2 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
           >
-            {content.cta}
+            Fale Conosco
           </a>
         </div>
 
@@ -107,14 +98,14 @@ export default function Header({ content }: { content: HeaderContent }) {
             className="font-display text-base text-[#A3A3A3] hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            {content.areaCliente}
+            Área do cliente
           </Link>
           <a
             href="#contato"
             className="font-display text-[14px] font-semibold tracking-wide px-5 py-3 bg-[#2563EB] text-white text-center hover:bg-[#3B82F6] transition-colors mt-2"
             onClick={() => setMenuOpen(false)}
           >
-            {content.cta}
+            Fale Conosco
           </a>
         </div>
       )}
