@@ -21,8 +21,8 @@ export default async function AssistenteDeVendasPage() {
     <>
       <main>
         <AssistenteHero content={content.assistente.hero} />
-        <AssistenteComoFunciona content={content.assistente.comoFunciona} />
         <AssistenteBeneficios content={content.assistente.beneficios} />
+        <AssistenteComoFunciona content={content.assistente.comoFunciona} />
         <ProcessoDeCompra content={content.assistente.processo} />
         <Planos content={content.assistente.planos} />
         <AssistenteFaq content={content.assistente.faq} />
