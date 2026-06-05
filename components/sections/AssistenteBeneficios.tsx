@@ -1,11 +1,11 @@
 "use client";
-import { Clock, ClipboardList, TrendingUp, Shield } from "lucide-react";
+import { Clock, Sword, TrendingUp, Shield } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
 import type { SiteContent } from "@/lib/content/types";
 
 // Ícones fixos (não editáveis), na ordem dos cards.
-const icons = [Clock, ClipboardList, TrendingUp, Shield];
+const icons = [Clock, Sword, TrendingUp, Shield];
 
 export default function AssistenteBeneficios({
   content,
