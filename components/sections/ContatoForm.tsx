@@ -60,7 +60,7 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-4 bg-[#25D366] text-white font-display font-semibold text-sm tracking-wide hover:bg-[#22C35E] transition-colors"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={22} />
               {content.whatsappLabel}
             </a>
 
@@ -72,7 +72,7 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
           <FadeInUp delay={0.15}>
             {status === "success" ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-16 border border-[#2563EB]/30 bg-[#2563EB]/5">
-                <CheckCircle size={40} className="text-[#2563EB] mb-4" />
+                <CheckCircle size={44} className="text-[#2563EB] mb-4" />
                 <h3 className="font-display font-semibold text-xl text-white mb-2">Mensagem enviada!</h3>
                 <p className="font-body text-sm text-[#A3A3A3]">
                   Entraremos em contato em até 24h.
@@ -121,7 +121,7 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
 
                 {status === "error" && (
                   <div className="flex items-center gap-2 text-red-400 text-xs font-body">
-                    <AlertCircle size={14} />
+                    <AlertCircle size={18} />
                     Erro ao enviar. Tente pelo WhatsApp ou e-mail diretamente.
                   </div>
                 )}
@@ -136,7 +136,7 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
                   ) : (
                     <>
                       Enviar mensagem
-                      <Send size={14} />
+                      <Send size={17} />
                     </>
                   )}
                 </button>

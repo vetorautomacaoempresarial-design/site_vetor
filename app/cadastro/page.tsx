@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle } from "lucide-react";
 import AuthCard from "@/components/auth/AuthCard";
-import { Field, Input, SubmitButton, FormError } from "@/components/ui/Form";
+import { Field, Input, PasswordInput, SubmitButton, FormError } from "@/components/ui/Form";
 import { signupSchema, type SignupData } from "@/lib/validation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -85,7 +85,7 @@ export default function CadastroPage() {
           <Input {...register("email")} type="email" placeholder="seu@email.com" error={!!errors.email} autoComplete="email" />
         </Field>
         <Field label="Senha" error={errors.password?.message} hint="Mínimo de 8 caracteres.">
-          <Input {...register("password")} type="password" placeholder="••••••••" error={!!errors.password} autoComplete="new-password" />
+          <PasswordInput {...register("password")} placeholder="••••••••" error={!!errors.password} autoComplete="new-password" />
         </Field>
         <SubmitButton loading={isSubmitting}>Criar conta</SubmitButton>
       </form>

@@ -111,8 +111,8 @@ Na qualidade de controladora dos dados do Cliente, tratamos as seguintes categor
 
 ## 15\. CONTATO
 
-**15.1.** Dúvidas sobre esta Política ou sobre o tratamento de seus dados: VETOR AUTOMAÇÃO EMPRESARIAL LTDA — e-mail contato@vetorautomacao.io — telefone (54) 9674-2471.
+**15.1.** Dúvidas sobre esta Política ou sobre o tratamento de seus dados: VETOR AUTOMAÇÃO EMPRESARIAL LTDA. E-mail contato@vetorautomacao.io, telefone (54) 9674-2471.
 
-_Última atualização: Junho/2026 — Versão 1.0_
+_Última atualização: Junho/2026 · Versão 1.0_
 
 _Nota: este documento está finalizado e pronto para publicação. Recomenda-se revisão periódica por advogado(a) para manter a conformidade com eventuais atualizações legislativas e regulatórias._

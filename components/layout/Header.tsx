@@ -6,10 +6,10 @@ import { cn } from "@/lib/cn";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Serviços", href: "/#servicos" },
+  { label: "O que entregamos", href: "/#servicos" },
   { label: "Como Funciona", href: "/#como-funciona" },
   { label: "Produtos", href: "/assistente-de-vendas" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Dúvidas", href: "/#faq" },
 ];
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
             height={32}
             className="object-contain brightness-0 invert"
           />
-          <span className="font-display font-700 text-sm tracking-widest uppercase text-[#F5F5F5] group-hover:text-white transition-colors">
+          <span className="font-display font-700 text-[13px] tracking-widest uppercase text-[#F5F5F5] group-hover:text-white transition-colors">
             VETOR AUTOMAÇÃO
           </span>
         </Link>
@@ -50,7 +50,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
+              className="font-display text-[14px] text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
             >
               {link.label}
             </Link>
@@ -60,15 +60,15 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-5">
           <Link
             href="/conta"
-            className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
+            className="font-display text-[14px] text-[#A3A3A3] hover:text-white transition-colors tracking-wide"
           >
             Área do cliente
           </Link>
           <a
             href="#contato"
-            className="font-display text-sm font-semibold tracking-wide px-5 py-2 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
+            className="font-display text-[14px] font-semibold tracking-wide px-5 py-2 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
           >
-            Agendar Demo
+            Fale Conosco
           </a>
         </div>
 
@@ -77,7 +77,7 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
@@ -87,7 +87,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-display text-base text-[#A3A3A3] hover:text-white transition-colors"
+              className="font-display text-[15px] text-[#A3A3A3] hover:text-white transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -102,10 +102,10 @@ export default function Header() {
           </Link>
           <a
             href="#contato"
-            className="font-display text-sm font-semibold tracking-wide px-5 py-3 bg-[#2563EB] text-white text-center hover:bg-[#3B82F6] transition-colors mt-2"
+            className="font-display text-[14px] font-semibold tracking-wide px-5 py-3 bg-[#2563EB] text-white text-center hover:bg-[#3B82F6] transition-colors mt-2"
             onClick={() => setMenuOpen(false)}
           >
-            Agendar Demo
+            Fale Conosco
           </a>
         </div>
       )}

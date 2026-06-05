@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle } from "lucide-react";
-import { Field, Input, FormError } from "@/components/ui/Form";
+import { Field, Input, PasswordInput, FormError } from "@/components/ui/Form";
 import { updateEmailSchema, resetPasswordSchema } from "@/lib/validation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -126,10 +126,10 @@ function PasswordForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-md">
         <FormError message={error} />
         <Field label="Nova senha" error={errors.password?.message} hint="Mínimo de 8 caracteres.">
-          <Input {...register("password")} type="password" error={!!errors.password} autoComplete="new-password" />
+          <PasswordInput {...register("password")} error={!!errors.password} autoComplete="new-password" />
         </Field>
         <Field label="Confirmar nova senha" error={errors.confirm?.message}>
-          <Input {...register("confirm")} type="password" error={!!errors.confirm} autoComplete="new-password" />
+          <PasswordInput {...register("confirm")} error={!!errors.confirm} autoComplete="new-password" />
         </Field>
         <button
           type="submit"

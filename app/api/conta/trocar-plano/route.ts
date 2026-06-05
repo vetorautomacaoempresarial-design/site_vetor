@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     await updateSubscription(sub.asaas_subscription_id, {
       valueCents: planConfig.priceCentsPerCycle,
       cycle: planConfig.cycle,
-      description: `Assistente de Vendas — plano ${planConfig.name}`,
+      description: `Assistente de Vendas, plano ${planConfig.name}`,
     });
 
     const service = createServiceClient();

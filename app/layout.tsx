@@ -20,7 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vetorautomacao.io";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vetor Automação — AI · Process Automation",
+    default: "Vetor Automação · Automação de Processos com IA",
     template: "%s | Vetor Automação",
   },
   description:
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Vetor Automação",
-    title: "Vetor Automação — AI · Process Automation",
+    title: "Vetor Automação · Automação de Processos com IA",
     description: "Automatizamos processos complexos com agentes de IA. Do diagnóstico à operação.",
     images: [{ url: "/og/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vetor Automação — AI · Process Automation",
+    title: "Vetor Automação · Automação de Processos com IA",
     description: "Automatizamos processos complexos com agentes de IA.",
   },
   robots: { index: true, follow: true },

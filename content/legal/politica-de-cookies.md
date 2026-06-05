@@ -1,6 +1,6 @@
 **POLÍTICA DE COOKIES**
 
-_Uso de cookies e tecnologias similares — em conformidade com a LGPD_
+_Uso de cookies e tecnologias similares, em conformidade com a LGPD_
 
 ## 1\. O QUE SÃO COOKIES
 
@@ -45,4 +45,4 @@ _A lista detalhada de cookies específicos utilizados (nome, provedor e prazo de
 
 **8.1.** Esta Política poderá ser atualizada periodicamente; a versão vigente, com a data de atualização, estará sempre disponível no site. Dúvidas: contato@vetorautomacao.io.
 
-_Última atualização: Junho/2026 — Versão 1.0_
+_Última atualização: Junho/2026 · Versão 1.0_

@@ -6,7 +6,7 @@ import Badge from "@/components/ui/Badge";
 import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Cases de Sucesso",
+  title: "Casos de Sucesso",
   description: "Resultados reais de automação com agentes de IA. Veja como a Vetor Automação transformou processos em diferentes setores.",
 };
 
@@ -25,7 +25,7 @@ export default function CasesPage() {
             </Link>
           </div>
 
-          <Badge className="mb-6">Cases</Badge>
+          <Badge className="mb-6">Casos de sucesso</Badge>
           <h1 className="font-display font-bold text-5xl lg:text-6xl text-[#F5F5F5] leading-tight tracking-tight mb-4">
             Resultados reais
           </h1>
@@ -68,7 +68,7 @@ export default function CasesPage() {
                 </div>
 
                 <div className="flex items-center gap-2 text-[#2563EB] font-display text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                  Ver case completo
+                  Ver caso completo
                   <ArrowRight size={12} />
                 </div>
               </Link>

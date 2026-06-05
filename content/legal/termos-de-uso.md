@@ -82,8 +82,8 @@ _Plataforma de Automação por IA para Qualificação de Leads via WhatsApp_
 
 ## 14\. CONTATO
 
-**14.1.** Dúvidas sobre estes Termos ou suporte técnico: e-mail administrativo@vetorautomacao.io (suporte) ou contato@vetorautomacao.io (comercial/geral) — telefone/WhatsApp (54) 9674-2471.
+**14.1.** Dúvidas sobre estes Termos ou suporte técnico: e-mail administrativo@vetorautomacao.io (suporte) ou contato@vetorautomacao.io (comercial/geral). Telefone/WhatsApp (54) 9674-2471.
 
-_Última atualização: Junho/2026 — Versão 1.0_
+_Última atualização: Junho/2026 · Versão 1.0_
 
 _Nota: este documento está finalizado e pronto para publicação e uso. Recomenda-se revisão periódica por advogado(a) para manter a conformidade com eventuais atualizações legislativas e regulatórias._

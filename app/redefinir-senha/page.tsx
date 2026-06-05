@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthCard from "@/components/auth/AuthCard";
-import { Field, Input, SubmitButton, FormError } from "@/components/ui/Form";
+import { Field, PasswordInput, SubmitButton, FormError } from "@/components/ui/Form";
 import { resetPasswordSchema } from "@/lib/validation";
 import { createClient } from "@/lib/supabase/client";
 import { z } from "zod";
@@ -27,7 +27,7 @@ export default function RedefinirSenhaPage() {
     const { error } = await supabase.auth.updateUser({ password: data.password });
     if (error) {
       setError(
-        "Não foi possível redefinir a senha. O link pode ter expirado — solicite um novo."
+        "Não foi possível redefinir a senha. O link pode ter expirado, solicite um novo."
       );
       return;
     }
@@ -43,10 +43,10 @@ export default function RedefinirSenhaPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <FormError message={error} />
         <Field label="Nova senha" error={errors.password?.message} hint="Mínimo de 8 caracteres.">
-          <Input {...register("password")} type="password" placeholder="••••••••" error={!!errors.password} autoComplete="new-password" />
+          <PasswordInput {...register("password")} placeholder="••••••••" error={!!errors.password} autoComplete="new-password" />
         </Field>
         <Field label="Confirmar senha" error={errors.confirm?.message}>
-          <Input {...register("confirm")} type="password" placeholder="••••••••" error={!!errors.confirm} autoComplete="new-password" />
+          <PasswordInput {...register("confirm")} placeholder="••••••••" error={!!errors.confirm} autoComplete="new-password" />
         </Field>
         <SubmitButton loading={isSubmitting}>Salvar nova senha</SubmitButton>
       </form>

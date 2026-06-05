@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
       customer: customer.id,
       valueCents: planConfig.priceCentsPerCycle,
       cycle: planConfig.cycle,
-      description: `Assistente de Vendas — plano ${planConfig.name}`,
+      description: `Assistente de Vendas, plano ${planConfig.name}`,
       externalReference: user.id,
     });
 

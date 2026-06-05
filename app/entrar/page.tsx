@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthCard from "@/components/auth/AuthCard";
-import { Field, Input, SubmitButton, FormError } from "@/components/ui/Form";
+import { Field, Input, PasswordInput, SubmitButton, FormError } from "@/components/ui/Form";
 import { loginSchema, type LoginData } from "@/lib/validation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -55,7 +55,7 @@ function LoginForm() {
           <Input {...register("email")} type="email" placeholder="seu@email.com" error={!!errors.email} autoComplete="email" />
         </Field>
         <Field label="Senha" error={errors.password?.message}>
-          <Input {...register("password")} type="password" placeholder="••••••••" error={!!errors.password} autoComplete="current-password" />
+          <PasswordInput {...register("password")} placeholder="••••••••" error={!!errors.password} autoComplete="current-password" />
         </Field>
         <div className="flex justify-end -mt-1">
           <Link href="/recuperar-senha" className="font-body text-xs text-[#A3A3A3] hover:text-white transition-colors">

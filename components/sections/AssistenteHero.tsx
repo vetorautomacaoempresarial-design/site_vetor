@@ -74,7 +74,7 @@ export default function AssistenteHero({ content }: { content: AssistenteHeroCon
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors group"
             >
               {content.ctaPrimary}
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href={whatsappHref}
@@ -82,7 +82,7 @@ export default function AssistenteHero({ content }: { content: AssistenteHeroCon
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 border border-[#2A2A2A] text-[#A3A3A3] hover:text-white hover:border-[#525252] transition-colors"
             >
-              <MessageCircle size={16} />
+              <MessageCircle size={18} />
               {content.ctaSecondary}
             </a>
           </motion.div>

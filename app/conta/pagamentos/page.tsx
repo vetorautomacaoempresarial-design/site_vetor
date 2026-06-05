@@ -60,7 +60,7 @@ export default async function PagamentosPage() {
             <div key={p.id} className="flex items-center justify-between gap-4 px-8 py-5">
               <div>
                 <p className="font-body text-sm text-[#F5F5F5]">
-                  {p.description ?? "Assinatura — Assistente de Vendas"}
+                  {p.description ?? "Assinatura do Assistente de Vendas"}
                 </p>
                 <p className="font-body text-xs text-[#737373] mt-0.5">
                   {formatDate(p.paid_at ?? p.due_date)}

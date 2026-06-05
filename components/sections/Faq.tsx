@@ -32,14 +32,14 @@ export default function Faq({ content }: { content: SiteContent["home"]["faq"] }
                 >
                   <span
                     className={cn(
-                      "font-display font-medium text-sm leading-snug tracking-tight transition-colors",
+                      "font-display font-medium text-base leading-snug tracking-tight transition-colors",
                       open === i ? "text-white" : "text-[#A3A3A3] group-hover:text-[#F5F5F5]"
                     )}
                   >
                     {faq.question}
                   </span>
                   <span className="shrink-0 mt-0.5 text-[#737373] group-hover:text-[#A3A3A3] transition-colors">
-                    {open === i ? <Minus size={16} /> : <Plus size={16} />}
+                    {open === i ? <Minus size={20} /> : <Plus size={20} />}
                   </span>
                 </button>
                 {open === i && (

@@ -1,4 +1,6 @@
 "use client";
+import { forwardRef, useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 export function Field({
@@ -38,6 +40,36 @@ export function Input({
     />
   );
 }
+
+export const PasswordInput = forwardRef<
+  HTMLInputElement,
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> & { error?: boolean }
+>(function PasswordInput({ error, className, ...props }, ref) {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div className="relative">
+      <input
+        ref={ref}
+        type={visible ? "text" : "password"}
+        className={cn(
+          "w-full bg-[#0A0A0A] border pl-4 pr-12 py-3 font-body text-sm text-[#F5F5F5] placeholder:text-[#6B7280] focus:outline-none focus:border-[#2563EB] transition-colors",
+          error ? "border-red-500" : "border-[#2A2A2A]",
+          className
+        )}
+        {...props}
+      />
+      <button
+        type="button"
+        onClick={() => setVisible((v) => !v)}
+        tabIndex={-1}
+        aria-label={visible ? "Ocultar senha" : "Mostrar senha"}
+        className="absolute right-0 top-0 h-full px-3 flex items-center text-[#737373] hover:text-[#F5F5F5] transition-colors"
+      >
+        {visible ? <EyeOff size={18} /> : <Eye size={18} />}
+      </button>
+    </div>
+  );
+});
 
 export function SubmitButton({
   loading,

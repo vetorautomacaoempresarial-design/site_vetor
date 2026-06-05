@@ -36,11 +36,11 @@ export default function Diferenciais({
                   className="bg-[#141414] p-6 hover:bg-[#1C1C1C] transition-colors group"
                 >
                   <Icon
-                    size={18}
+                    size={22}
                     strokeWidth={1.5}
                     className="text-[#737373] group-hover:text-[#2563EB] transition-colors mb-4"
                   />
-                  <h3 className="font-display font-semibold text-sm text-[#F5F5F5] mb-2 tracking-tight">
+                  <h3 className="font-display font-semibold text-xl text-[#F5F5F5] mb-2 tracking-tight">
                     {d.title}
                   </h3>
                   <p className="font-body text-xs text-[#A3A3A3] leading-relaxed">{d.description}</p>

@@ -1,24 +1,28 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { AlertCircle, CheckCircle, X } from "lucide-react";
 import { PLAN_LIST, PLANS, formatBRL, savingsPercent, type PlanId } from "@/lib/plans";
-import { LEGAL_DOCS } from "@/lib/legal";
 import { Field, Input, FormError } from "@/components/ui/Form";
 import { cn } from "@/lib/cn";
 
 type Mode = "idle" | "subscribe" | "change" | "cancel";
+
+type LegalDocContent = { slug: string; title: string; summary: string; markdown: string };
 
 export default function ContaActions({
   hasActive,
   currentPlan,
   initialPlan,
   defaultName,
+  legalDocs,
 }: {
   hasActive: boolean;
   currentPlan: PlanId | null;
   initialPlan?: PlanId | null;
   defaultName: string;
+  legalDocs: LegalDocContent[];
 }) {
   const [mode, setMode] = useState<Mode>("idle");
   const [selectedPlan, setSelectedPlan] = useState<PlanId>(
@@ -32,6 +36,7 @@ export default function ContaActions({
   const [success, setSuccess] = useState<string | null>(null);
   const [showTerms, setShowTerms] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [openDoc, setOpenDoc] = useState<LegalDocContent | null>(null);
 
   async function post(url: string, body: unknown) {
     setLoading(true);
@@ -311,17 +316,16 @@ export default function ContaActions({
           </p>
 
           <ul className="flex flex-col gap-2 mb-6 border border-[#2A2A2A] divide-y divide-[#2A2A2A]">
-            {LEGAL_DOCS.map((d) => (
+            {legalDocs.map((d) => (
               <li key={d.slug}>
-                <Link
-                  href={d.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between px-4 py-3 font-body text-sm text-[#D4D4D4] hover:bg-[#141414] hover:text-white transition-colors"
+                <button
+                  type="button"
+                  onClick={() => setOpenDoc(d)}
+                  className="w-full text-left flex items-center justify-between px-4 py-3 font-body text-sm text-[#D4D4D4] hover:bg-[#141414] hover:text-white transition-colors"
                 >
                   {d.title}
                   <span className="text-xs text-[#2563EB]">Ler →</span>
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
@@ -354,6 +358,63 @@ export default function ContaActions({
               className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors px-4"
             >
               Voltar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* Pop-up do documento legal — sobre o modal de termos, sem sair da página */}
+    {openDoc && (
+      <div
+        className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        role="dialog"
+        aria-modal="true"
+        aria-label={openDoc.title}
+        onClick={() => setOpenDoc(null)}
+      >
+        <div
+          className="relative w-full max-w-2xl bg-[#0A0A0A] border border-[#2A2A2A] max-h-[88vh] flex flex-col"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-[#2A2A2A] shrink-0">
+            <h3 className="font-display font-semibold text-base text-[#F5F5F5] tracking-tight">
+              {openDoc.title}
+            </h3>
+            <button
+              onClick={() => setOpenDoc(null)}
+              aria-label="Fechar"
+              className="text-[#737373] hover:text-white transition-colors shrink-0"
+            >
+              <X size={20} />
+            </button>
+          </div>
+
+          <div
+            className="overflow-y-auto px-6 py-6 font-body font-light text-[#D4D4D4] text-sm leading-relaxed
+              [&_p]:mb-4
+              [&_h1]:font-display [&_h1]:font-bold [&_h1]:text-xl [&_h1]:text-[#F5F5F5] [&_h1]:tracking-tight [&_h1]:mb-4
+              [&_h2]:font-display [&_h2]:font-semibold [&_h2]:text-lg [&_h2]:text-[#F5F5F5] [&_h2]:tracking-tight [&_h2]:mt-8 [&_h2]:mb-3
+              [&_h3]:font-display [&_h3]:font-semibold [&_h3]:text-base [&_h3]:text-[#F5F5F5] [&_h3]:mt-6 [&_h3]:mb-2
+              [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul]:space-y-1.5
+              [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_ol]:space-y-1.5
+              [&_strong]:text-[#F5F5F5] [&_strong]:font-semibold
+              [&_a]:text-[#2563EB] [&_a]:underline hover:[&_a]:text-[#3B82F6]
+              [&_hr]:border-[#2A2A2A] [&_hr]:my-8
+              [&_table]:w-full [&_table]:my-6 [&_table]:border [&_table]:border-[#2A2A2A] [&_table]:text-left
+              [&_th]:border [&_th]:border-[#2A2A2A] [&_th]:bg-[#141414] [&_th]:px-3 [&_th]:py-2 [&_th]:font-display [&_th]:font-semibold [&_th]:text-[#F5F5F5] [&_th]:text-xs
+              [&_td]:border [&_td]:border-[#2A2A2A] [&_td]:px-3 [&_td]:py-2 [&_td]:align-top
+              [&_em]:text-[#A3A3A3]"
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{openDoc.markdown}</ReactMarkdown>
+          </div>
+
+          <div className="border-t border-[#2A2A2A] px-6 py-3 shrink-0">
+            <button
+              onClick={() => setOpenDoc(null)}
+              className="font-display text-sm font-semibold text-[#2563EB] hover:text-[#3B82F6] transition-colors"
+            >
+              Fechar e voltar
             </button>
           </div>
         </div>

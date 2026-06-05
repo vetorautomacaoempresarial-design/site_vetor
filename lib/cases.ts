@@ -23,7 +23,7 @@ export const cases: Case[] = [
     summary:
       "Implementamos agentes de IA conversacional que automatizaram 87% das interações de atendimento, reduzindo custos e aumentando a satisfação de clientes.",
     challenge:
-      "A empresa processava mais de 15.000 chamados por mês com 40 atendentes. Os tempos de espera chegavam a 48 horas, causando insatisfação e churn.",
+      "A empresa processava mais de 15.000 chamados por mês com 40 atendentes. Os tempos de espera chegavam a 48 horas, causando insatisfação e cancelamentos.",
     solution:
       "Desenvolvemos uma camada de agentes de IA integrada ao CRM existente, capaz de resolver autonomamente consultas de saldo, extratos, renegociação e cadastro. Casos complexos são escalados para humanos com contexto completo.",
     results: [
@@ -36,22 +36,22 @@ export const cases: Case[] = [
   },
   {
     slug: "pipeline-vendas-automatizado",
-    title: "Pipeline de Vendas com Agentes Autônomos",
+    title: "Funil de Vendas com Agentes Autônomos",
     client: "SaaS Scale",
     industry: "Tecnologia B2B",
     metric: "3.2×",
     metricLabel: "aumento na taxa de conversão",
     summary:
-      "Agentes autônomos que qualificam leads, personalizam propostas e fazem follow-up inteligente — triplicando a conversão do pipeline comercial.",
+      "Agentes autônomos que qualificam contatos, personalizam propostas e fazem acompanhamento inteligente, triplicando a conversão do funil comercial.",
     challenge:
-      "O time comercial perdia 60% do tempo em tarefas repetitivas: qualificação de leads frios, envio de materiais genéricos e follow-ups manuais.",
+      "O time comercial perdia 60% do tempo em tarefas repetitivas: qualificação de contatos frios, envio de materiais genéricos e acompanhamentos manuais.",
     solution:
-      "Implantamos agentes que analisam o perfil de cada lead, personalizam a comunicação por segmento e comportamento, executam follow-ups no timing ideal e atualizam o CRM automaticamente.",
+      "Implantamos agentes que analisam o perfil de cada contato, personalizam a comunicação por segmento e comportamento, executam acompanhamentos no momento ideal e atualizam o CRM automaticamente.",
     results: [
       { label: "Aumento na taxa de conversão", value: "3.2×" },
       { label: "Tempo economizado por vendedor/mês", value: "62h" },
-      { label: "Leads qualificados automaticamente", value: "94%" },
-      { label: "ROI em 6 meses", value: "780%" },
+      { label: "Contatos qualificados automaticamente", value: "94%" },
+      { label: "Retorno em 6 meses", value: "780%" },
     ],
     technologies: ["Multi-Agent System", "LangChain", "CRM API", "Email Automation", "Analytics"],
   },
@@ -65,7 +65,7 @@ export const cases: Case[] = [
     summary:
       "Sistema de extração e validação de dados de documentos logísticos (NF-e, CTe, manifestos) com 99.4% de precisão, eliminando digitação manual.",
     challenge:
-      "A operação processava 8.000 documentos por dia manualmente. Erros causavam atrasos, multas fiscais e retrabalho — com 12 pessoas dedicadas exclusivamente a isso.",
+      "A operação processava 8.000 documentos por dia manualmente. Erros causavam atrasos, multas fiscais e retrabalho, com 12 pessoas dedicadas exclusivamente a isso.",
     solution:
       "Pipeline de IDP (Intelligent Document Processing) com modelos de visão computacional e LLMs especializados para extração, validação e integração automática com o ERP.",
     results: [

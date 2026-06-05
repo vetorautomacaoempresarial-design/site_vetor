@@ -49,7 +49,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
   },
   {
     slug: "dpa",
-    title: "DPA — Acordo de Tratamento de Dados",
+    title: "DPA: Acordo de Tratamento de Dados",
     href: "/dpa",
     summary:
       "Termos de tratamento de dados pessoais entre a Vetor (operadora) e o cliente (controlador), conforme a LGPD.",

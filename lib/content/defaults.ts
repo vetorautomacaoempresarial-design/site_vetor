@@ -6,7 +6,7 @@ import type { SiteContent } from "@/lib/content/types";
 export const DEFAULT_CONTENT: SiteContent = {
   home: {
     hero: {
-      tag: "AI · Process Automation",
+      tag: "Inteligência Artificial · Automação de Processos",
       headline: [
         { text: "Seu processo", accent: false },
         { text: "tem magnitude.", accent: false },
@@ -14,29 +14,29 @@ export const DEFAULT_CONTENT: SiteContent = {
         { text: "direção.", accent: false },
       ],
       subtitle:
-        "Automatizamos processos com agentes de IA — do diagnóstico à operação contínua. Mais velocidade, menos erro, escala real.",
-      ctaLabel: "Agendar Demo",
+        "Automatizamos processos com agentes de inteligência artificial, do diagnóstico à operação contínua. Mais velocidade, menos erro, escala real.",
+      ctaLabel: "Fale Conosco",
     },
     servicos: {
       badge: "Serviços",
       title: "O que entregamos",
       intro:
-        "Soluções end-to-end, da estratégia à operação. Cada projeto é construído com tecnologia de ponta e responsabilidade de negócio.",
+        "Soluções completas, da estratégia à operação. Cada projeto é construído com tecnologia de ponta e responsabilidade de negócio.",
       items: [
         {
           title: "Agentes de IA Conversacional",
           description:
-            "Agentes autônomos que entendem contexto, executam tarefas e se integram ao seu fluxo de trabalho — atendimento, vendas, suporte interno e muito mais.",
+            "Agentes autônomos que entendem o contexto, executam tarefas e se integram ao seu fluxo de trabalho: atendimento, vendas, suporte interno e muito mais.",
         },
         {
-          title: "Integrações & Orquestração",
+          title: "Integrações e Orquestração",
           description:
-            "Conectamos suas ferramentas, APIs e bancos de dados em pipelines inteligentes que movem dados e disparam ações automaticamente entre sistemas.",
+            "Conectamos suas ferramentas, sistemas e bancos de dados em fluxos inteligentes que movem dados e disparam ações automaticamente entre os sistemas.",
         },
         {
-          title: "Diagnóstico & Consultoria",
+          title: "Diagnóstico e Consultoria",
           description:
-            "Mapeamos seus processos, identificamos os maiores gargalos e entregamos um roadmap de automação com ROI estimado antes de qualquer implementação.",
+            "Mapeamos seus processos, identificamos os maiores gargalos e entregamos um plano de automação com retorno estimado antes de qualquer implementação.",
         },
       ],
     },
@@ -48,25 +48,25 @@ export const DEFAULT_CONTENT: SiteContent = {
           number: "01",
           title: "Diagnóstico",
           description:
-            "Mapeamos seus processos atuais, identificamos gargalos, estimamos ROI e definimos o escopo ideal de automação.",
+            "Mapeamos seus processos atuais, identificamos gargalos, estimamos o retorno e definimos o escopo ideal de automação.",
         },
         {
           number: "02",
           title: "Projeto",
           description:
-            "Arquitetamos a solução, escolhemos as tecnologias certas e desenvolvemos em sprints com validação contínua.",
+            "Arquitetamos a solução, escolhemos as tecnologias certas e desenvolvemos em etapas com validação contínua.",
         },
         {
           number: "03",
           title: "Implementação",
           description:
-            "Deploy controlado, testes em produção, treinamento da equipe e monitoramento intensivo na primeira fase operacional.",
+            "Implantação controlada, testes em produção, treinamento da equipe e monitoramento intensivo na primeira fase de operação.",
         },
         {
           number: "04",
           title: "Operação",
           description:
-            "Monitoramento contínuo, ajustes finos, relatórios de desempenho e evoluções incrementais conforme o negócio cresce.",
+            "Monitoramento contínuo, ajustes finos, relatórios de desempenho e evoluções graduais conforme o negócio cresce.",
         },
       ],
     },
@@ -77,16 +77,16 @@ export const DEFAULT_CONTENT: SiteContent = {
         "Não vendemos promessa de IA. Entregamos automação que funciona em produção, com monitoramento e responsabilidade pelo resultado.",
       items: [
         {
-          title: "LLMs de última geração",
+          title: "Modelos de IA de última geração",
           description: "Acesso aos modelos mais avançados do mercado.",
         },
         {
-          title: "Segurança enterprise",
+          title: "Segurança de nível corporativo",
           description:
-            "Dados processados em infraestrutura segura, conformidade com LGPD e auditoria completa de todas as operações.",
+            "Dados processados em infraestrutura segura, conformidade com a LGPD e auditoria completa de todas as operações.",
         },
         {
-          title: "Conformidade LGPD",
+          title: "Conformidade com a LGPD",
           description: "Nossa preocupação com a segurança dos seus dados é genuína.",
         },
         {
@@ -97,7 +97,7 @@ export const DEFAULT_CONTENT: SiteContent = {
       ],
     },
     faq: {
-      badge: "FAQ",
+      badge: "Dúvidas",
       title: "Perguntas\nfrequentes",
       intro:
         "Não encontrou sua resposta? Fale diretamente com a gente pelo formulário abaixo ou pelo WhatsApp.",
@@ -105,22 +105,32 @@ export const DEFAULT_CONTENT: SiteContent = {
         {
           question: "Quanto tempo leva para ter uma automação em produção?",
           answer:
-            "Depende da complexidade. Para automações simples (atendimento, triagem), de 2 a 5 semanas. Para pipelines mais complexos com múltiplas integrações, de 8 a 12 semanas. Nossa metodologia garante que você veja valor antes da entrega final.",
+            "Depende da complexidade. Para automações simples (atendimento, triagem), de 2 a 5 semanas. Para fluxos mais complexos, com muitas integrações, de 8 a 12 semanas. Nossa metodologia garante que você veja valor antes da entrega final.",
         },
         {
           question: "Quanto custa um projeto de automação com IA?",
           answer:
-            "Cada projeto é precificado individualmente após o diagnóstico. Temos a responsabilidade de não entregar nada aquém do que o seu processo exige, mas com consciência com relação ao seu orçamento.",
+            "Cada projeto é precificado individualmente após o diagnóstico. Temos a responsabilidade de não entregar nada aquém do que o seu processo exige, mas com consciência em relação ao seu orçamento.",
         },
         {
           question: "Preciso trocar meus sistemas atuais para automatizar?",
           answer:
-            "Temos soluções também para projetos que exigem integrações com plataformas que não possuem API pública.",
+            "Temos soluções também para projetos que exigem integrações com plataformas que não oferecem conexão automática com outros sistemas.",
         },
         {
           question: "O que acontece se a automação falhar ou tomar uma decisão errada?",
           answer:
-            "Todas as automações possuem sistemas de fallback, alertas e, quando necessário, revisão humana. Monitoramos proativamente e de forma integral para garantir o sucesso da operação.",
+            "Todas as automações possuem sistemas de contingência, alertas e, quando necessário, revisão humana. Monitoramos de forma proativa e integral para garantir o sucesso da operação.",
+        },
+        {
+          question: "Preciso de uma equipe especializada para usar as automações?",
+          answer:
+            "Definitivamente não. Nossas automações são muito simples de serem utilizadas, e nossa equipe cuida da parte operacional. Você apenas nos fornece as informações necessárias.",
+        },
+        {
+          question: "Preciso trocar o número de WhatsApp para utilizar automações?",
+          answer:
+            "Não! Com um chip novo em mãos, garantimos a qualidade do processo utilizando a API oficial da Meta. Dessa forma, você fica livre de preocupações relacionadas a banimentos.",
         },
       ],
     },
@@ -128,7 +138,7 @@ export const DEFAULT_CONTENT: SiteContent = {
       badge: "Contato",
       title: "Vamos conversar\nsobre o seu processo?",
       intro:
-        "Conte o que você precisa automatizar. Respondemos em até 24h com uma proposta de diagnóstico inicial — sem compromisso.",
+        "Conte o que você precisa automatizar. Respondemos em até 24h com uma proposta de diagnóstico inicial, sem compromisso.",
       whatsappLabel: "Falar pelo WhatsApp",
       whatsappNote: "Ou preencha o formulário ao lado e entraremos em contato.",
     },
@@ -137,43 +147,43 @@ export const DEFAULT_CONTENT: SiteContent = {
     hero: {
       tag: "Produto · Assistente de Vendas",
       headline: [
-        { text: "Todo lead", accent: false },
+        { text: "Todo contato", accent: false },
         { text: "qualificado.", accent: false },
         { text: "Todo vendedor", accent: true },
         { text: "no contexto.", accent: false },
       ],
       subtitle:
-        "O Assistente de Vendas faz o primeiro contato com cada lead, entende a fundo a demanda e entrega um resumo completo para o seu time — com dados de contato e a necessidade real do cliente. Seu processo comercial, organizado de ponta a ponta.",
+        "O Assistente de Vendas faz o primeiro contato com cada cliente, entende a fundo a demanda e entrega um resumo completo para a sua equipe, com os dados de contato e a necessidade real do cliente. Seu processo comercial organizado de ponta a ponta.",
       ctaPrimary: "Ver planos",
       ctaSecondary: "Falar no WhatsApp",
     },
     comoFunciona: {
       badge: "Como funciona",
-      title: 'Do primeiro "olá" ao lead pronto para fechar',
+      title: 'Do primeiro "olá" ao cliente pronto para fechar',
       steps: [
         {
           number: "01",
           title: "Primeiro contato",
           description:
-            "O lead chega e é recebido imediatamente pelo agente — disponível 24/7, sem espera e sem depender da agenda do time de vendas.",
+            "O cliente chega e é recebido imediatamente pelo agente, disponível a qualquer hora, sem espera e sem depender da agenda do time de vendas.",
         },
         {
           number: "02",
           title: "Entende a demanda",
           description:
-            "Em uma conversa natural, o agente faz as perguntas certas, compreende a real necessidade do lead e coleta os dados de contato.",
+            "Em uma conversa natural, o agente faz as perguntas certas, compreende a real necessidade do cliente e coleta os dados de contato.",
         },
         {
           number: "03",
           title: "Gera o resumo",
           description:
-            "Tudo é consolidado em um resumo estruturado: quem é o lead, como falar com ele e exatamente o que ele precisa.",
+            "Tudo é consolidado em um resumo organizado: quem é o cliente, como falar com ele e exatamente o que ele precisa.",
         },
         {
           number: "04",
           title: "Repassa ao vendedor",
           description:
-            "O vendedor recebe o lead já qualificado e contextualizado — pronto para focar no que importa: fechar a venda.",
+            "O vendedor recebe o cliente já qualificado e com todo o contexto, pronto para focar no que importa: fechar a venda.",
         },
       ],
     },
@@ -181,22 +191,22 @@ export const DEFAULT_CONTENT: SiteContent = {
       badge: "Benefícios",
       title: "Por que adotar o Assistente",
       intro:
-        "Mais do que atender, o agente organiza a porta de entrada do seu comercial e entrega leads prontos para o time avançar.",
+        "Mais do que atender, o agente organiza a porta de entrada do seu comercial e entrega clientes prontos para a equipe avançar.",
       items: [
         {
-          title: "Resposta imediata, 24/7",
+          title: "Resposta imediata, a qualquer hora",
           description:
-            "Nenhum lead espera. O agente atende no instante do primeiro contato, a qualquer hora, e nenhuma oportunidade esfria por falta de resposta.",
+            "Nenhum cliente espera. O agente atende no instante do primeiro contato, a qualquer hora do dia, e nenhuma oportunidade esfria por falta de resposta.",
         },
         {
           title: "Vendedor sempre no contexto",
           description:
-            "O time recebe um resumo completo da demanda e dos dados do lead — sem retrabalho, sem perguntar de novo o que o cliente já respondeu.",
+            "A equipe recebe um resumo completo da demanda e dos dados do cliente, sem retrabalho, sem perguntar de novo o que o cliente já respondeu.",
         },
         {
           title: "Processo comercial organizado",
           description:
-            "A qualificação vira uma etapa padronizada e previsível. Seu funil fica limpo e seus vendedores focam em quem está pronto para comprar.",
+            "A qualificação vira uma etapa padronizada e previsível. Seu funil de vendas fica limpo e seus vendedores focam em quem está pronto para comprar.",
         },
       ],
       stats: [
@@ -208,10 +218,10 @@ export const DEFAULT_CONTENT: SiteContent = {
         {
           value: "391%",
           caption:
-            "de aumento na conversão ao responder o lead no primeiro minuto.",
+            "de aumento na conversão ao responder o cliente no primeiro minuto.",
         },
       ],
-      statsNote: "Dados de estudos de mercado sobre tempo de resposta a leads.",
+      statsNote: "Dados de estudos de mercado sobre tempo de resposta a clientes.",
     },
     processo: {
       badge: "Processo de compra",
@@ -233,7 +243,7 @@ export const DEFAULT_CONTENT: SiteContent = {
           number: "03",
           title: "Treinamos o agente para você",
           description:
-            "Coletamos as informações do seu negócio — produtos, serviços, tom de voz, diferenciais — e treinamos o agente de acordo com a realidade da sua empresa.",
+            "Coletamos as informações do seu negócio, como produtos, serviços, tom de voz e diferenciais, e treinamos o agente de acordo com a realidade da sua empresa.",
         },
       ],
       boxTitle: "Já adquiriu o seu plano?",
@@ -260,22 +270,22 @@ export const DEFAULT_CONTENT: SiteContent = {
         "Todos os planos incluem acesso completo ao Assistente de Vendas. A diferença está apenas no período de contratação.",
       noteStrong: "Configuração em até 3 dias úteis.",
       noteRest:
-        "Após a contratação, nossa equipe refina o assistente com os dados do seu negócio e conecta a API oficial do WhatsApp. Você acompanha o andamento pela sua conta.",
+        "Após a contratação, nossa equipe refina o assistente com os dados do seu negócio e conecta a conta oficial do WhatsApp. Você acompanha o andamento pela sua conta.",
       ctaQuestion: "Tem dúvidas antes de assinar?",
     },
     faq: {
-      badge: "FAQ",
+      badge: "Dúvidas",
       title: "Perguntas\nfrequentes",
       items: [
         {
-          question: "Como o Assistente recebe os leads?",
+          question: "Como o Assistente recebe os clientes?",
           answer:
-            "Por padrão, o Assistente recebe os leads pelo WhatsApp. Essa funcionalidade pode ser alterada caso o seu principal canal de atendimento seja outro.",
+            "Por padrão, o Assistente recebe os clientes pelo WhatsApp. Essa função pode ser alterada caso o seu principal canal de atendimento seja outro.",
         },
         {
-          question: "Como o resumo do lead chega para o vendedor?",
+          question: "Como o resumo do cliente chega para o vendedor?",
           answer:
-            "Diretamente no WhatsApp do vendedor. Ele recebe todos os dados necessários para entrar em contato com o lead, além da demanda completa dele.",
+            "Diretamente no WhatsApp do vendedor. Ele recebe todos os dados necessários para entrar em contato com o cliente, além da demanda completa dele.",
         },
         {
           question: "Posso trocar de plano depois?",
@@ -286,7 +296,7 @@ export const DEFAULT_CONTENT: SiteContent = {
   },
   footer: {
     description:
-      "Automação de processos com agentes de IA. Diagnóstico, projeto, implantação e operação.",
+      "Automação de processos com agentes de inteligência artificial. Diagnóstico, projeto, implantação e operação.",
     tagline: "Seu processo tem magnitude. Nós damos direção.",
     email: "contato@vetorautomacao.io",
   },
@@ -298,13 +308,13 @@ export const SECTION_LABELS: Record<string, { group: string; label: string }> = 
   "home.servicos": { group: "Home", label: "Serviços" },
   "home.comoFunciona": { group: "Home", label: "Como funciona" },
   "home.diferenciais": { group: "Home", label: "Diferenciais" },
-  "home.faq": { group: "Home", label: "FAQ" },
+  "home.faq": { group: "Home", label: "Dúvidas frequentes" },
   "home.contato": { group: "Home", label: "Contato" },
   "assistente.hero": { group: "Assistente de Vendas", label: "Topo (Hero)" },
   "assistente.comoFunciona": { group: "Assistente de Vendas", label: "Como funciona" },
   "assistente.beneficios": { group: "Assistente de Vendas", label: "Benefícios" },
   "assistente.processo": { group: "Assistente de Vendas", label: "Processo de compra" },
   "assistente.planos": { group: "Assistente de Vendas", label: "Planos (textos)" },
-  "assistente.faq": { group: "Assistente de Vendas", label: "FAQ" },
+  "assistente.faq": { group: "Assistente de Vendas", label: "Dúvidas frequentes" },
   footer: { group: "Geral", label: "Rodapé" },
 };

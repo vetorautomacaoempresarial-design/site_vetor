@@ -25,7 +25,7 @@ export default function Planos({ content }: { content: SiteContent["assistente"]
           </p>
 
           <div className="mt-6 inline-flex items-start gap-2.5 text-left border border-[#2563EB]/30 bg-[#2563EB]/5 px-4 py-3">
-            <Clock size={16} className="text-[#2563EB] mt-0.5 shrink-0" />
+            <Clock size={18} className="text-[#2563EB] mt-0.5 shrink-0" />
             <p className="font-body text-xs text-[#A3A3A3] leading-relaxed">
               <span className="text-[#F5F5F5] font-medium">{content.noteStrong}</span>{" "}
               {content.noteRest}
@@ -81,7 +81,7 @@ export default function Planos({ content }: { content: SiteContent["assistente"]
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-6 py-4 bg-[#25D366] text-white font-display font-semibold text-sm tracking-wide hover:bg-[#22C35E] transition-colors"
           >
-            <MessageCircle size={18} />
+            <MessageCircle size={22} />
             Falar no WhatsApp
           </a>
         </div>

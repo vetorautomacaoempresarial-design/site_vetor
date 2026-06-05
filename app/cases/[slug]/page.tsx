@@ -40,7 +40,7 @@ export default async function CasePage({ params }: Props) {
               className="inline-flex items-center gap-2 font-display text-xs text-[#737373] hover:text-[#A3A3A3] transition-colors tracking-widest uppercase mb-10"
             >
               <ArrowLeft size={12} />
-              Todos os Cases
+              Todos os casos
             </Link>
 
             <div className="grid lg:grid-cols-2 gap-12 items-end">
@@ -132,7 +132,7 @@ export default async function CasePage({ params }: Props) {
                   href="/#contato"
                   className="inline-flex items-center gap-2 font-display text-xs font-semibold tracking-wide px-5 py-2.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
                 >
-                  Agendar Diagnóstico
+                  Fale Conosco
                   <ArrowRight size={12} />
                 </Link>
               </div>

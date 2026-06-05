@@ -37,7 +37,7 @@ export default function ComoFunciona({
                 {step.number}
               </div>
               <div className="w-6 h-px bg-[#2563EB] mb-5" />
-              <h3 className="font-display font-semibold text-lg text-[#F5F5F5] mb-3 tracking-tight">
+              <h3 className="font-display font-semibold text-2xl text-[#F5F5F5] mb-3 tracking-tight">
                 {step.title}
               </h3>
               <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed">

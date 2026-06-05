@@ -1,5 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { PLANS, STATUS_LABELS, formatBRL, isPlanId, type PlanId } from "@/lib/plans";
+import { LEGAL_DOCS } from "@/lib/legal";
+import { getLegalMarkdown } from "@/lib/legal-content";
 import type { Subscription } from "@/lib/db";
 import ContaActions from "@/components/conta/ContaActions";
 
@@ -45,6 +47,15 @@ export default async function ContaPage({
     (user!.user_metadata?.name as string | undefined) ?? user!.email ?? "";
 
   const hasActive = sub?.status === "ativa" || sub?.status === "pendente";
+
+  // Conteúdo dos documentos legais lido no servidor e passado ao cliente,
+  // para exibição em pop-up no aceite (sem sair da página e perder o formulário).
+  const legalDocs = LEGAL_DOCS.map((d) => ({
+    slug: d.slug,
+    title: d.title,
+    summary: d.summary,
+    markdown: getLegalMarkdown(d.slug),
+  }));
 
   return (
     <div className="flex flex-col gap-8">
@@ -98,6 +109,7 @@ export default async function ContaPage({
         currentPlan={sub?.plan ?? null}
         initialPlan={initialPlan}
         defaultName={defaultName}
+        legalDocs={legalDocs}
       />
     </div>
   );

@@ -15,7 +15,7 @@ export default function AdminHomePage() {
       <div>
         <h1 className="font-display font-bold text-3xl tracking-tight mb-2">Editar textos do site</h1>
         <p className="font-body text-sm text-[#A3A3A3] max-w-xl leading-relaxed">
-          Escolha uma seção para editar. Ao salvar, as mudanças vão ao ar em segundos — sem
+          Escolha uma seção para editar. Ao salvar, as mudanças vão ao ar em segundos, sem
           precisar mexer no servidor.
         </p>
       </div>

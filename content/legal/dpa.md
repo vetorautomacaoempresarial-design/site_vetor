@@ -1,6 +1,6 @@
 **ACORDO DE TRATAMENTO DE DADOS PESSOAIS (DPA)**
 
-_Anexo ao Contrato de Prestação de Serviços — Lei nº 13.709/2018 (LGPD)_
+_Anexo ao Contrato de Prestação de Serviços · Lei nº 13.709/2018 (LGPD)_
 
 ## PARTES
 

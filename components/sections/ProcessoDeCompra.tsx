@@ -35,7 +35,7 @@ export default function ProcessoDeCompra({
                 {step.number}
               </div>
               <div className="w-6 h-px bg-[#2563EB] mb-5" />
-              <h3 className="font-display font-semibold text-lg text-[#F5F5F5] mb-3 tracking-tight">
+              <h3 className="font-display font-semibold text-2xl text-[#F5F5F5] mb-3 tracking-tight">
                 {step.title}
               </h3>
               <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed">
@@ -61,7 +61,7 @@ export default function ProcessoDeCompra({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-5 py-3 bg-[#25D366] text-white hover:bg-[#22C35E] transition-colors"
               >
-                <MessageCircle size={16} />
+                <MessageCircle size={20} />
                 {p.label}
               </a>
             ))}

@@ -1,13 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Globe, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { getSiteContent } from "@/lib/content";
 
+function InstagramIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 const nav = [
-  { label: "Serviços", href: "/#servicos" },
+  { label: "O que entregamos", href: "/#servicos" },
   { label: "Como Funciona", href: "/#como-funciona" },
   { label: "Produtos", href: "/assistente-de-vendas" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Dúvidas", href: "/#faq" },
   { label: "Contato", href: "/#contato" },
   { label: "Área do cliente", href: "/conta" },
 ];
@@ -31,7 +51,7 @@ export default async function Footer() {
               {footer.description}
             </p>
             <p className="font-display text-xs text-[#2563EB] tracking-widest uppercase mt-4">
-              AI · Process Automation
+              Inteligência Artificial · Automação de Processos
             </p>
           </div>
 
@@ -64,24 +84,19 @@ export default async function Footer() {
                 href={`mailto:${footer.email}`}
                 className="flex items-center gap-2 font-body text-sm text-[#A3A3A3] hover:text-white transition-colors"
               >
-                <Mail size={14} />
+                <Mail size={17} />
                 {footer.email}
               </a>
             </div>
             <div className="flex gap-3 mt-6">
               <a
-                href="#"
-                className="w-9 h-9 border border-[#2A2A2A] flex items-center justify-center text-[#737373] hover:border-[#2563EB] hover:text-[#2563EB] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Globe size={15} />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/vetor_ai/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 border border-[#2A2A2A] flex items-center justify-center text-[#737373] hover:border-[#2563EB] hover:text-[#2563EB] transition-colors"
                 aria-label="Instagram"
               >
-                <Globe size={15} />
+                <InstagramIcon size={18} />
               </a>
             </div>
           </div>

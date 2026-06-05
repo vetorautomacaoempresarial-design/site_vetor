@@ -36,10 +36,10 @@ export default function AssistenteBeneficios({
                 variants={staggerItem}
                 className="bg-[#0A0A0A] p-8 group hover:bg-[#141414] transition-colors duration-300"
               >
-                <div className="w-10 h-10 border border-[#2A2A2A] flex items-center justify-center mb-6 group-hover:border-[#2563EB] group-hover:text-[#2563EB] text-[#A3A3A3] transition-colors">
-                  <Icon size={20} strokeWidth={1.5} />
+                <div className="w-12 h-12 border border-[#2A2A2A] flex items-center justify-center mb-6 group-hover:border-[#2563EB] group-hover:text-[#2563EB] text-[#A3A3A3] transition-colors">
+                  <Icon size={24} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display font-semibold text-xl text-[#F5F5F5] mb-3 tracking-tight">
+                <h3 className="font-display font-semibold text-2xl text-[#F5F5F5] mb-3 tracking-tight">
                   {b.title}
                 </h3>
                 <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed">
