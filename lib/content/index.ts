@@ -77,7 +77,7 @@ async function fetchContent(): Promise<SiteContent> {
  * O banco só é consultado quando o cache é invalidado (ou seja, quando o admin
  * salva) — visitantes não pesam no banco.
  */
-export const getSiteContent = unstable_cache(fetchContent, ["site-content-v1"], {
+export const getSiteContent = unstable_cache(fetchContent, ["site-content-v2"], {
   tags: [CONTENT_TAG],
 });
 
