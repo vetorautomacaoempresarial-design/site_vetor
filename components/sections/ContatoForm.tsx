@@ -6,6 +6,7 @@ import { Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { FadeInUp } from "@/components/motion";
 import { contactSchema, ContactFormData } from "@/lib/validation";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 import { cn } from "@/lib/cn";
 import type { SiteContent } from "@/lib/content/types";
 
@@ -33,6 +34,8 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
       if (res.ok) {
         setStatus("success");
         reset();
+        // Conversão: lead enviado pelo formulário de contato.
+        trackMetaEvent("Lead");
       } else {
         setStatus("error");
       }
@@ -58,6 +61,7 @@ export default function ContatoForm({ content }: { content: SiteContent["home"][
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Vim pelo site e gostaria de saber mais sobre automação com IA.")}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackMetaEvent("Contact")}
               className="inline-flex items-center gap-3 px-6 py-4 bg-[#25D366] text-white font-display font-semibold text-sm tracking-wide hover:bg-[#22C35E] transition-colors"
             >
               <MessageCircle size={22} />

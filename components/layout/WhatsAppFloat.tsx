@@ -1,4 +1,5 @@
 "use client";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
@@ -26,6 +27,7 @@ export default function WhatsAppFloat() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackMetaEvent("Contact")}
       aria-label="Falar no WhatsApp"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white shadow-lg hover:bg-[#22C35E] transition-all duration-200 hover:scale-105 rounded-full"
     >
