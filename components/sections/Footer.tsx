@@ -24,7 +24,7 @@ function InstagramIcon({ size = 15 }: { size?: number }) {
 }
 
 const nav = [
-  { label: "O que entregamos", href: "/#servicos" },
+  { label: "O que entregamos", href: "/#solucoes" },
   { label: "Como Funciona", href: "/#como-funciona" },
   { label: "Produtos", href: "/assistente-de-vendas" },
   { label: "Dúvidas", href: "/#faq" },

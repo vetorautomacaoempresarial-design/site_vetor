@@ -8,8 +8,8 @@ import type { HeaderContent } from "@/lib/content/types";
 
 // Os hrefs (links funcionais) ficam no código; só os textos vêm do CMS.
 const NAV_HREFS = {
-  navServicos: "/#servicos",
-  navComoFunciona: "/#como-funciona",
+  navPersonalizadas: "/#como-funciona",
+  navPorqueVetor: "/#diferenciais",
   navProdutos: "/assistente-de-vendas",
   navDuvidas: "/#faq",
 } as const;
@@ -19,8 +19,8 @@ export default function Header({ content }: { content: HeaderContent }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: content.navServicos, href: NAV_HREFS.navServicos },
-    { label: content.navComoFunciona, href: NAV_HREFS.navComoFunciona },
+    { label: content.navPersonalizadas, href: NAV_HREFS.navPersonalizadas },
+    { label: content.navPorqueVetor, href: NAV_HREFS.navPorqueVetor },
     { label: content.navProdutos, href: NAV_HREFS.navProdutos },
     { label: content.navDuvidas, href: NAV_HREFS.navDuvidas },
   ];

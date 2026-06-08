@@ -1,5 +1,5 @@
 import Hero from "@/components/sections/Hero";
-import Servicos from "@/components/sections/Servicos";
+import Solucoes from "@/components/sections/Solucoes";
 import ComoFunciona from "@/components/sections/ComoFunciona";
 import Diferenciais from "@/components/sections/Diferenciais";
 import Faq from "@/components/sections/Faq";
@@ -13,7 +13,7 @@ export default async function HomePage() {
   return (
     <main>
       <Hero content={content.home.hero} />
-      <Servicos content={content.home.servicos} />
+      <Solucoes content={content.home.solucoes} />
       <ComoFunciona content={content.home.comoFunciona} />
       <Diferenciais content={content.home.diferenciais} />
       <Faq content={content.home.faq} />

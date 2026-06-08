@@ -6,8 +6,8 @@ import type { SiteContent } from "@/lib/content/types";
 export const DEFAULT_CONTENT: SiteContent = {
   header: {
     brand: "Vetor Automação",
-    navServicos: "O que entregamos",
-    navComoFunciona: "Como Funciona",
+    navPersonalizadas: "Automações personalizadas",
+    navPorqueVetor: "Por que a Vetor",
     navProdutos: "Produtos",
     navDuvidas: "Dúvidas",
     areaCliente: "Área do cliente",
@@ -26,26 +26,23 @@ export const DEFAULT_CONTENT: SiteContent = {
         "Automatizamos processos com agentes de IA de forma personalizada para o seu negócio, do diagnóstico à operação contínua. Mais velocidade, menos erro, escala real.",
       ctaLabel: "Como funciona",
     },
-    servicos: {
-      badge: "Serviços",
+    solucoes: {
+      badge: "Nossas soluções",
       title: "O que entregamos",
       intro:
-        "Soluções completas, da estratégia à operação. Cada projeto é construído com tecnologia de ponta e responsabilidade de negócio.",
+        "Dois caminhos para automatizar o seu negócio: comece agora com uma solução pronta ou construa uma automação sob medida para o seu processo.",
       items: [
         {
-          title: "Agentes de IA Conversacional",
+          title: "Automações prontas",
           description:
-            "Agentes autônomos que entendem o contexto, executam tarefas e se integram ao seu fluxo de trabalho: atendimento, vendas, suporte interno e muito mais.",
+            "Soluções já desenvolvidas e validadas, prontas para entrar em operação rapidamente. Ideais para quem quer começar a colher resultados sem esperar por um projeto do zero, como o nosso Assistente de Vendas.",
+          ctaLabel: "Como funciona",
         },
         {
-          title: "Integrações e Orquestração",
+          title: "Automações personalizadas",
           description:
-            "Conectamos suas ferramentas, sistemas e bancos de dados em fluxos inteligentes que movem dados e disparam ações automaticamente entre os sistemas.",
-        },
-        {
-          title: "Diagnóstico e Consultoria",
-          description:
-            "Mapeamos seus processos, identificamos os maiores gargalos e entregamos um plano de automação com retorno estimado antes de qualquer implementação.",
+            "Projetos sob medida, construídos a partir do diagnóstico do seu processo. Do mapeamento à operação contínua, desenhamos a automação exata que o seu negócio precisa.",
+          ctaLabel: "Como funciona",
         },
       ],
     },
@@ -319,7 +316,7 @@ export const DEFAULT_CONTENT: SiteContent = {
 export const SECTION_LABELS: Record<string, { group: string; label: string }> = {
   header: { group: "Geral", label: "Cabeçalho (menu do topo)" },
   "home.hero": { group: "Home", label: "Topo (Hero)" },
-  "home.servicos": { group: "Home", label: "Serviços" },
+  "home.solucoes": { group: "Home", label: "Nossas soluções" },
   "home.comoFunciona": { group: "Home", label: "Como funciona" },
   "home.diferenciais": { group: "Home", label: "Diferenciais" },
   "home.faq": { group: "Home", label: "Dúvidas frequentes" },

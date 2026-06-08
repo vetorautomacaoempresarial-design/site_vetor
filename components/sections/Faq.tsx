@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 import type { SiteContent } from "@/lib/content/types";
 
 export default function Faq({ content }: { content: SiteContent["home"]["faq"] }) {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section id="faq" className="py-28 bg-[#0A0A0A] border-t border-[#2A2A2A]">

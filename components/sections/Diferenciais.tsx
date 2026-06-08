@@ -13,7 +13,7 @@ export default function Diferenciais({
   content: SiteContent["home"]["diferenciais"];
 }) {
   return (
-    <section className="py-28 bg-[#141414] border-t border-[#2A2A2A]">
+    <section id="diferenciais" className="py-28 bg-[#141414] border-t border-[#2A2A2A]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <FadeInUp>

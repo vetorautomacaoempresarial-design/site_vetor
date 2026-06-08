@@ -14,6 +14,13 @@ export interface InfoCard {
   description: string;
 }
 
+/** Card de solução (título + descrição + rótulo do botão). O link fica no código. */
+export interface SolutionCard {
+  title: string;
+  description: string;
+  ctaLabel: string;
+}
+
 /** Etapa numerada (como funciona, processo de compra). */
 export interface Step {
   number: string;
@@ -57,8 +64,8 @@ export interface AssistenteHero {
 /** Cabeçalho/menu do topo. Só TEXTO — os links (hrefs) ficam no código. */
 export interface HeaderContent {
   brand: string;
-  navServicos: string;
-  navComoFunciona: string;
+  navPersonalizadas: string;
+  navPorqueVetor: string;
   navProdutos: string;
   navDuvidas: string;
   areaCliente: string;
@@ -69,7 +76,7 @@ export interface SiteContent {
   header: HeaderContent;
   home: {
     hero: HomeHero;
-    servicos: { badge: string; title: string; intro: string; items: InfoCard[] };
+    solucoes: { badge: string; title: string; intro: string; items: SolutionCard[] };
     comoFunciona: { badge: string; title: string; steps: Step[] };
     diferenciais: { badge: string; title: string; intro: string; items: InfoCard[] };
     faq: { badge: string; title: string; intro: string; items: FaqItem[] };
@@ -116,7 +123,7 @@ export interface SiteContent {
 export type SectionKey =
   | "header"
   | "home.hero"
-  | "home.servicos"
+  | "home.solucoes"
   | "home.comoFunciona"
   | "home.diferenciais"
   | "home.faq"
