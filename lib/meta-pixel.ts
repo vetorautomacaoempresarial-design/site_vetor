@@ -19,11 +19,33 @@ export type MetaStandardEvent =
   | "Purchase"
   | "ViewContent";
 
-/** Dispara um evento padrão do Meta Pixel (no-op se o fbq não estiver disponível). */
+/**
+ * Gera um identificador único para um evento, usado na deduplicação
+ * navegador ↔ servidor (Conversions API). O Meta casa o `eventID` do pixel
+ * com o `event_id` da carga do servidor para contar o evento uma única vez.
+ */
+export function newMetaEventId(): string {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
+/**
+ * Dispara um evento padrão do Meta Pixel (no-op se o fbq não estiver disponível).
+ *
+ * Sempre envia um `eventID` para permitir a deduplicação com a Conversions API.
+ * Retorna o `eventID` usado — encaminhe-o como `event_id` ao disparar o mesmo
+ * evento pelo servidor para que o Meta conte apenas uma vez.
+ */
 export function trackMetaEvent(
   event: MetaStandardEvent,
   params?: Record<string, unknown>,
-): void {
-  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
-  window.fbq("track", event, params);
+  eventId: string = newMetaEventId(),
+): string {
+  if (typeof window === "undefined" || typeof window.fbq !== "function") {
+    return eventId;
+  }
+  window.fbq("track", event, params ?? {}, { eventID: eventId });
+  return eventId;
 }
