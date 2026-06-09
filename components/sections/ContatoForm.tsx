@@ -12,7 +12,7 @@ import type { SiteContent } from "@/lib/content/types";
 
 export default function ContatoForm({ content }: { content: SiteContent["home"]["contato"] }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554996742471";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 
   const {
     register,

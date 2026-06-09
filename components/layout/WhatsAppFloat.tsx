@@ -16,7 +16,7 @@ function WhatsAppIcon({ size = 24 }: { size?: number }) {
 }
 
 export default function WhatsAppFloat() {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554996742471";
+  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
   const message = encodeURIComponent(
     "Olá! Vim pelo site da Vetor Automação e gostaria de saber mais sobre automação de processos com IA."
   );

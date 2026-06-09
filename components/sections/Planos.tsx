@@ -6,7 +6,7 @@ import { StaggerChildren, staggerItem, motion } from "@/components/motion";
 import { PLAN_LIST, savingsPercent } from "@/lib/plans";
 import type { SiteContent } from "@/lib/content/types";
 
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554996742471";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   "Olá! Tenho interesse no Assistente de Vendas da Vetor e gostaria de tirar dúvidas sobre os planos."
 )}`;

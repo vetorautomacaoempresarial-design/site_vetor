@@ -5,7 +5,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import type { AssistenteHero as AssistenteHeroContent } from "@/lib/content/types";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554996742471";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   "Olá! Tenho interesse no Assistente de Vendas da Vetor."
 )}`;

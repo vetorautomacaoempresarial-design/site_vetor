@@ -4,7 +4,7 @@ import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
 import type { SiteContent } from "@/lib/content/types";
 
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554996742471";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 
 export default function ProcessoDeCompra({
   content,
