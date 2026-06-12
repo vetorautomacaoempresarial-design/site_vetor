@@ -16,16 +16,32 @@ export type ContactFormData = z.infer<typeof contactSchema>;
 const emailField = z.string().email("E-mail inválido");
 const passwordField = z.string().min(8, "A senha deve ter ao menos 8 caracteres");
 
+// Telefone brasileiro — guarda só os dígitos e exige 10 (fixo) ou 11 (celular).
+const phoneField = z
+  .string()
+  .min(1, "Informe seu telefone")
+  .transform((s) => s.replace(/\D/g, ""))
+  .refine((s) => s.length === 10 || s.length === 11, {
+    message: "Telefone inválido (informe DDD + número)",
+  });
+
 export const loginSchema = z.object({
   email: emailField,
   password: z.string().min(1, "Informe sua senha"),
 });
 
-export const signupSchema = z.object({
-  name: z.string().min(2, "Informe seu nome"),
-  email: emailField,
-  password: passwordField,
-});
+export const signupSchema = z
+  .object({
+    name: z.string().min(2, "Informe seu nome"),
+    email: emailField,
+    phone: phoneField,
+    password: passwordField,
+    confirm: z.string().min(1, "Confirme a senha"),
+  })
+  .refine((d) => d.password === d.confirm, {
+    message: "As senhas não conferem",
+    path: ["confirm"],
+  });
 
 export const recoverSchema = z.object({
   email: emailField,
@@ -43,6 +59,12 @@ export const resetPasswordSchema = z
 
 export const updateEmailSchema = z.object({
   email: emailField,
+  // Re-autenticação: o usuário confirma a senha atual para trocar o e-mail.
+  password: z.string().min(1, "Informe sua senha atual"),
+});
+
+export const updateNameSchema = z.object({
+  name: z.string().min(2, "Informe seu nome completo"),
 });
 
 const planField = z.enum(["mensal", "trimestral", "anual"]);

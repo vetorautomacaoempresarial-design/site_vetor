@@ -9,5 +9,7 @@ export default async function ConfiguracoesPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  return <ConfiguracoesForms currentEmail={user!.email ?? ""} />;
+  const currentName = (user!.user_metadata?.name as string | undefined) ?? "";
+
+  return <ConfiguracoesForms currentEmail={user!.email ?? ""} currentName={currentName} />;
 }

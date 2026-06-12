@@ -26,7 +26,7 @@ export default function CadastroPage() {
       email: data.email,
       password: data.password,
       options: {
-        data: { name: data.name },
+        data: { name: data.name, phone: data.phone },
         emailRedirectTo: `${window.location.origin}/auth/callback`,
       },
     });
@@ -84,8 +84,14 @@ export default function CadastroPage() {
         <Field label="E-mail" error={errors.email?.message}>
           <Input {...register("email")} type="email" placeholder="seu@email.com" error={!!errors.email} autoComplete="email" />
         </Field>
+        <Field label="Telefone" error={errors.phone?.message}>
+          <Input {...register("phone")} type="tel" placeholder="(11) 99999-9999" error={!!errors.phone} autoComplete="tel" />
+        </Field>
         <Field label="Senha" error={errors.password?.message} hint="Mínimo de 8 caracteres.">
           <PasswordInput {...register("password")} placeholder="••••••••" error={!!errors.password} autoComplete="new-password" />
+        </Field>
+        <Field label="Confirmar senha" error={errors.confirm?.message}>
+          <PasswordInput {...register("confirm")} placeholder="••••••••" error={!!errors.confirm} autoComplete="new-password" />
         </Field>
         <SubmitButton loading={isSubmitting}>Criar conta</SubmitButton>
       </form>
