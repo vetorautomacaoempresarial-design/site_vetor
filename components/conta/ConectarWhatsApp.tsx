@@ -156,7 +156,11 @@ export default function ConectarWhatsApp({
         config_id: CONFIG_ID,
         response_type: "code",
         override_default_response_type: true,
-        extras: { setup: {} },
+        // Coexistência: onboarding de um número que JÁ está no WhatsApp Business
+        // App (mantém o app no celular + Cloud API no mesmo número, com histórico).
+        // featureType 'whatsapp_business_app_onboarding' — o valor antigo
+        // 'coexistence' foi descontinuado pela Meta.
+        extras: { setup: {}, featureType: "whatsapp_business_app_onboarding" },
       }
     );
   }
