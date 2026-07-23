@@ -192,8 +192,7 @@ export default function ConectarWhatsApp({
         <div className="flex flex-col items-center text-center gap-3 py-4">
           <CheckCircle size={36} className="text-[#22C35E]" />
           <p className="font-body text-sm text-[#F5F5F5] leading-relaxed max-w-md">
-            Conexão concluída! Estamos preparando seu número — em instantes o Assistente
-            começa a atender. Você pode fechar esta página.
+            Conexão concluída! Você pode fechar esta página.
           </p>
         </div>
       ) : (
