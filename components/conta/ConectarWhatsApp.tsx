@@ -105,6 +105,37 @@ export default function ConectarWhatsApp({
     document.body.appendChild(js);
   }, [configOk]);
 
+  // Envia o code + ids capturados ao backend. Fica FORA do callback do FB.login
+  // de propósito: o SDK do Facebook rejeita uma função `async` como callback
+  // ("Expression is of type asyncfunction, not function"). O callback tem que
+  // ser síncrono; a parte assíncrona (fetch) roda aqui.
+  async function enviarConexao(code: string) {
+    const dados = signupData.current;
+    setStatus("enviando");
+    try {
+      const res = await fetch("/api/conta/whatsapp/conectar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          code,
+          waba_id: dados?.waba_id ?? null,
+          phone_number_id: dados?.phone_number_id ?? null,
+          business_id: dados?.business_id ?? null,
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setErro(json.error ?? "Não foi possível concluir a conexão. Tente novamente.");
+        setStatus("erro");
+        return;
+      }
+      setStatus("ok");
+    } catch {
+      setErro("Falha de conexão ao enviar os dados. Tente novamente.");
+      setStatus("erro");
+    }
+  }
+
   function abrirSignup() {
     if (!window.FB || !CONFIG_ID) return;
     setErro(null);
@@ -112,37 +143,14 @@ export default function ConectarWhatsApp({
     signupData.current = null;
 
     window.FB.login(
-      async (response: FBLoginResponse) => {
+      (response: FBLoginResponse) => {
         const code = response?.authResponse?.code;
         if (!code) {
           // Cliente fechou/cancelou sem concluir.
           setStatus("idle");
           return;
         }
-        const dados = signupData.current;
-        setStatus("enviando");
-        try {
-          const res = await fetch("/api/conta/whatsapp/conectar", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              code,
-              waba_id: dados?.waba_id ?? null,
-              phone_number_id: dados?.phone_number_id ?? null,
-              business_id: dados?.business_id ?? null,
-            }),
-          });
-          const json = await res.json().catch(() => ({}));
-          if (!res.ok) {
-            setErro(json.error ?? "Não foi possível concluir a conexão. Tente novamente.");
-            setStatus("erro");
-            return;
-          }
-          setStatus("ok");
-        } catch {
-          setErro("Falha de conexão ao enviar os dados. Tente novamente.");
-          setStatus("erro");
-        }
+        void enviarConexao(code);
       },
       {
         config_id: CONFIG_ID,
