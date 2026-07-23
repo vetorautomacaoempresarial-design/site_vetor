@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 
 const links = [
   { label: "Assinatura", href: "/conta" },
+  { label: "WhatsApp", href: "/conta/whatsapp" },
   { label: "Pagamentos", href: "/conta/pagamentos" },
   { label: "Configurações", href: "/conta/configuracoes" },
 ];
