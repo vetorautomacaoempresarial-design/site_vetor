@@ -43,7 +43,7 @@ function LoginForm() {
       footer={
         <>
           Ainda não tem conta?{" "}
-          <Link href="/cadastro" className="text-[#2563EB] hover:text-[#3B82F6] transition-colors">
+          <Link href="/cadastro" className="text-[#4A6CF7] hover:text-[#6D8AFF] transition-colors">
             Criar conta
           </Link>
         </>

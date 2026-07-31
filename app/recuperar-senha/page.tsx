@@ -39,11 +39,11 @@ export default function RecuperarSenhaPage() {
     return (
       <AuthCard title="Verifique seu e-mail">
         <div className="flex flex-col items-center text-center gap-3 py-4">
-          <CheckCircle size={40} className="text-[#2563EB]" />
+          <CheckCircle size={40} className="text-[#4A6CF7]" />
           <p className="font-body text-sm text-[#A3A3A3] leading-relaxed">
             Se existir uma conta com este e-mail, enviamos um link para redefinir a senha.
           </p>
-          <Link href="/entrar" className="mt-2 font-display text-sm text-[#2563EB] hover:text-[#3B82F6] transition-colors">
+          <Link href="/entrar" className="mt-2 font-display text-sm text-[#4A6CF7] hover:text-[#6D8AFF] transition-colors">
             Voltar ao login
           </Link>
         </div>
@@ -56,7 +56,7 @@ export default function RecuperarSenhaPage() {
       title="Recuperar senha"
       subtitle="Informe seu e-mail e enviaremos um link para criar uma nova senha."
       footer={
-        <Link href="/entrar" className="text-[#2563EB] hover:text-[#3B82F6] transition-colors">
+        <Link href="/entrar" className="text-[#4A6CF7] hover:text-[#6D8AFF] transition-colors">
           Voltar ao login
         </Link>
       }

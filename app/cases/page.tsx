@@ -14,7 +14,7 @@ export default function CasesPage() {
   return (
     <>
       <main className="min-h-screen bg-[#0A0A0A] pt-24">
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto px-6 pt-20 pb-40">
           <div className="mb-4">
             <Link
               href="/"
@@ -46,7 +46,7 @@ export default function CasesPage() {
                 </span>
 
                 <div className="mb-5">
-                  <div className="font-display font-bold text-6xl text-[#2563EB] leading-none">
+                  <div className="font-display font-bold text-6xl text-[#4A6CF7] leading-none">
                     {c.metric}
                   </div>
                   <div className="font-body text-xs text-[#A3A3A3] mt-1.5">{c.metricLabel}</div>
@@ -67,7 +67,7 @@ export default function CasesPage() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-2 text-[#2563EB] font-display text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2 text-[#4A6CF7] font-display text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
                   Ver caso completo
                   <ArrowRight size={12} />
                 </div>
@@ -86,7 +86,7 @@ export default function CasesPage() {
             </div>
             <Link
               href="/#contato"
-              className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors shrink-0"
+              className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors shrink-0"
             >
               Falar com a Vetor
               <ArrowRight size={14} />

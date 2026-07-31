@@ -4,10 +4,12 @@ import { ArrowRight } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
 import { cases } from "@/lib/cases";
+import Wave from "@/components/ui/Wave";
 
 export default function CasesPreview() {
   return (
-    <section id="cases" className="py-28 bg-[#0A0A0A] border-t border-[#2A2A2A]">
+    <section id="cases" className="relative pt-28 pb-40 bg-[#0A0A0A]">
+      <Wave fill="#0A0A0A" position="top" line="#2A2A2A" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
@@ -40,7 +42,7 @@ export default function CasesPreview() {
 
                 {/* Metric */}
                 <div className="mb-4">
-                  <div className="font-display font-bold text-5xl text-[#2563EB] leading-none">
+                  <div className="font-display font-bold text-5xl text-[#4A6CF7] leading-none">
                     {c.metric}
                   </div>
                   <div className="font-body text-xs text-[#A3A3A3] mt-1">{c.metricLabel}</div>
@@ -53,7 +55,7 @@ export default function CasesPreview() {
                   {c.summary}
                 </p>
 
-                <div className="flex items-center gap-2 mt-6 text-[#2563EB] opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2 mt-6 text-[#4A6CF7] opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="font-display text-xs tracking-widest uppercase">Ver caso</span>
                   <ArrowRight size={15} />
                 </div>

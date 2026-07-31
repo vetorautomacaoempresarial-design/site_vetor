@@ -10,9 +10,7 @@ type Json = string | number | boolean | null | Json[] | { [k: string]: Json };
 const LABELS: Record<string, string> = {
   brand: "Nome da marca (ao lado do logo)",
   navPersonalizadas: "Menu · Automações personalizadas",
-  navPorqueVetor: "Menu · Por que a Vetor",
   navProdutos: "Menu · Produtos",
-  navDuvidas: "Menu · Dúvidas",
   areaCliente: "Link · Área do cliente",
   cta: "Botão · Fale Conosco",
   tag: "Etiqueta (texto pequeno acima do título)",
@@ -21,7 +19,9 @@ const LABELS: Record<string, string> = {
   intro: "Texto de apoio",
   subtitle: "Subtítulo",
   description: "Descrição",
-  headline: "Título principal (linhas)",
+  headline: "Título principal",
+  typedLines: "Frases que se revezam (efeito de digitação)",
+  bullets: "Tópicos com check",
   ctaLabel: "Texto do botão",
   ctaPrimary: "Botão principal",
   ctaSecondary: "Botão secundário",
@@ -132,7 +132,7 @@ export default function ContentEditor({
             type="checkbox"
             checked={value}
             onChange={(e) => update(path, e.target.checked)}
-            className="w-4 h-4 accent-[#2563EB]"
+            className="w-4 h-4 accent-[#4A6CF7]"
           />
           <span className="font-display text-xs text-[#A3A3A3]">{humanize(keyName)}</span>
         </label>
@@ -152,13 +152,13 @@ export default function ContentEditor({
               value={str}
               rows={rows}
               onChange={(e) => update(path, e.target.value)}
-              className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-3 py-2 font-body text-sm text-[#F5F5F5] focus:outline-none focus:border-[#2563EB] transition-colors resize-y"
+              className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-3 py-2 font-body text-sm text-[#F5F5F5] focus:outline-none focus:border-[#4A6CF7] transition-colors resize-y"
             />
           ) : (
             <input
               value={str}
               onChange={(e) => update(path, e.target.value)}
-              className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-3 py-2 font-body text-sm text-[#F5F5F5] focus:outline-none focus:border-[#2563EB] transition-colors"
+              className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-3 py-2 font-body text-sm text-[#F5F5F5] focus:outline-none focus:border-[#4A6CF7] transition-colors"
             />
           )}
         </label>
@@ -198,7 +198,7 @@ export default function ContentEditor({
           <button
             type="button"
             onClick={() => update(path, [...(value as Json[]), blankLike(templateSource)])}
-            className="inline-flex items-center gap-2 self-start font-display text-xs font-semibold text-[#2563EB] hover:text-[#3B82F6] transition-colors"
+            className="inline-flex items-center gap-2 self-start font-display text-xs font-semibold text-[#4A6CF7] hover:text-[#6D8AFF] transition-colors"
           >
             <Plus size={14} /> Adicionar item
           </button>
@@ -241,7 +241,7 @@ export default function ContentEditor({
           type="button"
           onClick={onSave}
           disabled={pending}
-          className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center gap-2 font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Check size={16} />
           {pending ? "Salvando..." : "Salvar alterações"}

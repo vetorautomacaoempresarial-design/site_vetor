@@ -32,7 +32,7 @@ export function Input({
   return (
     <input
       className={cn(
-        "w-full bg-[#0A0A0A] border px-4 py-3 font-body text-sm text-[#F5F5F5] placeholder:text-[#6B7280] focus:outline-none focus:border-[#2563EB] transition-colors",
+        "w-full bg-[#0A0A0A] border px-4 py-3 font-body text-sm text-[#F5F5F5] placeholder:text-[#6B7280] focus:outline-none focus:border-[#4A6CF7] transition-colors",
         error ? "border-red-500" : "border-[#2A2A2A]",
         className
       )}
@@ -52,7 +52,7 @@ export const PasswordInput = forwardRef<
         ref={ref}
         type={visible ? "text" : "password"}
         className={cn(
-          "w-full bg-[#0A0A0A] border pl-4 pr-12 py-3 font-body text-sm text-[#F5F5F5] placeholder:text-[#6B7280] focus:outline-none focus:border-[#2563EB] transition-colors",
+          "w-full bg-[#0A0A0A] border pl-4 pr-12 py-3 font-body text-sm text-[#F5F5F5] placeholder:text-[#6B7280] focus:outline-none focus:border-[#4A6CF7] transition-colors",
           error ? "border-red-500" : "border-[#2A2A2A]",
           className
         )}
@@ -80,7 +80,7 @@ export function SubmitButton({
     <button
       type="submit"
       disabled={loading || props.disabled}
-      className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50 disabled:cursor-not-allowed w-full"
+      className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50 disabled:cursor-not-allowed w-full"
       {...props}
     >
       {loading ? "Aguarde..." : children}

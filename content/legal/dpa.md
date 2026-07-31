@@ -10,7 +10,7 @@ CONTROLADOR: o CLIENTE qualificado no contrato de prestação de serviços ao qu
 
 Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o referido contrato, regendo o tratamento de dados pessoais dos Leads realizado pela VETOR por conta e ordem do CONTROLADOR. Em caso de conflito sobre proteção de dados, prevalece este DPA.
 
-## CLÁUSULA 1 – DEFINIÇÕES E PAPÉIS
+## CLÁUSULA 1. DEFINIÇÕES E PAPÉIS
 
 **1.1.** Os termos “dado pessoal”, “titular”, “tratamento”, “controlador”, “operador”, “encarregado” e “incidente” têm o significado atribuído pela LGPD.
 
@@ -18,7 +18,7 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **1.3.** A descrição do tratamento (natureza, finalidade, categorias de dados e de titulares e duração) consta do Anexo I.
 
-## CLÁUSULA 2 – OBRIGAÇÕES DO CONTROLADOR
+## CLÁUSULA 2. OBRIGAÇÕES DO CONTROLADOR
 
 **2.1.** Determinar finalidades lícitas, específicas e informadas para o tratamento, fornecendo instruções igualmente lícitas à VETOR.
 
@@ -28,7 +28,7 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **2.4.** Prestar aos titulares as informações exigidas por lei e responder, como controlador, perante titulares e autoridades. O CONTROLADOR é o único responsável pela licitude da origem e do uso dos dados dos Leads.
 
-## CLÁUSULA 3 – OBRIGAÇÕES DA VETOR (OPERADORA)
+## CLÁUSULA 3. OBRIGAÇÕES DA VETOR (OPERADORA)
 
 **3.1.** Tratar os dados pessoais somente conforme as instruções documentadas do CONTROLADOR e a finalidade do Anexo I, salvo obrigação legal, hipótese em que informará o CONTROLADOR, se permitido.
 
@@ -44,7 +44,7 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **3.7.** Manter registros das operações de tratamento que realizar, quando exigível.
 
-## CLÁUSULA 4 – SUBOPERADORES
+## CLÁUSULA 4. SUBOPERADORES
 
 **4.1.** O CONTROLADOR autoriza, de forma geral, o uso de suboperadores pela VETOR para a prestação do serviço, incluindo, sem limitação, provedores de mensageria (Meta/WhatsApp), de hospedagem em nuvem, de infraestrutura de inteligência artificial e de processamento de pagamentos.
 
@@ -52,25 +52,25 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **4.3.** O CONTROLADOR reconhece que os suboperadores Meta/WhatsApp possuem termos e políticas próprios, alheios ao controle da VETOR, aplicando-se a respeito a cláusula de plataformas de terceiros do contrato principal.
 
-## CLÁUSULA 5 – SEGURANÇA DA INFORMAÇÃO
+## CLÁUSULA 5. SEGURANÇA DA INFORMAÇÃO
 
 **5.1.** A VETOR adotará medidas como controle de acesso, criptografia em trânsito, segregação lógica, registros de auditoria e práticas de desenvolvimento seguro, proporcionais ao risco e ao estado da técnica.
 
 **5.2.** As partes reconhecem que nenhuma medida elimina integralmente os riscos e que parte relevante do tratamento ocorre em plataformas de terceiros, não constituindo a ocorrência de incidente, por si só, presunção de culpa da VETOR.
 
-## CLÁUSULA 6 – INCIDENTES DE SEGURANÇA
+## CLÁUSULA 6. INCIDENTES DE SEGURANÇA
 
 **6.1.** Ao tomar conhecimento de incidente de segurança envolvendo os dados tratados sob este DPA, a VETOR comunicará o CONTROLADOR sem demora injustificada, com as informações de que dispuser, e cooperará razoavelmente nas medidas de contenção.
 
 **6.2.** Cabe ao CONTROLADOR, como controlador, avaliar a comunicação à ANPD e aos titulares e realizá-la quando exigida pela LGPD, salvo acordo diverso.
 
-## CLÁUSULA 7 – DIREITOS DOS TITULARES E TRANSFERÊNCIA INTERNACIONAL
+## CLÁUSULA 7. DIREITOS DOS TITULARES E TRANSFERÊNCIA INTERNACIONAL
 
 **7.1.** Recebendo solicitação de titular diretamente, a VETOR a encaminhará ao CONTROLADOR e não responderá diretamente, salvo determinação legal ou instrução do CONTROLADOR.
 
 **7.2.** O CONTROLADOR está ciente de que suboperadores podem tratar dados fora do Brasil, autorizando tais transferências internacionais, observadas as salvaguardas da LGPD.
 
-## CLÁUSULA 8 – RESPONSABILIDADE
+## CLÁUSULA 8. RESPONSABILIDADE
 
 **8.1.** Cada parte responde pelo descumprimento das obrigações que lhe cabem nos termos da LGPD e deste DPA. O CONTROLADOR é exclusivamente responsável pela licitude do tratamento, pela base legal, pela origem dos dados dos Leads e pelo conteúdo das comunicações.
 
@@ -78,11 +78,11 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **8.3.** Observada a lei, a responsabilidade total e acumulada da VETOR sob este DPA fica limitada ao valor pago pelo CONTROLADOR nos 3 (três) meses anteriores ao fato gerador, excluídos danos indiretos e lucros cessantes.
 
-## CLÁUSULA 9 – TÉRMINO, DEVOLUÇÃO E ELIMINAÇÃO
+## CLÁUSULA 9. TÉRMINO, DEVOLUÇÃO E ELIMINAÇÃO
 
 **9.1.** Encerrado o tratamento ou o contrato, a VETOR, conforme instrução do CONTROLADOR e quando tecnicamente viável, eliminará ou devolverá os dados dos Leads, ressalvadas as hipóteses de guarda obrigatória por lei, podendo manter cópias estritamente necessárias ao cumprimento de obrigações legais.
 
-## CLÁUSULA 10 – VIGÊNCIA E DISPOSIÇÕES GERAIS
+## CLÁUSULA 10. VIGÊNCIA E DISPOSIÇÕES GERAIS
 
 **10.1.** Este DPA vigora enquanto houver tratamento de dados pela VETOR em razão do contrato e, quanto às obrigações que por sua natureza subsistam, após o seu término.
 
@@ -90,7 +90,7 @@ Este Acordo de Tratamento de Dados Pessoais (“DPA”) integra e complementa o 
 
 **10.3.** Este DPA pode ser firmado por aceite eletrônico, juntamente com o contrato principal.
 
-## ANEXO I – DESCRIÇÃO DO TRATAMENTO
+## ANEXO I. DESCRIÇÃO DO TRATAMENTO
 
 | Item | Descrição |
 | --- | --- |

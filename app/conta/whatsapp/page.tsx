@@ -37,13 +37,13 @@ export default async function WhatsAppPage() {
           WhatsApp Business
         </p>
         <h2 className="font-display font-semibold text-lg text-[#F5F5F5] tracking-tight mb-3">
-          Conectar seu número ao Assistente
+          Conectar seu número
         </h2>
         <p className="font-body font-light text-sm text-[#A3A3A3] leading-relaxed max-w-2xl">
-          Conecte o WhatsApp Business da sua empresa para que o Assistente de Vendas
-          comece a atender por você. O processo é da própria Meta — você entra na sua
-          conta do Facebook, escolhe (ou cria) a conta do WhatsApp Business e autoriza.
-          Nada da sua senha passa pela Vetor.
+          Conecte o WhatsApp Business da sua empresa à nossa infraestrutura oficial da
+          Meta. O processo é da própria Meta: você entra na sua conta do Facebook,
+          escolhe (ou cria) a conta do WhatsApp Business e autoriza. Nada da sua senha
+          passa pela Vetor.
         </p>
       </section>
 

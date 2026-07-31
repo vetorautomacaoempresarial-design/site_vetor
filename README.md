@@ -1,7 +1,7 @@
 # Site Vetor Automação
 
 Site institucional + **Área do Cliente** da Vetor Automação (`vetorautomacao.io`).
-Reúne o marketing institucional, a página do produto **Assistente de Vendas**, login de
+Reúne o marketing institucional, a página do produto **Vetor Sales**, login de
 clientes, **assinatura recorrente via ASAAS** e um **painel administrativo** (`/admin`) que
 edita os textos do site sem precisar de rebuild.
 
@@ -64,7 +64,7 @@ Modelo em [`.env.example`](./.env.example). Valores reais ficam em `.env.local` 
 ```
 app/
   page.tsx                     Home (consome getSiteContent)
-  assistente-de-vendas/        Página do produto (consome getSiteContent)
+  vetor-sales/        Página do produto (consome getSiteContent)
   cases/                       Lista e detalhe ([slug]) de cases
   entrar · cadastro · recuperar-senha · redefinir-senha
   auth/callback · auth/confirm  Troca de code/token por sessão (Supabase)
@@ -99,7 +99,7 @@ indisponível, o site continua no ar com os defaults.
 
 Acesso ao `/admin` exige login **e** estar na tabela `admins`.
 
-### Assinatura (Assistente de Vendas)
+### Assinatura (Vetor Sales)
 
 1. Cliente logado em `/conta` informa nome + CPF/CNPJ e escolhe o plano.
 2. Aceita os documentos legais (registrado em `terms_acceptances` **antes** da cobrança).

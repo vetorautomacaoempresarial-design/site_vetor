@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle, AlertCircle, Loader2, MessageCircle } from "lucide-react";
+import { CheckCircle, AlertCircle, Loader2, MessageCircle, Unplug } from "lucide-react";
 
 // Config pública do app da Meta (não são segredos — App ID e Config ID
 // aparecem no navegador por definição do Embedded Signup).
@@ -52,6 +52,12 @@ export default function ConectarWhatsApp({
   const [sdkReady, setSdkReady] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [erro, setErro] = useState<string | null>(null);
+  // Quando o cliente informa que o número não está mais conectado, soltamos o
+  // vínculo no banco e mostramos o fluxo de conexão de novo — sem depender de
+  // recarregar a página (o `conexao` recebido por prop fica obsoleto).
+  const [desvinculado, setDesvinculado] = useState(false);
+  const [confirmandoDesconexao, setConfirmandoDesconexao] = useState(false);
+  const [desconectando, setDesconectando] = useState(false);
   // Guarda os ids que chegam pelo postMessage até o callback do FB.login juntar
   // tudo (code + ids) e mandar pro backend.
   const signupData = useRef<SignupData | null>(null);
@@ -136,6 +142,26 @@ export default function ConectarWhatsApp({
     }
   }
 
+  async function desconectar() {
+    setErro(null);
+    setDesconectando(true);
+    try {
+      const res = await fetch("/api/conta/whatsapp/desconectar", { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setErro(json.error ?? "Não foi possível concluir. Tente novamente.");
+        return;
+      }
+      setConfirmandoDesconexao(false);
+      setDesvinculado(true);
+      setStatus("idle");
+    } catch {
+      setErro("Falha de conexão. Tente novamente.");
+    } finally {
+      setDesconectando(false);
+    }
+  }
+
   function abrirSignup() {
     if (!window.FB || !CONFIG_ID) return;
     setErro(null);
@@ -165,21 +191,71 @@ export default function ConectarWhatsApp({
     );
   }
 
-  // Já conectado (linha em meta_clientes) e sem uma nova conexão em andamento.
-  if (conexao && status !== "ok") {
+  // Já conectado (linha em meta_clientes), sem nova conexão em andamento e sem
+  // o cliente ter informado que o número caiu.
+  if (conexao && status !== "ok" && !desvinculado) {
     return (
       <section className="border border-[#22C35E]/30 bg-[#22C35E]/5 p-8">
         <div className="flex items-start gap-3">
           <CheckCircle size={22} className="text-[#22C35E] mt-0.5 shrink-0" />
-          <div>
+          <div className="flex-1">
             <h3 className="font-display font-semibold text-base text-[#F5F5F5] mb-1">
               WhatsApp conectado
             </h3>
             <p className="font-body text-sm text-[#A3A3A3] leading-relaxed">
               {conexao.verified_name ? `${conexao.verified_name} · ` : ""}
-              {conexao.display_phone_number ?? "número conectado"}. Seu Assistente já
-              pode atender por este número.
+              {conexao.display_phone_number ?? "número conectado"}. Este número já opera
+              pela infraestrutura oficial da Meta.
             </p>
+
+            {erro && (
+              <div className="flex items-start gap-2 text-red-400 text-sm font-body border border-red-500/30 bg-red-500/5 px-3 py-2.5 mt-5">
+                <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                <span>{erro}</span>
+              </div>
+            )}
+
+            {confirmandoDesconexao ? (
+              <div className="mt-6 border-t border-[#22C35E]/20 pt-5">
+                <p className="font-body text-sm text-[#D4D4D4] leading-relaxed mb-4">
+                  Vamos remover este número da sua conta e avisar nossa equipe. Você
+                  poderá conectar novamente em seguida, pelo cadastro da Meta.
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={desconectar}
+                    disabled={desconectando}
+                    className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wide px-6 py-3 border border-[#F59E0B] text-[#F59E0B] hover:bg-[#F59E0B] hover:text-[#0A0A0A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {desconectando ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" /> Removendo...
+                      </>
+                    ) : (
+                      "Confirmar"
+                    )}
+                  </button>
+                  <button
+                    onClick={() => setConfirmandoDesconexao(false)}
+                    disabled={desconectando}
+                    className="font-display text-sm text-[#A3A3A3] hover:text-white transition-colors px-2 disabled:opacity-50"
+                  >
+                    Voltar
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <button
+                onClick={() => {
+                  setErro(null);
+                  setConfirmandoDesconexao(true);
+                }}
+                className="mt-6 inline-flex items-center gap-2 font-display text-sm text-[#737373] hover:text-[#F59E0B] transition-colors"
+              >
+                <Unplug size={15} />
+                Meu WhatsApp não está mais conectado
+              </button>
+            )}
           </div>
         </div>
       </section>
@@ -197,6 +273,16 @@ export default function ConectarWhatsApp({
         </div>
       ) : (
         <>
+          {desvinculado && (
+            <div className="flex items-start gap-2 text-[#A3A3A3] text-sm font-body border border-[#2A2A2A] bg-[#0A0A0A] px-3 py-2.5 mb-6">
+              <CheckCircle size={16} className="mt-0.5 shrink-0 text-[#22C35E]" />
+              <span>
+                Número removido da sua conta e equipe avisada. Você pode conectar de
+                novo abaixo quando quiser.
+              </span>
+            </div>
+          )}
+
           <h3 className="font-display font-semibold text-lg text-[#F5F5F5] tracking-tight mb-2">
             Conectar meu WhatsApp
           </h3>
@@ -224,7 +310,7 @@ export default function ConectarWhatsApp({
           <button
             onClick={abrirSignup}
             disabled={!configOk || !sdkReady || status === "aguardando" || status === "enviando"}
-            className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wide px-7 py-3.5 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "enviando" ? (
               <>

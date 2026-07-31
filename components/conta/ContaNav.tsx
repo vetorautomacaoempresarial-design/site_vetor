@@ -24,7 +24,7 @@ export default function ContaNav() {
             className={cn(
               "font-display text-sm tracking-wide px-4 py-3 -mb-px border-b-2 transition-colors",
               active
-                ? "border-[#2563EB] text-white"
+                ? "border-[#4A6CF7] text-white"
                 : "border-transparent text-[#A3A3A3] hover:text-white"
             )}
           >

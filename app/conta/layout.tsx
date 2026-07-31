@@ -20,7 +20,7 @@ export default async function ContaLayout({
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
-            <p className="font-display text-xs tracking-widest uppercase text-[#2563EB] mb-2">
+            <p className="font-display text-xs tracking-widest uppercase text-[#4A6CF7] mb-2">
               Área do cliente
             </p>
             <h1 className="font-display font-bold text-3xl text-[#F5F5F5] tracking-tight">

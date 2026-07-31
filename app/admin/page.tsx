@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { SECTION_LABELS } from "@/lib/content/defaults";
 
 export default function AdminHomePage() {
-  // Agrupa as seções por área (Home, Assistente de Vendas, Geral).
+  // Agrupa as seções por área (Home, Vetor Sales, Geral).
   const groups = new Map<string, { key: string; label: string }[]>();
   for (const [key, { group, label }] of Object.entries(SECTION_LABELS)) {
     if (!groups.has(group)) groups.set(group, []);
@@ -33,7 +33,7 @@ export default function AdminHomePage() {
                 className="flex items-center justify-between px-5 py-4 hover:bg-[#141414] transition-colors group"
               >
                 <span className="font-display text-sm text-[#F5F5F5]">{s.label}</span>
-                <ChevronRight size={16} className="text-[#525252] group-hover:text-[#2563EB] transition-colors" />
+                <ChevronRight size={16} className="text-[#525252] group-hover:text-[#4A6CF7] transition-colors" />
               </Link>
             ))}
           </div>

@@ -20,7 +20,7 @@ export default function LegalDocument({
 }) {
   return (
     <>
-      <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-24">
+      <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-40">
         <div className="max-w-3xl mx-auto px-6">
           <Link
             href="/#planos"
@@ -50,7 +50,7 @@ export default function LegalDocument({
               [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul]:space-y-1.5
               [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_ol]:space-y-1.5
               [&_strong]:text-[#F5F5F5] [&_strong]:font-semibold
-              [&_a]:text-[#2563EB] [&_a]:underline hover:[&_a]:text-[#3B82F6]
+              [&_a]:text-[#4A6CF7] [&_a]:underline hover:[&_a]:text-[#6D8AFF]
               [&_hr]:border-[#2A2A2A] [&_hr]:my-8
               [&_table]:w-full [&_table]:my-6 [&_table]:border [&_table]:border-[#2A2A2A] [&_table]:text-left
               [&_th]:border [&_th]:border-[#2A2A2A] [&_th]:bg-[#141414] [&_th]:px-3 [&_th]:py-2 [&_th]:font-display [&_th]:font-semibold [&_th]:text-[#F5F5F5] [&_th]:text-xs

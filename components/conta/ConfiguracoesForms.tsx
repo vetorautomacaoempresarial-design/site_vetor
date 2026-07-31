@@ -60,7 +60,7 @@ function NameForm({ currentName }: { currentName: string }) {
       </h2>
 
       {done && (
-        <div className="flex items-center gap-2 text-[#2563EB] font-body text-sm mb-4">
+        <div className="flex items-center gap-2 text-[#4A6CF7] font-body text-sm mb-4">
           <CheckCircle size={18} />
           Nome atualizado com sucesso.
         </div>
@@ -74,7 +74,7 @@ function NameForm({ currentName }: { currentName: string }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50"
+          className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50"
         >
           {isSubmitting ? "Salvando..." : "Salvar nome"}
         </button>
@@ -125,12 +125,12 @@ function EmailForm({ currentEmail }: { currentEmail: string }) {
         Alterar e-mail
       </h2>
       <p className="font-body text-sm text-[#737373] mb-6">
-        Por segurança, confirme sua senha atual. A troca é aplicada na hora — você passará a
+        Por segurança, confirme sua senha atual. A troca é aplicada na hora e você passará a
         entrar com o novo e-mail.
       </p>
 
       {done ? (
-        <div className="flex items-center gap-2 text-[#2563EB] font-body text-sm">
+        <div className="flex items-center gap-2 text-[#4A6CF7] font-body text-sm">
           <CheckCircle size={18} />
           E-mail atualizado com sucesso.
         </div>
@@ -146,7 +146,7 @@ function EmailForm({ currentEmail }: { currentEmail: string }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50"
+            className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "Enviando..." : "Salvar e-mail"}
           </button>
@@ -187,7 +187,7 @@ function PasswordForm() {
       </h2>
 
       {done && (
-        <div className="flex items-center gap-2 text-[#2563EB] font-body text-sm mb-4">
+        <div className="flex items-center gap-2 text-[#4A6CF7] font-body text-sm mb-4">
           <CheckCircle size={18} />
           Senha atualizada com sucesso.
         </div>
@@ -204,7 +204,7 @@ function PasswordForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors disabled:opacity-50"
+          className="self-start font-display text-sm font-semibold tracking-wide px-6 py-3 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors disabled:opacity-50"
         >
           {isSubmitting ? "Salvando..." : "Salvar senha"}
         </button>

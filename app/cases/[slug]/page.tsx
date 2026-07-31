@@ -54,7 +54,7 @@ export default async function CasePage({ params }: Props) {
                 </p>
               </div>
               <div className="lg:text-right">
-                <div className="font-display font-bold text-8xl text-[#2563EB] leading-none">
+                <div className="font-display font-bold text-8xl text-[#4A6CF7] leading-none">
                   {c.metric}
                 </div>
                 <div className="font-body text-sm text-[#A3A3A3] mt-2">{c.metricLabel}</div>
@@ -63,12 +63,12 @@ export default async function CasePage({ params }: Props) {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto px-6 pt-20 pb-40">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main content */}
             <div className="lg:col-span-2 flex flex-col gap-14">
               <div>
-                <h2 className="font-display font-semibold text-xs tracking-widest uppercase text-[#2563EB] mb-4">
+                <h2 className="font-display font-semibold text-xs tracking-widest uppercase text-[#4A6CF7] mb-4">
                   O Desafio
                 </h2>
                 <p className="font-body font-light text-[#A3A3A3] leading-relaxed text-base">
@@ -77,7 +77,7 @@ export default async function CasePage({ params }: Props) {
               </div>
 
               <div>
-                <h2 className="font-display font-semibold text-xs tracking-widest uppercase text-[#2563EB] mb-4">
+                <h2 className="font-display font-semibold text-xs tracking-widest uppercase text-[#4A6CF7] mb-4">
                   A Solução
                 </h2>
                 <p className="font-body font-light text-[#A3A3A3] leading-relaxed text-base">
@@ -96,7 +96,7 @@ export default async function CasePage({ params }: Props) {
                 <div className="flex flex-col gap-4">
                   {c.results.map((r) => (
                     <div key={r.label} className="flex items-start gap-3">
-                      <CheckCircle size={14} className="text-[#2563EB] mt-0.5 shrink-0" />
+                      <CheckCircle size={14} className="text-[#4A6CF7] mt-0.5 shrink-0" />
                       <div>
                         <div className="font-display font-bold text-xl text-white">{r.value}</div>
                         <div className="font-body text-xs text-[#737373] mt-0.5">{r.label}</div>
@@ -121,7 +121,7 @@ export default async function CasePage({ params }: Props) {
               </div>
 
               {/* CTA */}
-              <div className="border border-[#2563EB]/30 bg-[#2563EB]/5 p-6">
+              <div className="border border-[#4A6CF7]/30 bg-[#4A6CF7]/5 p-6">
                 <p className="font-display font-semibold text-sm text-[#F5F5F5] mb-2">
                   Quer resultados semelhantes?
                 </p>
@@ -130,7 +130,7 @@ export default async function CasePage({ params }: Props) {
                 </p>
                 <Link
                   href="/#contato"
-                  className="inline-flex items-center gap-2 font-display text-xs font-semibold tracking-wide px-5 py-2.5 bg-[#2563EB] text-white hover:bg-[#3B82F6] transition-colors"
+                  className="inline-flex items-center gap-2 font-display text-xs font-semibold tracking-wide px-5 py-2.5 bg-[#4A6CF7] text-white hover:bg-[#6D8AFF] transition-colors"
                 >
                   Fale Conosco
                   <ArrowRight size={12} />

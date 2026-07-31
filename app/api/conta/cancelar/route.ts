@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createServiceClient } from "@/lib/supabase/service";
 import { cancelSchema } from "@/lib/validation";
-import { PLANS } from "@/lib/plans";
+import { PRODUCTS } from "@/lib/plans";
 import { cancelSubscription, AsaasError } from "@/lib/asaas/client";
 import { notifyTeam } from "@/lib/notify";
 import type { Subscription } from "@/lib/db";
@@ -56,10 +56,10 @@ export async function POST(req: NextRequest) {
       subject: `[Assinatura] Cancelamento — ${user.email}`,
       html: `
         <div style="font-family: sans-serif; color:#1a1a1a; max-width:600px;">
-          <h2 style="color:#2563EB;">Cancelamento de assinatura</h2>
+          <h2 style="color:#4A6CF7;">Cancelamento de assinatura</h2>
           <p><strong>Cliente:</strong> ${user.email}</p>
           <p><strong>ID do usuário:</strong> ${user.id}</p>
-          <p><strong>Plano:</strong> ${PLANS[sub.plan]?.name ?? sub.plan}</p>
+          <p><strong>Plano:</strong> ${PRODUCTS[sub.product]?.name ?? sub.product} — ${sub.plan}</p>
           <p><strong>Assinatura ASAAS:</strong> ${sub.asaas_subscription_id}</p>
           ${parsed.data.message ? `<p><strong>Motivo:</strong> ${parsed.data.message}</p>` : ""}
           <p style="color:#666;">A assinatura já foi cancelada no ASAAS via API.</p>

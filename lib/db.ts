@@ -1,5 +1,9 @@
-// Tipos das tabelas da Área do Cliente (espelham supabase/migrations/0001_area_do_cliente.sql).
-import type { PlanId } from "@/lib/plans";
+// Tipos das tabelas da Área do Cliente (espelham supabase/migrations/0001_area_do_cliente.sql
+// e 0005_produtos.sql).
+//
+// Atenção à nomenclatura: a coluna `plan` guarda o CICLO de cobrança
+// (billing_period), não o produto. O produto vive na coluna `product`.
+import type { BillingPeriod, ProductId } from "@/lib/plans";
 
 export type SubscriptionStatus = "ativa" | "vencida" | "cancelada" | "pendente";
 export type RequestType = "cancelamento" | "troca_plano";
@@ -8,7 +12,9 @@ export type RequestStatus = "pendente" | "resolvido" | "cancelado";
 export interface Subscription {
   id: string;
   user_id: string;
-  plan: PlanId;
+  /** Ciclo de cobrança (coluna `plan`, enum billing_period). */
+  plan: BillingPeriod;
+  product: ProductId;
   status: SubscriptionStatus;
   asaas_customer_id: string | null;
   asaas_subscription_id: string | null;
@@ -29,7 +35,8 @@ export interface Payment {
   asaas_subscription_id: string | null;
   amount_cents: number;
   currency: string;
-  plan: PlanId | null;
+  plan: BillingPeriod | null;
+  product: ProductId | null;
   status: string | null;
   billing_type: string | null;
   invoice_url: string | null;
@@ -43,7 +50,8 @@ export interface SubscriptionRequest {
   id: string;
   user_id: string;
   type: RequestType;
-  desired_plan: PlanId | null;
+  desired_plan: BillingPeriod | null;
+  desired_product: ProductId | null;
   status: RequestStatus;
   message: string | null;
   created_at: string;

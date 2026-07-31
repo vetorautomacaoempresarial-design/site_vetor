@@ -1,55 +1,71 @@
 "use client";
 import { MessageCircle } from "lucide-react";
-import Badge from "@/components/ui/Badge";
 import { StaggerChildren, staggerItem, motion } from "@/components/motion";
+import { cn } from "@/lib/cn";
+import Wave from "@/components/ui/Wave";
+import { THEMES, badgeClasses, cardClasses, type SectionTheme } from "@/lib/section-theme";
 import type { SiteContent } from "@/lib/content/types";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5554991776175";
 
 export default function ProcessoDeCompra({
   content,
+  theme = "azul",
 }: {
   content: SiteContent["assistente"]["processo"];
+  theme?: SectionTheme;
 }) {
+  const t = THEMES[theme];
+
   return (
-    <section className="py-28 bg-[#141414] border-t border-[#2A2A2A]">
+    <section className="relative pt-28 pb-40" style={{ backgroundColor: t.bg }}>
+      <Wave fill={t.bg} position="top" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
-          <Badge className="mb-4">{content.badge}</Badge>
-          <h2 className="font-display font-bold text-4xl lg:text-5xl text-[#F5F5F5] leading-tight tracking-tight max-w-xl whitespace-pre-line">
+          <span className={cn(badgeClasses(t), "mb-4")}>{content.badge}</span>
+          <h2
+            className={cn(
+              "font-display font-bold text-4xl lg:text-5xl leading-tight tracking-tight max-w-xl whitespace-pre-line",
+              t.title
+            )}
+          >
             {content.title}
           </h2>
         </div>
 
-        <StaggerChildren className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0" staggerDelay={0.12}>
+        {/* Caixas independentes: o que agrupa é a proximidade e o alinhamento,
+            não um contorno comum. */}
+        <StaggerChildren className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.12}>
           {content.steps.map((step, i) => (
             <motion.div
               key={step.number || i}
               variants={staggerItem}
-              className="relative p-8 border-[#2A2A2A] border-t lg:border-t-0 lg:border-l first:lg:border-l-0"
+              className={cn(cardClasses(t), "relative")}
             >
-              {i < content.steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 right-0 w-px h-4 bg-[#2563EB] translate-x-1/2" />
-              )}
-              <div className="font-display font-bold text-5xl text-[#383838] mb-6 leading-none tracking-tighter">
+              <div
+                className={cn(
+                  "font-display font-bold text-5xl mb-6 leading-none tracking-tighter",
+                  t.ghost
+                )}
+              >
                 {step.number}
               </div>
-              <div className="w-6 h-px bg-[#2563EB] mb-5" />
-              <h3 className="font-display font-semibold text-2xl text-[#F5F5F5] mb-3 tracking-tight">
+              <div className={cn("w-6 h-px mb-5", t.divide)} />
+              <h3 className={cn("font-display font-semibold text-2xl mb-3 tracking-tight", t.title)}>
                 {step.title}
               </h3>
-              <p className="font-body font-light text-[#A3A3A3] text-sm leading-relaxed">
+              <p className={cn("font-body font-light text-sm leading-relaxed", t.body)}>
                 {step.description}
               </p>
             </motion.div>
           ))}
         </StaggerChildren>
 
-        <div className="mt-16 p-10 border border-[#2A2A2A] bg-[#0A0A0A] flex flex-col items-center text-center">
-          <p className="font-display font-semibold text-lg text-[#F5F5F5] mb-2">
+        <div className={cn("mt-16 p-10 flex flex-col items-center text-center", t.box)}>
+          <p className={cn("font-display font-semibold text-lg mb-2", t.title)}>
             {content.boxTitle}
           </p>
-          <p className="font-body font-light text-sm text-[#A3A3A3] mb-8">
+          <p className={cn("font-body font-light text-sm mb-8", t.body)}>
             {content.boxSubtitle}
           </p>
           <div className="flex flex-wrap justify-center gap-3">

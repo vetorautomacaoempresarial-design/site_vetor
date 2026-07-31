@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServiceClient } from "@/lib/supabase/service";
-import type { PlanId } from "@/lib/plans";
+import type { BillingPeriod, ProductId } from "@/lib/plans";
 
 // Webhook do ASAAS: recebe eventos de cobrança e sincroniza o Supabase.
 // Autenticação: header `asaas-access-token` deve bater com ASAAS_WEBHOOK_TOKEN.
@@ -89,7 +89,8 @@ export async function POST(req: NextRequest) {
       asaas_subscription_id: payment.subscription ?? null,
       amount_cents: Math.round((payment.value ?? 0) * 100),
       currency: "BRL",
-      plan: sub.plan as PlanId,
+      plan: sub.plan as BillingPeriod,
+      product: sub.product as ProductId,
       status: payment.status ?? null,
       billing_type: payment.billingType ?? null,
       invoice_url: payment.invoiceUrl ?? null,

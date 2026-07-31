@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createServiceClient } from "@/lib/supabase/service";
 import { subscribeSchema } from "@/lib/validation";
-import { PLANS } from "@/lib/plans";
+import { PRODUCTS, getPlan } from "@/lib/plans";
 import { LEGAL_VERSION, legalAcceptanceSnapshot } from "@/lib/legal";
 import {
   findOrCreateCustomer,
@@ -33,8 +33,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Dados inválidos." }, { status: 400 });
   }
 
-  const { plan, name, cpfCnpj } = parsed.data;
-  const planConfig = PLANS[plan];
+  const { plan, product, name, cpfCnpj } = parsed.data;
+  const planConfig = getPlan(product, plan);
+  const productConfig = PRODUCTS[product];
 
   const service = createServiceClient();
 
@@ -52,6 +53,7 @@ export async function POST(req: NextRequest) {
       terms_version: LEGAL_VERSION,
       documents: legalAcceptanceSnapshot(),
       plan,
+      product,
     });
   if (acceptanceError) {
     console.error("Erro ao registrar aceite dos termos:", acceptanceError);
@@ -73,7 +75,7 @@ export async function POST(req: NextRequest) {
       customer: customer.id,
       valueCents: planConfig.priceCentsPerCycle,
       cycle: planConfig.cycle,
-      description: `Assistente de Vendas, plano ${planConfig.name}`,
+      description: `${productConfig.name}, plano ${planConfig.name}`,
       externalReference: user.id,
     });
 
@@ -84,6 +86,7 @@ export async function POST(req: NextRequest) {
       {
         user_id: user.id,
         plan,
+        product,
         status: "pendente",
         asaas_customer_id: customer.id,
         asaas_subscription_id: subscription.id,

@@ -1,5 +1,13 @@
 import { createClient } from "@/lib/supabase/server";
-import { PLANS, STATUS_LABELS, formatBRL, isPlanId, type PlanId } from "@/lib/plans";
+import {
+  PRODUCTS,
+  STATUS_LABELS,
+  formatBRL,
+  isBillingPeriod,
+  isProductId,
+  type BillingPeriod,
+  type ProductId,
+} from "@/lib/plans";
 import { LEGAL_DOCS } from "@/lib/legal";
 import { getLegalMarkdown } from "@/lib/legal-content";
 import type { Subscription } from "@/lib/db";
@@ -7,11 +15,17 @@ import ContaActions from "@/components/conta/ContaActions";
 
 export const metadata = { title: "Minha assinatura" };
 
+const CYCLE_LABELS: Record<string, string> = {
+  mensal: "Mensal",
+  trimestral: "Trimestral",
+  anual: "Anual",
+};
+
 const STATUS_STYLES: Record<string, string> = {
   ativa: "text-[#22C35E] border-[#22C35E]/40 bg-[#22C35E]/10",
   vencida: "text-[#F59E0B] border-[#F59E0B]/40 bg-[#F59E0B]/10",
   cancelada: "text-[#A3A3A3] border-[#A3A3A3]/40 bg-[#A3A3A3]/10",
-  pendente: "text-[#2563EB] border-[#2563EB]/40 bg-[#2563EB]/10",
+  pendente: "text-[#4A6CF7] border-[#4A6CF7]/40 bg-[#4A6CF7]/10",
 };
 
 function formatDate(value: string | null): string {
@@ -26,10 +40,13 @@ function formatDate(value: string | null): string {
 export default async function ContaPage({
   searchParams,
 }: {
-  searchParams: Promise<{ plano?: string }>;
+  searchParams: Promise<{ plano?: string; produto?: string }>;
 }) {
-  const { plano } = await searchParams;
-  const initialPlan: PlanId | null = isPlanId(plano) ? plano : null;
+  // ?plano= é o ciclo (mensal/trimestral/anual) e ?produto= o que se contrata.
+  // As páginas públicas de cada produto linkam para cá já com os dois.
+  const { plano, produto } = await searchParams;
+  const initialPlan: BillingPeriod | null = isBillingPeriod(plano) ? plano : null;
+  const initialProduct: ProductId | null = isProductId(produto) ? produto : null;
 
   const supabase = await createClient();
   const {
@@ -83,7 +100,8 @@ export default async function ContaPage({
 
         {sub ? (
           <dl className="grid sm:grid-cols-2 gap-y-5 gap-x-8">
-            <Info label="Plano" value={PLANS[sub.plan]?.name ?? sub.plan} />
+            <Info label="Produto" value={PRODUCTS[sub.product]?.name ?? sub.product} />
+            <Info label="Ciclo de cobrança" value={CYCLE_LABELS[sub.plan] ?? sub.plan} />
             <Info
               label="Valor por ciclo"
               value={sub.value_cents != null ? formatBRL(sub.value_cents) : "—"}
@@ -98,8 +116,8 @@ export default async function ContaPage({
           </dl>
         ) : (
           <p className="font-body text-sm text-[#A3A3A3] leading-relaxed">
-            Você ainda não tem uma assinatura ativa do Assistente de Vendas. Escolha um plano abaixo
-            para começar.
+            Você ainda não tem uma assinatura ativa. Escolha abaixo o que quer contratar para
+            começar.
           </p>
         )}
       </section>
@@ -107,7 +125,9 @@ export default async function ContaPage({
       <ContaActions
         hasActive={hasActive}
         currentPlan={sub?.plan ?? null}
+        currentProduct={sub?.product ?? null}
         initialPlan={initialPlan}
+        initialProduct={initialProduct}
         defaultName={defaultName}
         legalDocs={legalDocs}
       />

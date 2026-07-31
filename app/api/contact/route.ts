@@ -62,14 +62,14 @@ export async function POST(req: NextRequest) {
       subject: `[Lead] ${name} — ${company}`,
       html: `
         <div style="font-family: sans-serif; color: #1a1a1a; max-width: 600px;">
-          <h2 style="color: #2563EB; margin-bottom: 24px;">Novo lead via site</h2>
+          <h2 style="color: #4A6CF7; margin-bottom: 24px;">Novo lead via site</h2>
           <table style="width:100%; border-collapse: collapse;">
             <tr><td style="padding: 8px 0; color:#666; width:100px;">Nome</td><td style="padding: 8px 0; font-weight:600;">${name}</td></tr>
             <tr><td style="padding: 8px 0; color:#666;">E-mail</td><td style="padding: 8px 0;">${email}</td></tr>
             <tr><td style="padding: 8px 0; color:#666;">Empresa</td><td style="padding: 8px 0; font-weight:600;">${company}</td></tr>
             <tr><td style="padding: 8px 0; color:#666;">Telefone</td><td style="padding: 8px 0;">${phone || "—"}</td></tr>
           </table>
-          <div style="margin-top: 24px; padding: 16px; background: #f5f5f5; border-left: 3px solid #2563EB;">
+          <div style="margin-top: 24px; padding: 16px; background: #f5f5f5; border-left: 3px solid #4A6CF7;">
             <p style="margin: 0; color:#333; white-space: pre-wrap;">${message}</p>
           </div>
         </div>
