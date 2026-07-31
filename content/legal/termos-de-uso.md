@@ -1,6 +1,6 @@
 **TERMOS DE USO**
 
-_Plataforma de Automação por IA para Qualificação de Leads via WhatsApp_
+_Plataforma de Automação por IA e de Conexão de Número à API Oficial do WhatsApp_
 
 ## 1\. ACEITAÇÃO DOS TERMOS
 
@@ -10,9 +10,17 @@ _Plataforma de Automação por IA para Qualificação de Leads via WhatsApp_
 
 ## 2\. DESCRIÇÃO DO SERVIÇO
 
-**2.1.** O Serviço consiste em uma automação por inteligência artificial, vinculada à conta de WhatsApp Business do CLIENTE, destinada a receber, interagir e qualificar leads de forma automatizada, em funcionamento contínuo, observadas as limitações técnicas e a dependência de plataformas de terceiros.
+**2.1.** A VETOR disponibiliza os seguintes produtos:
+
+**a)** **Vetor Sales** (anteriormente denominado "Assistente de Vendas"): automação por inteligência artificial, vinculada à conta de WhatsApp do CLIENTE, destinada a receber, interagir e qualificar leads de forma automatizada, em funcionamento contínuo;
+
+**b)** **Vetor Chat** (anteriormente denominado "WhatsApp Blindado"): conexão do número do CLIENTE à API Oficial do WhatsApp por intermédio da conta de provedor da VETOR, com disponibilização de plataforma própria de atendimento.
 
 **2.2.** A qualificação de leads é atividade-meio. A VETOR não garante resultados comerciais, vendas, conversões ou retorno financeiro.
+
+**2.3. LIMITAÇÃO DE ENVIO ATIVO.** O CLIENTE cujo número seja conectado à API Oficial declara ciência de que essa conexão **restringe permanentemente a sua capacidade de enviar mensagens**: fora da janela de 24 (vinte e quatro) horas contada da última mensagem do destinatário, só é possível enviar modelos de mensagem previamente aprovados pela Meta, ficando **tecnicamente impossibilitado** o disparo livre ou em massa a quem não iniciou contato. Essa limitação é característica essencial e finalidade do serviço, não constituindo defeito ou falha de prestação, conforme a Cláusula 3.4 do Contrato de Prestação de Serviços.
+
+**2.4.** A VETOR não garante a ausência de bloqueios, suspensões ou restrições impostas pela Meta ao número ou à conta do CLIENTE, nos termos do item 5 abaixo.
 
 ## 3\. CADASTRO E CONTA
 
@@ -46,7 +54,7 @@ _Plataforma de Automação por IA para Qualificação de Leads via WhatsApp_
 
 ## 6\. PLANOS, PAGAMENTO E CANCELAMENTO
 
-**6.1.** Os planos, valores, formas de pagamento, renovação, reajuste e cancelamento são regidos pelo Contrato de Prestação de Serviços. Em resumo, há os planos Mensal (R$ 289,90), Trimestral (R$ 259,90/mês) e Anual (R$ 229,90/mês), com renovação automática. Para cancelar, o CLIENTE deve enviar solicitação ao e-mail administrativo@vetorautomacao.io com antecedência mínima de 7 (sete) dias corridos da data de renovação. O suporte técnico é prestado via WhatsApp (54) 9674-2471 e e-mail administrativo@vetorautomacao.io, em dias úteis, das 9h às 18h (horário de Brasília); os prazos de atendimento são informados diretamente no canal de suporte.
+**6.1.** Os planos, valores, formas de pagamento, renovação, reajuste e cancelamento são regidos pelo Contrato de Prestação de Serviços. Em resumo, cada produto é oferecido nos ciclos Mensal, Trimestral e Anual, com renovação automática: Vetor Chat a partir de R$ 78,90/mês e Vetor Sales a partir de R$ 229,90/mês. A migração entre produtos e ciclos pode ser feita pela Área do Cliente e vale a partir da cobrança seguinte. Para cancelar, o CLIENTE deve enviar solicitação ao e-mail administrativo@vetorautomacao.io com antecedência mínima de 7 (sete) dias corridos da data de renovação. O suporte técnico é prestado via WhatsApp (54) 9674-2471 e e-mail administrativo@vetorautomacao.io, em dias úteis, das 9h às 18h (horário de Brasília); os prazos de atendimento são informados diretamente no canal de suporte.
 
 **6.2.** O CLIENTE consumidor poderá exercer o direito de arrependimento em até 7 (sete) dias da contratação, nos termos do art. 49 do CDC.
 

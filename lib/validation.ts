@@ -67,7 +67,10 @@ export const updateNameSchema = z.object({
   name: z.string().min(2, "Informe seu nome completo"),
 });
 
+// `plan` = ciclo de cobrança (enum billing_period do banco).
+// `product` = o que está sendo contratado. Ver lib/plans.ts.
 const planField = z.enum(["mensal", "trimestral", "anual"]);
+const productField = z.enum(["assistente", "blindado"]);
 
 // Aceita CPF (11) ou CNPJ (14) dígitos — validação leve (só comprimento).
 const cpfCnpjField = z
@@ -79,6 +82,7 @@ const cpfCnpjField = z
 
 export const subscribeSchema = z.object({
   plan: planField,
+  product: productField,
   name: z.string().min(2, "Informe o nome do titular"),
   cpfCnpj: cpfCnpjField,
   // Aceite obrigatório dos termos (contrato, termos de uso, privacidade, cookies, DPA).
@@ -89,6 +93,7 @@ export const subscribeSchema = z.object({
 
 export const changePlanSchema = z.object({
   plan: planField,
+  product: productField,
 });
 
 export const cancelSchema = z.object({

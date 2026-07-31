@@ -1,6 +1,6 @@
 **CONTRATO DE ADESÃO E PRESTAÇÃO DE SERVIÇOS**
 
-_Serviço de Automação por Inteligência Artificial para Qualificação de Leads via WhatsApp_
+_Serviços de Automação por Inteligência Artificial e de Conexão de Número à API Oficial do WhatsApp_
 
 ## QUALIFICAÇÃO DAS PARTES
 
@@ -10,7 +10,7 @@ CONTRATANTE: a pessoa física ou jurídica que realiza o cadastro, aceita eletro
 
 As partes acima identificadas têm, entre si, justo e contratado o presente Contrato de Adesão e Prestação de Serviços (“Contrato”), que se regerá pelas cláusulas e condições a seguir, mediante aceite eletrônico do CLIENTE.
 
-## CLÁUSULA 1 – DAS DEFINIÇÕES
+## CLÁUSULA 1. DAS DEFINIÇÕES
 
 **1.1.** Para os fins deste Contrato, os termos abaixo terão os seguintes significados:
 
@@ -22,15 +22,31 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **d)** Número do CLIENTE: linha telefônica válida e habilitada, fornecida pelo CLIENTE, vinculada a uma conta de WhatsApp Business para funcionamento da Automação.
 
-## CLÁUSULA 2 – DO OBJETO
+**e)** Blindagem / Vetor Chat: serviço de conexão do Número do CLIENTE à API Oficial do WhatsApp (Cloud API), por intermédio da conta de provedor da VETOR junto à Meta, acompanhado da disponibilização da Plataforma de Atendimento.
 
-**2.1.** O objeto deste Contrato é a concessão, pela VETOR ao CLIENTE, de licença de uso, na modalidade de assinatura, de uma automação por inteligência artificial vinculada à conta de WhatsApp Business do CLIENTE, capaz de receber, interagir e qualificar leads de forma automatizada, em funcionamento contínuo (24 horas por dia, 7 dias por semana), sujeito às limitações deste Contrato e à disponibilidade das plataformas de terceiros.
+**f)** Plataforma de Atendimento: interface de software disponibilizada pela VETOR por meio da qual o CLIENTE e seus prepostos enviam e recebem as mensagens do Número do CLIENTE, em substituição ao uso direto do aplicativo WhatsApp Business.
 
-**2.2.** A Automação realiza atividade-meio de qualificação de leads. A VETOR NÃO comercializa, não garante e não se compromete com qualquer resultado comercial, número de vendas, taxa de conversão, faturamento ou retorno financeiro do CLIENTE, tratando-se de obrigação de meio e não de resultado.
+**g)** Janela de Atendimento: período de 24 (vinte e quatro) horas, contado a partir da última mensagem enviada pelo Lead, durante o qual as regras da Meta permitem o envio de mensagens de conteúdo livre pelo CLIENTE.
 
-**2.3.** A contratação não inclui a linha telefônica, o aparelho, o plano de dados, a conta de WhatsApp Business, nem qualquer custo cobrado por Meta ou por terceiros, que são de responsabilidade exclusiva do CLIENTE.
+**h)** Modelo de Mensagem (template): mensagem de conteúdo previamente submetido e aprovado pela Meta, única forma admitida de envio ativo ao Lead fora da Janela de Atendimento.
 
-## CLÁUSULA 3 – DO FUNCIONAMENTO E REQUISITOS
+## CLÁUSULA 2. DO OBJETO
+
+**2.1.** O objeto deste Contrato é a prestação, pela VETOR ao CLIENTE, na modalidade de assinatura, dos serviços correspondentes ao produto contratado no ato da adesão, entre os seguintes:
+
+**a)** **Vetor Sales** (anteriormente denominado "Assistente de Vendas"): licença de uso de automação por inteligência artificial vinculada à conta de WhatsApp do CLIENTE, capaz de receber, interagir e qualificar leads de forma automatizada, em funcionamento contínuo (24 horas por dia, 7 dias por semana);
+
+**b)** **Vetor Chat** (anteriormente denominado "WhatsApp Blindado"): conexão do Número do CLIENTE à API Oficial do WhatsApp por intermédio da conta de provedor da VETOR, com disponibilização da Plataforma de Atendimento e acompanhamento do processo de verificação junto à Meta.
+
+**2.2.** Os produtos são mutuamente exclusivos: o CLIENTE mantém uma única assinatura ativa por vez, podendo migrar entre os produtos na forma da Cláusula 7.
+
+**2.3.** A Automação realiza atividade-meio de qualificação de leads. A VETOR NÃO comercializa, não garante e não se compromete com qualquer resultado comercial, número de vendas, taxa de conversão, faturamento ou retorno financeiro do CLIENTE, tratando-se de obrigação de meio e não de resultado.
+
+**2.4.** A Blindagem consiste em atividade-meio de adequação técnica do Número do CLIENTE ao padrão oficial da Meta. A VETOR NÃO garante, e não pode garantir, a ausência de bloqueios, suspensões ou restrições impostas pela Meta, cuja decisão é soberana e unilateral, nos exatos termos da Cláusula 10.
+
+**2.5.** A contratação não inclui a linha telefônica, o aparelho, o plano de dados, nem qualquer custo cobrado por Meta ou por terceiros, inclusive tarifas de mensagens cobradas pela Meta pelo uso da API Oficial, que são de responsabilidade exclusiva do CLIENTE.
+
+## CLÁUSULA 3. DO FUNCIONAMENTO E REQUISITOS
 
 **3.1.** Para ativação do serviço, o CLIENTE deverá disponibilizar um número de telefone válido, ativo, de sua titularidade ou cujo uso esteja por ele autorizado, apto a ser cadastrado no WhatsApp Business.
 
@@ -38,7 +54,23 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **3.3.** A VETOR poderá realizar manutenções programadas, atualizações e melhorias na Automação, comprometendo-se a comunicar previamente o CLIENTE, sempre que possível, quanto às manutenções que impliquem indisponibilidade relevante.
 
-## CLÁUSULA 4 – DAS OBRIGAÇÕES DA VETOR
+**3.4. DA LIMITAÇÃO DE ENVIO ATIVO DE MENSAGENS.** O CLIENTE declara estar plenamente ciente, e expressamente aceita, que a conexão do seu Número à API Oficial do WhatsApp implica **restrição permanente à sua capacidade de enviar mensagens**, nos seguintes termos:
+
+**a)** dentro da Janela de Atendimento, o envio de mensagens de conteúdo livre é permitido;
+
+**b)** **fora da Janela de Atendimento, o envio de mensagens de conteúdo livre é tecnicamente impossível**, sendo admitido exclusivamente o envio de Modelos de Mensagem previamente aprovados pela Meta;
+
+**c)** a aprovação de cada Modelo de Mensagem é decisão exclusiva da Meta, podendo ser negada ou revogada a qualquer tempo, sem que isso configure inadimplemento da VETOR;
+
+**d)** o disparo em massa de mensagens a destinatários que não tenham iniciado contato **deixa de ser possível** por meio do Número conectado;
+
+**e)** a Meta cobra tarifa própria por determinadas categorias de mensagem enviadas fora da Janela de Atendimento, de responsabilidade exclusiva do CLIENTE.
+
+**3.5.** O CLIENTE reconhece que a limitação descrita na Cláusula 3.4 é **característica essencial e finalidade precípua** do serviço de Blindagem, e não defeito, vício ou falha de prestação. A adequação do Número às regras da Meta é justamente o que se pretende obter com a contratação, não sendo cabível reclamação, abatimento, reembolso ou rescisão sem ônus fundada na impossibilidade de envio ativo fora da Janela de Atendimento.
+
+**3.6.** A migração do Número para a API Oficial é realizada, sempre que tecnicamente viável, em modo de coexistência, com preservação do histórico de conversas. A VETOR não responde por eventual perda de histórico decorrente de limitação técnica da Meta, de configuração prévia do aparelho do CLIENTE ou de ausência de backup sob responsabilidade deste.
+
+## CLÁUSULA 4. DAS OBRIGAÇÕES DA VETOR
 
 **4.1.** Disponibilizar a Automação em funcionamento durante a vigência do Contrato, observadas as limitações técnicas e a dependência de plataformas de terceiros.
 
@@ -48,7 +80,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **4.4.** Comunicar o CLIENTE sobre alterações relevantes no serviço ou nestes termos, na forma da Cláusula 16.
 
-## CLÁUSULA 5 – DAS OBRIGAÇÕES E RESPONSABILIDADES DO CLIENTE
+## CLÁUSULA 5. DAS OBRIGAÇÕES E RESPONSABILIDADES DO CLIENTE
 
 **5.1.** Fornecer dados cadastrais verdadeiros, completos e atualizados, responsabilizando-se civil e criminalmente pelas informações prestadas.
 
@@ -62,7 +94,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **5.6.** Manter sob sigilo suas credenciais de acesso, não as compartilhando com terceiros não autorizados, sendo responsável por todas as operações realizadas com seu cadastro.
 
-## CLÁUSULA 6 – DO USO ACEITÁVEL E CONDUTAS VEDADAS
+## CLÁUSULA 6. DO USO ACEITÁVEL E CONDUTAS VEDADAS
 
 **6.1.** É expressamente vedado ao CLIENTE, direta ou indiretamente:
 
@@ -78,33 +110,45 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **6.2.** A infração a esta cláusula autoriza a VETOR a suspender ou rescindir imediatamente o serviço, sem prejuízo da retenção dos valores devidos e da responsabilização do CLIENTE por perdas e danos, na forma da Cláusula 11.
 
-## CLÁUSULA 7 – DOS PLANOS, PREÇOS E PAGAMENTO
+## CLÁUSULA 7. DOS PLANOS, PREÇOS E PAGAMENTO
 
-**7.1.** Os serviços são prestados mediante assinatura, conforme os planos abaixo:
+**7.1.** Os serviços são prestados mediante assinatura, conforme o produto e o ciclo de cobrança contratados:
 
-| Plano | Valor mensal | Compromisso / cobrança |
+**7.1.1.** **Vetor Chat:**
+
+| Ciclo | Valor mensal | Compromisso / cobrança |
+| --- | --- | --- |
+| Mensal | R$ 99,90 | Sem fidelidade. Renovação automática a cada mês. |
+| Trimestral | R$ 89,90 /mês | Compromisso de 3 meses (total R$ 269,70). |
+| Anual | R$ 78,90 /mês | Compromisso de 12 meses (total R$ 946,80). |
+
+**7.1.2.** **Vetor Sales:**
+
+| Ciclo | Valor mensal | Compromisso / cobrança |
 | --- | --- | --- |
 | Mensal | R$ 289,90 | Sem fidelidade. Renovação automática a cada mês. |
 | Trimestral | R$ 259,90 /mês | Compromisso de 3 meses (total R$ 779,70). |
 | Anual | R$ 229,90 /mês | Compromisso de 12 meses (total R$ 2.758,80). |
 
-**7.2.** Os valores dos planos Trimestral e Anual correspondem ao preço mensal sob compromisso de permanência pelo respectivo período, com cobrança recorrente mensal dentro do período contratado, mediante débito automático no cartão de crédito cadastrado ou pagamento via PIX/boleto gerado mensalmente.
+**7.2.** Os valores dos ciclos Trimestral e Anual correspondem ao preço mensal sob compromisso de permanência pelo respectivo período, com cobrança recorrente dentro do período contratado, mediante débito automático no cartão de crédito cadastrado ou pagamento via PIX/boleto gerado a cada ciclo.
+
+**7.2.1.** O CLIENTE poderá, a qualquer tempo e pela Área do Cliente, migrar entre os produtos e ciclos previstos na Cláusula 7.1. A alteração passa a vigorar a partir da cobrança subsequente, não gerando reembolso proporcional do período já pago nem antecipação da data de renovação.
 
 **7.3.** O pagamento será realizado por meio de **cartão de crédito recorrente, PIX e boleto bancário, processados pela plataforma Asaas (instituição de pagamento autorizada pelo Banco Central, código 461)**, com vencimento **aniversário mensal da data de contratação, conforme controlado automaticamente pela plataforma de cobrança**.
 
 **7.4.** O acesso à Automação fica condicionado à confirmação do pagamento. A assinatura renova-se automaticamente ao final de cada ciclo, pelo mesmo período, salvo cancelamento na forma da Cláusula 15.
 
-## CLÁUSULA 8 – DO REAJUSTE
+## CLÁUSULA 8. DO REAJUSTE
 
 **8.1.** Os valores poderão ser reajustados anualmente, a contar da data de início da contratação, pela variação do **IPCA (Índice de Preços ao Consumidor Amplo, apurado pelo IBGE)** ou, na sua falta, por índice que o substitua, mediante comunicação prévia ao CLIENTE com antecedência mínima de 30 (trinta) dias.
 
-## CLÁUSULA 9 – DA INADIMPLÊNCIA
+## CLÁUSULA 9. DA INADIMPLÊNCIA
 
 **9.1.** Em caso de não pagamento na data de vencimento, incidirão sobre o valor em atraso multa de 2% (dois por cento), juros de mora de 1% (um por cento) ao mês e atualização monetária.
 
 **9.2.** Persistindo a inadimplência por prazo superior a **3 (três) dias úteis**, a VETOR poderá suspender a Automação independentemente de notificação adicional e, após **15 (quinze) dias corridos**, rescindir o Contrato e cancelar o cadastro, sem prejuízo da cobrança dos valores devidos.
 
-## CLÁUSULA 10 – DAS PLATAFORMAS DE TERCEIROS E DO BANIMENTO PELO WHATSAPP/META
+## CLÁUSULA 10. DAS PLATAFORMAS DE TERCEIROS E DO BANIMENTO PELO WHATSAPP/META
 
 **10.1.** O CLIENTE declara estar plenamente ciente de que a Automação funciona sobre serviços de terceiros (WhatsApp e Meta), que são integralmente alheios à VETOR e cujas regras, políticas, decisões, atualizações e disponibilidade são determinadas exclusivamente por esses terceiros.
 
@@ -118,7 +162,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **10.6.** Caberá exclusivamente ao CLIENTE adotar as boas práticas recomendadas pela Meta e por este Contrato para reduzir o risco de penalidades, bem como providenciar, às suas expensas, eventual recuperação ou substituição de número/conta.
 
-## CLÁUSULA 11 – DA LIMITAÇÃO DE RESPONSABILIDADE
+## CLÁUSULA 11. DA LIMITAÇÃO DE RESPONSABILIDADE
 
 **11.1.** A VETOR responde apenas por danos diretos comprovadamente causados por dolo ou culpa grave sua, excluída qualquer responsabilidade por danos indiretos, lucros cessantes, perda de chance, perda de dados de terceiros, danos reputacionais ou prejuízos decorrentes de expectativa de resultado comercial.
 
@@ -128,7 +172,7 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **11.4.** O CLIENTE obriga-se a indenizar e manter a VETOR indene (incluindo despesas com defesa, honorários e acordos) em relação a quaisquer reclamações, autuações, processos ou condenações de terceiros, de Leads ou de autoridades decorrentes do uso do serviço pelo CLIENTE ou da violação deste Contrato e da legislação.
 
-## CLÁUSULA 12 – DA PROTEÇÃO DE DADOS (LGPD)
+## CLÁUSULA 12. DA PROTEÇÃO DE DADOS (LGPD)
 
 **12.1.** As partes obrigam-se a cumprir a Lei nº 13.709/2018 (“LGPD”) e demais normas aplicáveis ao tratamento de dados pessoais.
 
@@ -140,17 +184,17 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **12.5.** As condições detalhadas de tratamento, segurança e direitos dos titulares constam da Política de Privacidade. O Acordo de Tratamento de Dados (DPA) disponibilizado pela VETOR integra este pacote documental e deverá ser aceito juntamente com este Contrato.
 
-## CLÁUSULA 13 – DA PROPRIEDADE INTELECTUAL
+## CLÁUSULA 13. DA PROPRIEDADE INTELECTUAL
 
 **13.1.** A Automação, o software, os algoritmos, as marcas, o nome “Vetor”, os fluxos, a documentação e todos os elementos da Plataforma são de titularidade exclusiva da VETOR, protegidos pela legislação de propriedade intelectual.
 
 **13.2.** Este Contrato concede ao CLIENTE apenas licença de uso pessoal, intransferível, não exclusiva e revogável, restrita à vigência contratual. É vedada cópia, modificação, distribuição, sublicenciamento, revenda ou engenharia reversa, sob pena de responsabilização.
 
-## CLÁUSULA 14 – DA VIGÊNCIA E RENOVAÇÃO
+## CLÁUSULA 14. DA VIGÊNCIA E RENOVAÇÃO
 
 **14.1.** Este Contrato entra em vigor na data do aceite eletrônico e da confirmação do pagamento, vigorando pelo período do plano contratado, renovando-se automaticamente por iguais períodos, salvo manifestação em contrário na forma da Cláusula 15.
 
-## CLÁUSULA 15 – DO CANCELAMENTO, RESCISÃO E REEMBOLSO
+## CLÁUSULA 15. DO CANCELAMENTO, RESCISÃO E REEMBOLSO
 
 **15.1.** O CLIENTE poderá cancelar a assinatura a qualquer tempo, mediante solicitação pelo canal **e-mail administrativo@vetorautomacao.io**, com antecedência mínima de **7 (sete) dias corridos** da data de renovação, cessando as cobranças a partir do ciclo seguinte.
 
@@ -162,11 +206,11 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **15.5.** Encerrado o Contrato, a Automação será desativada e os dados serão tratados conforme a Política de Privacidade e a legislação, podendo ser eliminados ou anonimizados, ressalvadas as hipóteses de guarda obrigatória.
 
-## CLÁUSULA 16 – DAS ALTERAÇÕES
+## CLÁUSULA 16. DAS ALTERAÇÕES
 
 **16.1.** A VETOR poderá alterar este Contrato a qualquer tempo, comunicando o CLIENTE com antecedência mínima de 30 (trinta) dias por e-mail ou pela própria Plataforma. O uso continuado após a vigência das alterações implica concordância; em caso de discordância, o CLIENTE poderá rescindir sem ônus antes da entrada em vigor das novas condições.
 
-## CLÁUSULA 17 – DAS DISPOSIÇÕES GERAIS
+## CLÁUSULA 17. DAS DISPOSIÇÕES GERAIS
 
 **17.1.** A tolerância quanto ao descumprimento de qualquer obrigação não implica novação ou renúncia.
 
@@ -176,13 +220,13 @@ As partes acima identificadas têm, entre si, justo e contratado o presente Cont
 
 **17.4.** As comunicações serão válidas quando enviadas aos e-mails cadastrados pelas partes.
 
-## CLÁUSULA 18 – DO ACEITE ELETRÔNICO
+## CLÁUSULA 18. DO ACEITE ELETRÔNICO
 
 **18.1.** O CLIENTE manifesta sua concordância integral com este Contrato mediante aceite eletrônico realizado no momento da contratação (checkout), por meio da marcação ativa de caixa de seleção e da conclusão do pagamento, reconhecendo a validade da contratação digital nos termos do art. 10, §2º, da MP 2.200-2/2001 e do Código Civil. O simples acesso ou login na Plataforma após a contratação não constitui novo aceite, mas pressupõe o aceite já realizado no checkout.
 
 **18.2.** A VETOR registrará automaticamente, para fins de prova da formação contratual, os seguintes dados do aceite: data e hora (timestamp), endereço IP do dispositivo utilizado, identificação do CLIENTE (e-mail cadastrado) e versão dos documentos aceitos. Esse registro constitui prova da celebração do Contrato, nos termos do art. 10, §2º, da MP 2.200-2/2001.
 
-## CLÁUSULA 19 – DO FORO
+## CLÁUSULA 19. DO FORO
 
 **19.1.** Fica eleito o foro da Comarca de Bento Gonçalves/RS para dirimir controvérsias oriundas deste Contrato, com renúncia a qualquer outro, por mais privilegiado que seja, ressalvada, em relação ao CLIENTE consumidor, a faculdade legal de eleger o foro de seu domicílio.
 

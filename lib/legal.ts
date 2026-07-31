@@ -16,7 +16,7 @@ export interface LegalDoc {
  * (`terms_acceptances`) como prova da formação contratual, conforme a
  * Cláusula 18.2 do Contrato de Adesão.
  */
-export const LEGAL_VERSION = "2026-06-04";
+export const LEGAL_VERSION = "2026-07-31";
 
 export const LEGAL_DOCS: LegalDoc[] = [
   {
@@ -24,14 +24,14 @@ export const LEGAL_DOCS: LegalDoc[] = [
     title: "Contrato de Adesão",
     href: "/contrato-de-adesao",
     summary:
-      "Condições da contratação do Assistente de Vendas: escopo do serviço, prazo de configuração, valores, renovação e cancelamento.",
+      "Condições da contratação: escopo de cada produto, limitações de envio de mensagens, prazo de configuração, valores, renovação e cancelamento.",
   },
   {
     slug: "termos-de-uso",
     title: "Termos de Uso",
     href: "/termos-de-uso",
     summary:
-      "Regras de uso da plataforma e do Assistente de Vendas, responsabilidades das partes e condições gerais do serviço.",
+      "Regras de uso da plataforma e dos produtos da Vetor, responsabilidades das partes e condições gerais do serviço.",
   },
   {
     slug: "politica-de-privacidade",
