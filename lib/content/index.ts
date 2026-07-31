@@ -77,7 +77,25 @@ async function fetchContent(): Promise<SiteContent> {
  * O banco só é consultado quando o cache é invalidado (ou seja, quando o admin
  * salva) — visitantes não pesam no banco.
  */
-export const getSiteContent = unstable_cache(fetchContent, ["site-content-v2"], {
+// A chave é VERSIONADA de propósito: o valor em cache guarda a forma do
+// SiteContent de quando foi gravado. Ao adicionar/remover campos do tipo,
+// incremente o sufixo — senão um cache antigo (sem as chaves novas) continua
+// sendo servido e as páginas que leem esses campos quebram.
+// v3: seção `blindado` (Vetor Chat).
+// v4: seção `personalizadas` (página própria); `home.comoFunciona` saiu da Home.
+// v5: header perdeu `navPorqueVetor` e `navDuvidas` (menu só com "Produtos").
+// v7: seção de soluções perdeu o `title` e o `description` de cada card.
+// v8: seção de soluções perdeu também o `badge` e o `intro` (só os produtos).
+// v9: hero da Home perdeu a `tag`, o `headline` virou texto único e ganhou
+//     `typedLines` (frases que se revezam com efeito de digitação).
+// v10: cards de "Por que a Vetor" perderam a `description` (só título).
+// v11: cards de "O problema" (Vetor Chat) perderam a `description` (só título).
+// v12: "O problema" perdeu os destaques numéricos (`stats` e `statsNote`).
+// v13: cards de "O que você ganha" (Vetor Chat) perderam a `description` —
+//      o título virou a própria frase-benefício.
+// v14: cards de "Benefícios" (Vetor Sales) perderam a `description` —
+//      o título virou a própria frase-benefício.
+export const getSiteContent = unstable_cache(fetchContent, ["site-content-v14"], {
   tags: [CONTENT_TAG],
 });
 
