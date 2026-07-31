@@ -17,11 +17,11 @@ export default function AuthCard({
       <div className="w-full max-w-md">
         <Link href="/" className="flex items-center justify-center gap-3 mb-10">
           <Image
-            src="/brand/logo.png"
+            src="/brand/logo-branco.png"
             alt="Vetor Automação"
             width={32}
             height={32}
-            className="object-contain brightness-0 invert"
+            className="object-contain"
           />
           <span className="font-display font-bold text-sm tracking-widest uppercase text-[#F5F5F5]">
             VETOR AUTOMAÇÃO

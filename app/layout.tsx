@@ -60,7 +60,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/brand/logo.png" type="image/png" />
+        <link rel="icon" href="/brand/logo-preto.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
