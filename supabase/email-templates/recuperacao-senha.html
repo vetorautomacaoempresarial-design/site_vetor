@@ -9,10 +9,12 @@
   Isso evita o endpoint de verify do Supabase e a dependência do cookie PKCE,
   funcionando em qualquer dispositivo. NAO usar {{ .ConfirmationURL }} aqui.
 
-  LAYOUT: segue o tema de seções do site (lib/section-theme.ts) — faixas de
-  ponta a ponta na ordem preto → azul (#4A6CF7) → branco → preto, cantos retos
-  (sem border-radius) e etiquetas em caixa-alta espaçada, como no site.
-  As cores com transparência do site (white/85, white/25...) viram tons sólidos
+  LAYOUT: cartão único centralizado (logo em cima, cartão, rodapé embaixo).
+  O que mudou em relação à versão escura antiga foi só a PALETA, para conversar
+  com o site novo: o fundo virou o azul da marca (#4A6CF7) e o cartão virou
+  branco com texto azul — o mesmo par de cores das seções do site
+  (lib/section-theme.ts, tema "branco" dentro de uma faixa "azul").
+  As cores com transparência do site (azul/80, azul/65...) viram tons sólidos
   aqui porque rgba() não é confiável no Outlook.
 -->
 <!DOCTYPE html>
@@ -21,8 +23,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- O layout tem faixa clara e faixa escura de propósito: travar em "light"
-       evita que o modo escuro do Gmail/Outlook inverta as cores da marca. -->
+  <!-- Layout claro: travar em "light" evita que o modo escuro do
+       Gmail/Outlook inverta o azul da marca. -->
   <meta name="color-scheme" content="light">
   <meta name="supported-color-schemes" content="light">
   <title>Redefina sua senha · Vetor Automação</title>
@@ -32,167 +34,104 @@
   </style>
   <![endif]-->
 </head>
-<body style="margin:0; padding:0; background-color:#0A0A0A; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+<body style="margin:0; padding:0; background-color:#4A6CF7; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
 
   <!-- Preheader (texto de pré-visualização, oculto) -->
-  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#0A0A0A; opacity:0;">
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#4A6CF7; opacity:0;">
     Crie uma nova senha para a sua conta na Vetor Automação.
   </div>
 
-  <!-- ===================== FAIXA 1 · PRETO (marca) ===================== -->
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0A0A0A" style="background-color:#0A0A0A;">
-    <tr>
-      <td align="center" style="padding:36px 16px 34px 16px;">
-        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;">
-          <tr>
-            <td align="center">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td style="padding-right:12px;" valign="middle">
-                    <img src="https://vetorautomacao.io/brand/logo-branco.png" width="36" height="36" alt="Vetor Automação" style="display:block; border:0; width:36px; height:36px;">
-                  </td>
-                  <td valign="middle" style="font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; letter-spacing:3px; text-transform:uppercase; color:#F5F5F5;">
-                    Vetor Automação
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-
-  <!-- ===================== FAIXA 2 · AZUL (conteúdo) ===================== -->
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#4A6CF7" style="background-color:#4A6CF7;">
     <tr>
-      <td align="center" style="padding:48px 16px 46px 16px;">
+      <td align="center" style="padding:40px 16px;">
+
+        <!-- Container -->
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;">
 
-          <!-- Etiqueta (badge de contorno, como nas seções do site) -->
+          <!-- Cabeçalho / Logo -->
           <tr>
-            <td style="padding:0 0 22px 0;">
+            <td align="center" style="padding:8px 0 28px 0;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="border:1px solid #92A7FA; padding:7px 13px; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; color:#FFFFFF;">
-                    Redefinição de senha
+                  <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border-radius:14px; padding:14px 16px;">
+                    <img src="https://vetorautomacao.io/brand/logo-preto.png" width="34" height="34" alt="Vetor Automação" style="display:block; border:0; width:34px; height:34px;">
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- Título -->
+          <!-- Card principal -->
           <tr>
-            <td style="padding:0 0 18px 0;">
-              <h1 style="margin:0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:32px; line-height:1.15; color:#FFFFFF; font-weight:bold; letter-spacing:-0.5px;">
+            <td bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #DCE3FE; border-radius:16px; padding:40px 40px 36px 40px;">
+
+              <!-- Etiqueta -->
+              <p style="margin:0 0 18px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#4A6CF7; font-weight:bold;">
+                Redefinição de senha
+              </p>
+
+              <!-- Título -->
+              <h1 style="margin:0 0 16px 0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:26px; line-height:1.25; color:#4A6CF7; font-weight:bold;">
                 Redefina sua senha
               </h1>
-            </td>
-          </tr>
 
-          <!-- Texto -->
-          <tr>
-            <td style="padding:0 0 32px 0;">
-              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.65; color:#E4E9FE;">
-                Recebemos um pedido para redefinir a senha da sua conta na <span style="color:#FFFFFF; font-weight:bold;">Vetor Automação</span>.
+              <!-- Texto -->
+              <p style="margin:0 0 28px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.65; color:#3A57D6;">
+                Recebemos um pedido para redefinir a senha da sua conta na <span style="color:#1E3AAE; font-weight:bold;">Vetor Automação</span>.
                 Clique no botão abaixo para criar uma nova senha e voltar a acessar sua área do cliente.
               </p>
-            </td>
-          </tr>
 
-          <!-- Botão: branco com texto azul, cantos retos — igual ao botão
-               principal das seções azuis do site. -->
-          <tr>
-            <td>
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <!-- Botão (bulletproof) -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px 0;">
                 <tr>
-                  <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+                  <td align="center" bgcolor="#4A6CF7" style="background-color:#4A6CF7; border-radius:10px;">
                     <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/redefinir-senha" target="_blank"
-                       style="display:inline-block; padding:16px 36px; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; color:#4A6CF7; text-decoration:none; letter-spacing:1px; text-transform:uppercase;">
+                       style="display:inline-block; padding:15px 34px; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none; border-radius:10px; letter-spacing:0.3px;">
                       Redefinir minha senha
                     </a>
                   </td>
                 </tr>
               </table>
-            </td>
-          </tr>
 
-        </table>
-      </td>
-    </tr>
-  </table>
-
-  <!-- ===================== FAIXA 3 · BRANCO (apoio) ===================== -->
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
-    <tr>
-      <td align="center" style="padding:40px 16px 38px 16px;">
-        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;">
-
-          <!-- Link alternativo -->
-          <tr>
-            <td style="padding:0 0 8px 0;">
-              <p style="margin:0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; color:#4A6CF7;">
-                O botão não funcionou?
+              <!-- Link alternativo -->
+              <p style="margin:0 0 6px 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.6; color:#7387C9;">
+                Se o botão não funcionar, copie e cole este endereço no seu navegador:
               </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 0 10px 0;">
-              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.6; color:#3A57D6;">
-                Copie e cole este endereço no seu navegador:
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 0 28px 0;">
-              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.6; word-break:break-all;">
+              <p style="margin:0 0 24px 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.6; word-break:break-all;">
                 <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/redefinir-senha" target="_blank" style="color:#4A6CF7; text-decoration:underline;">{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/redefinir-senha</a>
               </p>
-            </td>
-          </tr>
 
-          <!-- Divisor -->
-          <tr>
-            <td style="border-top:1px solid #D3DCFD; font-size:0; line-height:0;">&nbsp;</td>
-          </tr>
+              <!-- Divisor -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:1px solid #DCE3FE; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
 
-          <!-- Nota de segurança -->
-          <tr>
-            <td style="padding:24px 0 0 0;">
-              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.6; color:#3A57D6;">
+              <!-- Nota de segurança -->
+              <p style="margin:24px 0 0 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.6; color:#7387C9;">
                 Se você não solicitou a redefinição, pode ignorar este e-mail com segurança. Sua senha atual continua válida.
               </p>
+
             </td>
           </tr>
 
-        </table>
-      </td>
-    </tr>
-  </table>
-
-  <!-- ===================== FAIXA 4 · PRETO (rodapé) ===================== -->
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0A0A0A" style="background-color:#0A0A0A;">
-    <tr>
-      <td align="center" style="padding:34px 16px 38px 16px;">
-        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;">
+          <!-- Rodapé -->
           <tr>
-            <td align="center">
-              <p style="margin:0 0 8px 0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:13px; color:#F5F5F5; font-weight:bold; letter-spacing:3px; text-transform:uppercase;">
-                Vetor Automação
+            <td align="center" style="padding:28px 24px 8px 24px;">
+              <p style="margin:0 0 6px 0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:13px; color:#FFFFFF; font-weight:bold; letter-spacing:0.5px;">
+                VETOR AUTOMAÇÃO
               </p>
-              <p style="margin:0 0 6px 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.5; color:#A3A3A3;">
+              <p style="margin:0 0 10px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.5; color:#D5DDFD;">
                 Seu processo tem magnitude. Nós damos direção.
               </p>
-              <p style="margin:0 0 14px 0; font-family:'Space Grotesk',Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#525252;">
-                Inteligência Artificial · Automação de Processos
-              </p>
-              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px;">
-                <a href="https://vetorautomacao.io" target="_blank" style="color:#6D8AFF; text-decoration:none;">vetorautomacao.io</a>
+              <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#D5DDFD;">
+                <a href="https://vetorautomacao.io" target="_blank" style="color:#D5DDFD; text-decoration:underline;">vetorautomacao.io</a>
               </p>
             </td>
           </tr>
+
         </table>
+        <!-- /Container -->
+
       </td>
     </tr>
   </table>
