@@ -30,24 +30,8 @@ export default async function WhatsAppPage() {
 
   const conexao = (data?.[0] as ConexaoWhatsApp | undefined) ?? null;
 
-  return (
-    <div className="flex flex-col gap-8">
-      <section className="border border-[#2A2A2A] bg-[#141414] p-8">
-        <p className="font-display text-xs tracking-widest uppercase text-[#737373] mb-2">
-          WhatsApp Business
-        </p>
-        <h2 className="font-display font-semibold text-lg text-[#F5F5F5] tracking-tight mb-3">
-          Conectar seu número
-        </h2>
-        <p className="font-body font-light text-sm text-[#A3A3A3] leading-relaxed max-w-2xl">
-          Conecte o WhatsApp Business da sua empresa à nossa infraestrutura oficial da
-          Meta. O processo é da própria Meta: você entra na sua conta do Facebook,
-          escolhe (ou cria) a conta do WhatsApp Business e autoriza. Nada da sua senha
-          passa pela Vetor.
-        </p>
-      </section>
-
-      <ConectarWhatsApp conexao={conexao} />
-    </div>
-  );
+  // O cabeçalho vive dentro do próprio ConectarWhatsApp: o texto muda conforme o
+  // estado (conectar / processando / conectado), então um título fixo aqui só
+  // duplicaria o da seção.
+  return <ConectarWhatsApp conexao={conexao} />;
 }
